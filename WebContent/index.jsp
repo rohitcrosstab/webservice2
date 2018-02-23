@@ -120,11 +120,11 @@
     
    
    <div class="dropzone"id="dropzone1"
-						style="min-height: 150px; cursor: pointer; border: 2px dashed #0087F7; background: #eee; border-radius: 40px; background: white;"><span class="glyphicon glyphicon-download">
+						style="min-height: 150px;margin:0;padding:0; cursor: pointer;position:relative; border: 2px dashed #0087F7; background: #eee; border-radius: 40px; background: white;"><span class="glyphicon glyphicon-download">
 
 </span>
-<div id="dropzonePreview" class="dz-default dz-message">
-<span>Drop your files here</span>  
+<div id="dropzonePreview1" style="min-height:150px;margin:0;padding:0;">
+ 
 </div>
 
 					</div> 
@@ -223,7 +223,8 @@ $("#qurey2").click(function(){
 		    var name = $(this).find("name").text(),
 		        title = $(this).find("title").text(),
 		            salary = $(this).find("salary").text();
-		    var output = '<tr class="no-kids"><td class="name">'+name+'</td><td class="kids">'+title+'</td><td class="cars">'+salary+'</td></tr>';
+		    var output = '<tr class="no-kids"><td class="name">'+name
+		    +'</td><td class="kids">'+title+'</td><td class="cars">'+salary+'</td></tr>';
 		    $("tbody").append(output);
 		    });
 		   }
@@ -257,20 +258,20 @@ var myDropzoneOptions = {
 		acceptedFiles : ".doc,.pdf,.json,.jpg",
 		maxFiles : "1",
 		clickable : "#upload",
-		previewsContainer: '#dropzonePreview',
+		previewsContainer: '#dropzonePreview1',
 		uploadMultiple : false,
 		dictDefaultMessage: "Upload your resume here",
 		addRemoveLinks: true,
 		
 	};
 
-var myDropzone = new Dropzone("#dropzonePreview",myDropzoneOptions);
+var myDropzone = new Dropzone("#dropzonePreview1",myDropzoneOptions);
 var myDropzoneOptions2 = {
 		url : "http://localhost:8005/xmlparser/rest/test/upload",
 		acceptedFiles : ".doc,.pdf,.json,.jpg",
 		maxFiles : "1",
-		clickable : "#dropzonePreview",	
-		previewsContainer: '#dropzonePreview',
+		clickable : "#dropzonePreview1",	
+		previewsContainer: '#dropzonePreview1',
 		uploadMultiple : false,
 		dictDefaultMessage: "Upload your resume here",
 		addRemoveLinks: true,
