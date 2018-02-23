@@ -183,41 +183,166 @@ $(document).on("mousemove", function(event) {
 									afterInit : function($self, paper, areas,
 											plots, options) {
 										//india circle
-										paper.circle(690, 173,10).attr({
+										paper.circle(690, 170,10).attr({
 											stroke : "#fff",
-											fill : "#ee7c35",
+											fill : "#ffcc29",
 											"stroke-width" : 1
 										});
 										paper.circle(690, 160,10).attr({
 											stroke : "#fff",
-											fill : "#b60200",
+											fill : "#8ec859",
 											"stroke-width" : 1
 										});
 										//india circle close
 										//USA circle 
 										paper.circle(180, 110,10).attr({
 											stroke : "#fff",
-											fill : "#ee7c35",
+											fill : "#ffcc29",
 											"stroke-width" : 1
 										});
 											paper.circle(185, 100,10).attr({
 											stroke : "#fff",
-											fill : "#b60200",
+											fill : "#8ec859",
 											"stroke-width" : 1
 										});
-			//Usa Circle close
+											//Usa Circle close
+											//singapur
+											paper.circle(755, 220,10).attr({
+											stroke : "#fff",
+											fill : "#8ec859",
+											"stroke-width" : 1
+										});
+											paper.rect(815, 220, 0.5, 40).attr({
+												stroke : "#8ec859",
+												fill : "#8ec859",
+												"stroke-width" : 2											
+											});
+				paper.rect(755, 220, 60, 0.5).attr({
+					stroke : "#8ec859",
+					fill : "#8ec859",
+					"stroke-width" : 2											
+				});
+				paper.rect(815, 260, 40, 0.5).attr({
+					stroke : "#8ec859",
+					fill : "#8ec859",
+					"stroke-width" : 2											
+				});
+				var c7=paper.rect(855, 240, 80, 30).attr({
+					stroke : "#f3f3f4",
+					fill : "#f3f3f4",
+					"stroke-width" : 2,
+					
+				});
+				c7.node.onclick = function () { 
+	alert("hello");
+				};
+				var t14 = paper.text(860, 255, "Singapore");
+				t14.attr({
+					"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+					"text-anchor" : "start" , "font-style": "normal"
+				});
+				t14.node.onclick = function () { 
+					alert("hello");
+								};
+								//singapur close
+								//Europe
+											paper.circle(540, 100,10).attr({
+											stroke : "#fff",
+											fill : "#8ec859",
+											"stroke-width" : 1
+										});
+											paper.rect(480, 50, 0.5, 50).attr({
+												stroke : "#8ec859",
+												fill : "#8ec859",
+												"stroke-width" : 2											
+											});
+				paper.rect(480, 100, 60, 0.5).attr({
+					stroke : "#8ec859",
+					fill : "#8ec859",
+					"stroke-width" : 2											
+				});
+				paper.rect(480, 50, 40, 0.5).attr({
+					stroke : "#8ec859",
+					fill : "#8ec859",
+					"stroke-width" : 2											
+				});
+				var c7=paper.rect(520, 30, 100, 40).attr({
+					stroke : "#f3f3f4",
+					fill : "#f3f3f4",
+					"stroke-width" : 2,
+					
+				});
+				c7.node.onclick = function () { 
+	alert("hello");
+				};
+				var t15 = paper.text(525, 35, "Europe");
+				t15.attr({
+					"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+					"text-anchor" : "start" , "font-style": "normal"
+				});
+				t15.node.onclick = function () { 
+					alert("hello");
+								};
+								var t16 = paper.text(570, 50, "Merelbeke, Belgium");
+								t16.node.onclick = function () { 
+									alert("hello");
+								};
+								//Europe close
+			//China
+											paper.circle(765, 140,10).attr({
+											stroke : "#fff",
+											fill : "#8ec859",
+											"stroke-width" : 1
+										});
+											paper.rect(820, 140, 0.5, 20).attr({
+												stroke : "#8ec859",
+												fill : "#8ec859",
+												"stroke-width" : 2											
+											});
+				paper.rect(760, 140, 60, 0.5).attr({
+					stroke : "#8ec859",
+					fill : "#8ec859",
+					"stroke-width" : 2											
+				});
+				paper.rect(820, 160, 40, 0.5).attr({
+					stroke : "#8ec859",
+					fill : "#8ec859",
+					"stroke-width" : 2											
+				});
+				var c8=paper.rect(860, 140, 100, 40).attr({
+					stroke : "#f3f3f4",
+					fill : "#f3f3f4",
+					"stroke-width" : 2,
+					
+				});
+				c8.node.onclick = function () { 
+	alert("hello");
+				};
+				var t17 = paper.text(865, 148, "China");
+				t17.attr({
+					"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+					"text-anchor" : "start" , "font-style": "normal"
+				});
+				t17.node.onclick = function () { 
+					alert("hello");
+								};
+								var t18 = paper.text(902, 162, "Shanghai, China");
+								t18.node.onclick = function () { 
+									alert("hello");
+								};
+								//China close
 			//second usa
-			paper.rect(90, 112, 0.5, 60).attr({
-											stroke : "#ee7c35",
-											fill : "#ee7c35",
+			paper.rect(90, 110, 0.5, 60).attr({
+											stroke : "#ffcc29",
+											fill : "#ffcc29",
 											"stroke-width" : 2											
 										});
 			paper.rect(90, 110, 90, 0.5).attr({
-				stroke : "#ee7c35",
-				fill : "#ee7c35",
+				stroke : "#ffcc29",
+				fill : "#ffcc29",
 				"stroke-width" : 2											
 			});
-			var c1=paper.rect(25, 170, 150, 155).attr({
+			var c1=paper.rect(25, 170, 150, 65).attr({
 				stroke : "#f3f3f4",
 				fill : "#f3f3f4",
 				"stroke-width" : 2,
@@ -231,9 +356,8 @@ alert("hello");
 				"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 				"text-anchor" : "start" , "font-style": "normal"
 			});
-			var t11 = paper.text(30, 250, "Montreal, Quebec, Canada"+"\n"+"(Radiopharmaceuticals)"+"\n"+"Montreal, Quebec, Canada"
-					+"\n"+"(Contract Manufacturing of)"+"\n"+"Sterile Injectables)"+"\n"+"Spokane, Washington, USA"+"\n"+"(Contract Manufacturing of"
-							+"\n"+"Sterile Injectables and Allergy"+"\n"+"Therapy Products)"+"\n"+"Salisbury, Maryland, USA"+"\n"+"(Solid Dosage Formulation)");
+			var t11 = paper.text(30, 205, "Montreal, Quebec"+"\n"+"Montreal, Quebec"
+					+"\n"+"Spokane, Washington"+"\n"+"Salisbury, Maryland");
 			t11.node.onclick = function () { 
 				alert("hello");
 			};
@@ -244,13 +368,13 @@ alert("hello");
 			// second usa close
 			//North America
 			paper.rect(185, 10, 0.5, 90).attr({
-											stroke : "#b60200",
-											fill : "#b60200",
+											stroke : "#8ec859",
+											fill : "#8ec859",
 											"stroke-width" : 2											
 										});
 			paper.rect(185, 10,10, 0.5).attr({
-				stroke : "#b60200",
-				fill : "#b60200",
+				stroke : "#8ec859",
+				fill : "#8ec859",
 				"stroke-width" : 2											
 			});
 			var c2=paper.rect(190, 1, 150, 45).attr({
@@ -266,7 +390,7 @@ alert("hello");
 				"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 				"text-anchor" : "start" , "font-style": "normal"
 			});
-			var t9 = paper.text(190, 30, "Malvern, Pennsylvania,USA"+"\n"+"Yardley Pennsylvania, USA");
+			var t9 = paper.text(190, 30, "Malvern, Pennsylvania"+"\n"+"Yardley Pennsylvania");
 			t9.attr({
 				"font-family": "georgia", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
 				"text-anchor" : "start" , "font-style": "normal"
@@ -279,22 +403,22 @@ alert("hello");
 										
 										//North america close
 										paper.rect(690, 48, 0.5, 120).attr({
-											stroke : "#b60200",
-											fill : "#b60200",
+											stroke : "#8ec859",
+											fill : "#8ec859",
 											"stroke-width" : 2											
 										});
 									paper.rect(570, 173, 0.5, 70).attr({
-											stroke : "#ee7c35",
-											fill : "#ee7c35",
+											stroke : "#ffcc29",
+											fill : "#ffcc29",
 											"stroke-width" : 2											
 										});
 										paper.rect(570, 173, 120, 0.5).attr({
-											stroke : "#ee7c35",
-											fill : "#ee7c35",
+											stroke : "#ffcc29",
+											fill : "#ffcc29",
 											"stroke-width" : 2											
 										});
 										//india manufacture rectangle
-										var c3=paper.rect(480, 240, 200, 100).attr({
+										var c3=paper.rect(480, 240, 160, 85).attr({
 											stroke : "#f3f3f4",
 											fill : "#f3f3f4",
 											"stroke-width" : 2											
@@ -307,7 +431,7 @@ alert("hello");
 											"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
 										});
-										var t5 = paper.text(485, 275, "Nanjangud, Karnatak(Active"+"\n"+"Pharmaceutical Ingredients), Roorkee"+"\n"+"Uttrakhand(Solid Dosage formulation)");
+										var t5 = paper.text(485, 270, "Nanjangud, Karnatak,"+"\n"+"Roorkee, Uttrakhand");
 										t5.attr({
 											"font-family": "georgia", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
@@ -315,12 +439,12 @@ alert("hello");
 										t5.node.onclick = function () { 
 											alert("hello");
 														};
-										var t6 = paper.text(485, 300, "R&D Centers");
+										var t6 = paper.text(485, 290, "R&D Centers");
 										t6.attr({
 											"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
 										});
-										var t7 = paper.text(485, 320, "Noida, Uttar Pradesh,India,"+"\n"+"Nanjangud Karnatak, India");
+										var t7 = paper.text(485, 310, "Noida, Uttar Pradesh,"+"\n"+"Nanjangud Karnatak");
 										t7.attr({
 											"font-family": "georgia", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
@@ -329,8 +453,8 @@ alert("hello");
 											alert("hello");
 														};
 									paper.rect(690, 50, 120, 0.5).attr({
-											stroke : "#b60200",
-											fill : "#b60200",
+											stroke : "#8ec859",
+											fill : "#8ec859",
 											"stroke-width" : 2											
 										});
 									//for india offices
@@ -367,7 +491,7 @@ alert("hello");
 											},
 										},
 										attrs : {
-											fill : "#06425b"
+											fill : "#20359E"
 										},
 										attrsHover : {
 											fill : "#000000"
@@ -382,7 +506,7 @@ alert("hello");
 										},
 
 										attrs : {
-											fill : "#06425b"
+											fill : "#20359E"
 										},
 										attrsHover : {
 											fill : "#000000"
@@ -396,7 +520,7 @@ alert("hello");
 											},
 										},
 										attrs : {
-											fill : "#06425b"
+											fill : "#20359E"
 										},
 										attrsHover : {
 											fill : "#000000"
