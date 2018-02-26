@@ -416,4 +416,28 @@ body {
 	}
 }
 
-#success_message{ display: none;}
+#success_message {
+	display: none;
+}
+
+.form-control-feedback {
+	right: 8%;
+	line-height: 40px;
+}
+
+#dropzone {
+    min-height: 120px;
+    border: 2px dashed #0087f7;
+    background: #8080801a;
+    padding: 0;
+}
+
+#dropzonePreview {
+    text-align: center;
+    min-height: 120px;
+    margin: 0;
+}
+
+/*#dropzonePreview span {
+    line-height: 120px;
+}*/

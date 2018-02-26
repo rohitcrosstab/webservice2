@@ -58,7 +58,7 @@
                     }
                 }
             },
-            city: {
+/*            city: {
                 validators: {
                      stringLength: {
                         min: 4,
@@ -67,7 +67,7 @@
                         message: 'Please supply your city'
                     }
                 }
-            },
+            },*/
             workexyears: {
                 validators: {
                     notEmpty: {
@@ -82,7 +82,39 @@
                     }
                 }
             },
-            zip: {
+            bgrad: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your graduation'
+                      
+                    }
+                }
+            },
+            industry: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your industry'
+                    }
+                }
+            },
+            function: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your functional area'
+                    }
+                }
+            },
+            current: {
+                validators: {
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your surrent/last company name'
+                    }
+                }
+            },
+/*            zip: {
                 validators: {
                     notEmpty: {
                         message: 'Please supply your zip code'
@@ -104,7 +136,7 @@
                         message: 'Please supply a description of your project'
                     }
                     }
-                }
+                }*/
             }
         })
         .on('success.form.bv', function(e) {
