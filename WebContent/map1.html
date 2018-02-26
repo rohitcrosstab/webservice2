@@ -183,6 +183,13 @@ $(document).on("mousemove", function(event) {
 									afterInit : function($self, paper, areas,
 											plots, options) {
 										//india circle
+										var hoverIn = function() {
+				        this.attr({"fill":"red"});
+				    };
+				    
+				    var hoverOut = function() {
+				        this.attr({"fill":"black"});    
+				    }
 										paper.circle(690, 170,10).attr({
 											stroke : "#fff",
 											fill : "#ffcc29",
@@ -234,18 +241,19 @@ $(document).on("mousemove", function(event) {
 					
 				});
 				c7.node.onclick = function () { 
-	alert("hello");
+	alert("");
 				};
 				var t14 = paper.text(860, 255, "Singapore");
 				t14.attr({
-					"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+					"font-family": "georgia", fill: "black","cursor": "pointer", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 					"text-anchor" : "start" , "font-style": "normal"
-				});
+				}).hover(hoverIn, hoverOut, t14, t14);
 				t14.node.onclick = function () { 
-					alert("hello");
+					alert("");
 								};
 								//singapur close
 								//Europe
+								
 											paper.circle(540, 100,10).attr({
 											stroke : "#fff",
 											fill : "#8ec859",
@@ -272,20 +280,21 @@ $(document).on("mousemove", function(event) {
 					"stroke-width" : 2,
 					
 				});
-				c7.node.onclick = function () { 
-	alert("hello");
-				};
+				
 				var t15 = paper.text(525, 35, "Europe");
 				t15.attr({
-					"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+					"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 					"text-anchor" : "start" , "font-style": "normal"
-				});
+				}).hover(hoverIn, hoverOut, t15, t15);
+				 
+				
 				t15.node.onclick = function () { 
-					alert("hello");
+					alert("");
 								};
 								var t16 = paper.text(570, 50, "Merelbeke, Belgium");
+								t16.attr({"cursor": "pointer"}).hover(hoverIn, hoverOut, t16, t16)
 								t16.node.onclick = function () { 
-									alert("hello");
+									alert("");
 								};
 								//Europe close
 			//China
@@ -315,20 +324,19 @@ $(document).on("mousemove", function(event) {
 					"stroke-width" : 2,
 					
 				});
-				c8.node.onclick = function () { 
-	alert("hello");
-				};
+				
 				var t17 = paper.text(865, 148, "China");
 				t17.attr({
-					"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+					"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 					"text-anchor" : "start" , "font-style": "normal"
-				});
+				}).hover(hoverIn, hoverOut, t17, t17);
 				t17.node.onclick = function () { 
-					alert("hello");
+					alert("");
 								};
 								var t18 = paper.text(902, 162, "Shanghai, China");
+								t18.attr({"cursor": "pointer"}).hover(hoverIn, hoverOut, t18, t18);
 								t18.node.onclick = function () { 
-									alert("hello");
+									alert("");
 								};
 								//China close
 			//second usa
@@ -348,23 +356,24 @@ $(document).on("mousemove", function(event) {
 				"stroke-width" : 2,
 				
 			});
-			c1.node.onclick = function () { 
-alert("hello");
-			}; 
+			
 			var t10 = paper.text(30, 175, "North America");
 			t10.attr({
-				"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+				"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 				"text-anchor" : "start" , "font-style": "normal"
-			});
+			}).hover(hoverIn, hoverOut, t10, t10);
+			t10.node.onclick = function () { 
+				alert("");
+							};
 			var t11 = paper.text(30, 205, "Montreal, Quebec"+"\n"+"Montreal, Quebec"
 					+"\n"+"Spokane, Washington"+"\n"+"Salisbury, Maryland");
 			t11.node.onclick = function () { 
-				alert("hello");
+				alert("");
 			};
 			t11.attr({
-				"font-family": "georgia", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
+				"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
 				"text-anchor" : "start" , "font-style": "normal"
-			});
+			}).hover(hoverIn, hoverOut, t11, t11);
 			// second usa close
 			//North America
 			paper.rect(185, 10, 0.5, 90).attr({
@@ -382,21 +391,22 @@ alert("hello");
 				fill : "#f3f3f4",
 				"stroke-width" : 2											
 			});
-			c2.node.onclick = function () { 
-				alert("hello");
-							}; 
+			
 			var t8 = paper.text(190, 10, "North America");
 			t8.attr({
-				"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+				"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 				"text-anchor" : "start" , "font-style": "normal"
-			});
+			}).hover(hoverIn, hoverOut, t8, t8);
+			t8.node.onclick = function () { 
+				alert("");
+							};
 			var t9 = paper.text(190, 30, "Malvern, Pennsylvania"+"\n"+"Yardley Pennsylvania");
 			t9.attr({
-				"font-family": "georgia", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
+				"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
 				"text-anchor" : "start" , "font-style": "normal"
-			});
+			}).hover(hoverIn, hoverOut, t9, t9);
 			t9.node.onclick = function () { 
-				alert("hello");
+				alert("");
 							};
 										
 										
@@ -423,34 +433,38 @@ alert("hello");
 											fill : "#f3f3f4",
 											"stroke-width" : 2											
 										});
-										c3.node.onclick = function () { 
-											alert("hello");
-														}; 
+										
 										var t4 = paper.text(485, 250, "India - Manufacturing");
 										t4.attr({
-											"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+											"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
-										});
+										}).hover(hoverIn, hoverOut, t4, t4);
+										t4.node.onclick = function () { 
+											alert("");
+														};
 										var t5 = paper.text(485, 270, "Nanjangud, Karnatak,"+"\n"+"Roorkee, Uttrakhand");
 										t5.attr({
-											"font-family": "georgia", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
+											"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
-										});
+										}).hover(hoverIn, hoverOut, t5, t5);
 										t5.node.onclick = function () { 
-											alert("hello");
+											alert("");
 														};
 										var t6 = paper.text(485, 290, "R&D Centers");
 										t6.attr({
-											"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+											"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
-										});
+										}).hover(hoverIn, hoverOut, t6, t6);
+										t6.node.onclick = function () { 
+											alert("");
+														};
 										var t7 = paper.text(485, 310, "Noida, Uttar Pradesh,"+"\n"+"Nanjangud Karnatak");
 										t7.attr({
-											"font-family": "georgia", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
+											"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
-										});
+										}).hover(hoverIn, hoverOut, t7, t7);
 										t7.node.onclick = function () { 
-											alert("hello");
+											alert("");
 														};
 									paper.rect(690, 50, 120, 0.5).attr({
 											stroke : "#8ec859",
@@ -463,21 +477,22 @@ alert("hello");
 											fill : "#f3f3f4",
 											"stroke-width" : 2											
 										});
-										c4.node.onclick = function () { 
-											alert("hello");
-														}; 
+										
 										var t2 = paper.text(785, 28, "India - Offices");
 										t2.attr({
-											"font-family": "georgia", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
+											"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 12,"font-weight": "bold",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
-										});
+										}).hover(hoverIn, hoverOut, t2, t2);
+										t2.node.onclick = function () { 
+											alert("");
+														};
 										var t3 = paper.text(785, 53, "Noida, Uttar Pradesh"+"\n"+"Greater Noida, Uttar Pradesh"+"\n"+"Mumbai, Maharastra");
 										t3.attr({
-											"font-family": "georgia", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
+											"font-family": "georgia","cursor": "pointer", fill: "black", "font-size": 10,"font-weight": "normal",stroke:"black", "stroke-width": "0px",
 											"text-anchor" : "start" , "font-style": "normal"
-										});
+										}).hover(hoverIn, hoverOut, t3, t3);
 										t3.node.onclick = function () { 
-											alert("hello");
+											alert("");
 														};
 									//india offices	
 									},
@@ -487,7 +502,7 @@ alert("hello");
 									"IN" : {
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("");
 											},
 										},
 										attrs : {
@@ -501,7 +516,7 @@ alert("hello");
 									"CA" : {
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("");
 											},
 										},
 
@@ -516,7 +531,7 @@ alert("hello");
 
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("");
 											},
 										},
 										attrs : {
