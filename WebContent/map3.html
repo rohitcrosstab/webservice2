@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style>
@@ -15,22 +16,23 @@
 }
 
 .mapael .map {
-	background-color: #fff;
+	background-color: #4dc7f3;
 	margin-bottom: 10px;
 	position: relative;
 }
 
 .mapael .mapTooltip {
-	position: absolute;
-	background-color: #000;
-	moz-opacity: 0.70;
-	opacity: 1;
-	filter: alpha(opacity = 70);
-	padding: 10px;
-	z-index: 1000;
-	max-width: 200px;
-	display: none;
-	color: #f4f4e8;
+	 position: absolute;
+            background-color: #fff;
+            moz-opacity: 0.80;
+            opacity: 0.90;
+            filter: alpha(opacity=70);
+            border-radius: 10px;
+            padding: 10px;
+            z-index: 500;
+            max-width: 200px;
+            display: none;
+            color: #343434;
 }
 
 .mapael .myLegend {
@@ -163,7 +165,7 @@
 									defaultArea : {
 										attrs : {
 											fill : "#e2e2e2",
-											stroke : "#ffffff"
+											stroke : "#4dc7f3"
 										},
 										attrsHover : {
 											fill : "#000000",
@@ -237,11 +239,7 @@
 									// Plot positioned by x and y instead of latitude, longitude
 
 									'Chittorgarh' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 28.8887,
 										longitude : 74.6269,
 										eventHandlers : {
@@ -253,24 +251,21 @@
 											fill : "orange",
 											opacity : 1,
 											stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":1,
 									         
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Chittorgarh</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Chittorgarh</span>"
 										},
 										 attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 1,
+									          "stroke-width": 2,
 						
 									        }
 									      }, 
 									'Bharuch' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 21.7051,
 										longitude : 72.9959,
 										eventHandlers : {
@@ -285,20 +280,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Bharuch</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Bharuch</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Ambarnath' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 19.1825,
 										longitude : 73.1926,
 										eventHandlers : {
@@ -313,20 +305,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Ambarnath</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Ambarnath</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'banglore' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 12.9716,
 										longitude : 77.5946,
 										eventHandlers : {
@@ -341,21 +330,18 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Banglore</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Banglore</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 
 									'noida' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 28.5355,
 										longitude : 77.3910,
 										eventHandlers : {
@@ -370,20 +356,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Noida</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Noida</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Nira' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 18.1022,
 										longitude : 74.2119,
 										eventHandlers : {
@@ -398,20 +381,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Nira</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Nira</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Mumbai' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 25.0760,
 										longitude : 72.8777,
 										eventHandlers : {
@@ -426,20 +406,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Mumbai</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Mumbai</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Sahibabad' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 28.6654,
 										longitude : 77.3493,
 										eventHandlers : {
@@ -454,20 +431,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Sahibabad</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Sahibabad</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Roorkee' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 29.8543,
 										longitude : 77.8880,
 										eventHandlers : {
@@ -482,20 +456,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Roorkee</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Roorkee</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Spokane' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 47.658779,
 										longitude : -117.426048,
 									eventHandlers : {
@@ -510,20 +481,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Spokane</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Spokane</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Georgia' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 33.247875,
 										longitude : -83.441162,
 										eventHandlers : {
@@ -538,20 +506,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Georgia</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Georgia</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Pennsylvania' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 41.203323,
 										longitude : -77.194527,
 										eventHandlers : {
@@ -566,20 +531,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Pennsylvania</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Pennsylvania</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Salisbury' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 38.3607,
 										longitude : -80.5994,
 										eventHandlers : {
@@ -594,20 +556,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Salisbury</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Salisbury</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Yardley' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 45.245664,
 										longitude : -74.8459472,
 										eventHandlers : {
@@ -622,20 +581,17 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Yardley</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Yardley</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
 									'Montreal' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size:5,
 										latitude : 45.5016889,
 										longitude : -73.5672559999999999,
 										eventHandlers : {
@@ -650,12 +606,12 @@
 									          "stroke-width": 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Montreal</span><br />"
+											content : "<center><img src='ju.png'/></center><span style=\"font-weight:bold;\">Montreal</span><br />"
 										},
 										attrsHover: {
 									          fill: "orange",
 									          stroke: '#f4f4e8',
-									          "stroke-width": 0.5,
+									          "stroke-width":2,
 						
 									        }
 									      }, 
