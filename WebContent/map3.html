@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -22,17 +23,16 @@
 }
 
 .mapael .mapTooltip {
-	 position: absolute;
-            background-color: #fff;
-            moz-opacity: 0.80;
-            opacity: 0.90;
-            filter: alpha(opacity=70);
-           
-            padding: 2px;
-            z-index: 900;
-            max-width: 200px;
-            display: none;
-            color: #343434;
+	position: absolute;
+	background-color: #fff;
+	moz-opacity: 0.80;
+	opacity: 0.90;
+	filter: alpha(opacity = 70);
+	padding: 2px;
+	z-index: 900;
+	max-width: 200px;
+	display: none;
+	color: #343434;
 }
 
 .mapael .myLegend {
@@ -73,7 +73,6 @@
 /* Then Zoom In button */
 .mapael .zoomIn {
 	top: 50px;
-	
 }
 
 /* Then Zoom Out button */
@@ -98,9 +97,8 @@
 		charset="utf-8"></script>
 	<script src="js/world_countries.js" charset="utf-8"></script>
 	<div class="container">
-	
-		<div class="map">
-		</div>
+
+		<div class="map"></div>
 	</div>
 
 	<script type="text/javascript">
@@ -116,26 +114,26 @@
 									zoom : {
 										enabled : true,
 										maxLevel : 10,
-										
+
 										mousewheel : false,
-										buttons: {
-					                        "reset": {
-					                            cssClass: "zoomButton zoomReset",
-					                            content: "&#x2609;", // bullet sign
-					                            title: "Reset zoom"
-					                        },
-					                        "in": {
-					                            cssClass: "zoomButton zoomIn",
-					                            content: "&#128269;+",
-					                            title: "Zoom in"
-					                        },
-					                        "out": {
-					                            cssClass: "zoomButton zoomOut",
-					                            content: "&#128269;-", // minus sign
-					                            title: "Zoom out"
-					                        }
-					                    },
-										
+										buttons : {
+											"reset" : {
+												cssClass : "zoomButton zoomReset",
+												content : "&#x2609;", // bullet sign
+												title : "Reset zoom"
+											},
+											"in" : {
+												cssClass : "zoomButton zoomIn",
+												content : "&#128269;+",
+												title : "Zoom in"
+											},
+											"out" : {
+												cssClass : "zoomButton zoomOut",
+												content : "&#128269;-", // minus sign
+												title : "Zoom out"
+											}
+										},
+
 									}
 									// Set default plots and areas style
 									,
@@ -147,7 +145,7 @@
 										attrsHover : {
 											opacity : 5,
 											stroke : "#ffffff",
-											animDuration:0,
+											animDuration : 0,
 											"stroke-width" : 2
 										},
 										text : {
@@ -157,7 +155,7 @@
 											attrsHover : {
 												fill : "#000",
 												stroke : "#ffffff",
-												animDuration:0,
+												animDuration : 0,
 												"stroke-width" : 2
 											}
 										}
@@ -170,7 +168,7 @@
 										attrsHover : {
 											fill : "#000000",
 											stroke : "#ffffff",
-											animDuration:0,
+											animDuration : 0,
 											"stroke-width" : 2
 										},
 										text : {
@@ -180,19 +178,19 @@
 											attrsHover : {
 												fill : "#000",
 												stroke : "#ffffff",
-												animDuration:0,
+												animDuration : 0,
 												"stroke-width" : 2
 											}
 										}
 									},
-									
+
 								},
 								// Customize some areas of the map
 								areas : {
 									"IN" : {
 										eventHandlers : {
 											click : function() {
-												 $(".container").trigger('zoom', {level: 10, latitude: 20.5937, longitude: 78.9629});
+
 											},
 										},
 										attrs : {
@@ -206,7 +204,49 @@
 									"CA" : {
 										eventHandlers : {
 											click : function() {
-												 $(".container").trigger('zoom', {level: 10, latitude: 45.5016889, longitude: -73.5672559999999999});
+
+											},
+										},
+
+										attrs : {
+											fill : "#06425b"
+										},
+										attrsHover : {
+											fill : "#000000"
+										}
+									},
+									"CN" : {
+										eventHandlers : {
+											click : function() {
+
+											},
+										},
+
+										attrs : {
+											fill : "#06425b"
+										},
+										attrsHover : {
+											fill : "#000000"
+										}
+									},
+									"SG" : {
+										eventHandlers : {
+											click : function() {
+
+											},
+										},
+
+										attrs : {
+											fill : "#06425b"
+										},
+										attrsHover : {
+											fill : "#000000"
+										}
+									},
+									"BE" : {
+										eventHandlers : {
+											click : function() {
+
 											},
 										},
 
@@ -221,7 +261,7 @@
 
 										eventHandlers : {
 											click : function() {
-												$(".container").trigger('zoom', {level: 10, latitude: 37.0902, longitude: -95.7129});
+
 											},
 										},
 										attrs : {
@@ -239,7 +279,7 @@
 									// Plot positioned by x and y instead of latitude, longitude
 
 									'Chittorgarh' : {
-										size:5,
+										size : 5,
 										latitude : 28.8887,
 										longitude : 74.6269,
 										eventHandlers : {
@@ -250,371 +290,622 @@
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width":1,
-									         
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Chittorgarh</span></center>"
 										},
-										 attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width": 2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'Bharuch' : {
-										size:5,
+										size : 5,
 										latitude : 21.7051,
 										longitude : 72.9959,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Bharuch</span><br /></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'Ambarnath' : {
-										size:5,
+										size : 5,
 										latitude : 19.1825,
 										longitude : 73.1926,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Ambarnath</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'banglore' : {
-										size:5,
+										size : 5,
 										latitude : 12.9716,
 										longitude : 77.5946,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Banglore</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 
 									'noida' : {
-										size:5,
+										size : 5,
 										latitude : 28.5355,
 										longitude : 77.3910,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Noida</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'Nira' : {
-										size:5,
+										size : 5,
 										latitude : 18.1022,
 										longitude : 74.2119,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Nira</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'Mumbai' : {
-										size:5,
+										size : 5,
 										latitude : 25.0760,
 										longitude : 72.8777,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Mumbai</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'Sahibabad' : {
-										size:5,
+										size : 5,
 										latitude : 28.6654,
 										longitude : 77.3493,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Sahibabad</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'Roorkee' : {
-										size:5,
+										size : 5,
 										latitude : 29.8543,
 										longitude : 77.8880,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Roorkee</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'Spokane' : {
-										size:5,
+										size : 5,
 										latitude : 47.658779,
 										longitude : -117.426048,
-									eventHandlers : {
+										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Spokane</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
-									'Georgia' : {
-										size:5,
-										latitude : 33.247875,
-										longitude : -83.441162,
-										eventHandlers : {
-											click : function() {
-												alert("hello");
-											},
-										},
-										attrs : {
+										attrsHover : {
 											fill : "orange",
-											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
-										},
-										tooltip : {
-											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Georgia</span></center>"
-										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
-									'Pennsylvania' : {
-										size:5,
-										latitude : 41.203323,
-										longitude : -77.194527,
-										eventHandlers : {
-											click : function() {
-												alert("hello");
-											},
-										},
-										attrs : {
-											fill : "orange",
-											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
-										},
-										tooltip : {
-											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Pennsylvania</span></center>"
-										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
-									'Salisbury' : {
-										size:5,
-										latitude : 38.3607,
-										longitude : -80.5994,
-										eventHandlers : {
-											click : function() {
-												alert("hello");
-											},
-										},
-										attrs : {
-											fill : "orange",
-											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
-										},
-										tooltip : {
-											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Salisbury</span></center>"
-										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'Yardley' : {
-										size:5,
-										latitude : 45.245664,
+										size : 5,
+										latitude : 40.2457,
 										longitude : -74.8459472,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("Jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Yardley</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
-									'Montreal' : {
-										size:5,
-										latitude : 45.5016889,
-										longitude : -73.5672559999999999,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Salisbury' : {
+										size : 5,
+										latitude : 38.3606700,
+										longitude : -75.5993700,
 										eventHandlers : {
 											click : function() {
-												alert("hello");
+												alert("Jubilant");
 											},
 										},
 										attrs : {
 											fill : "orange",
 											opacity : 1,
-											stroke: '#f4f4e8',
-									          "stroke-width": 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Salisbury</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Malvern' : {
+										size : 5,
+										latitude : 40.036217,
+										longitude : -75.513809,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Malvern</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Shanghai' : {
+										size : 5,
+										latitude : 31.2304,
+										longitude : 121.4737,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Shanghai</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Merelbeke' : {
+										size : 5,
+										latitude : 50.9945,
+										longitude : 3.7456,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Merelbeke</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Singapore' : {
+										size : 5,
+										latitude : 1.3521,
+										longitude : 103.8198,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Singapore</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'orlando' : {
+										size : 5,
+										latitude : 28.538336,
+										longitude : -81.379234,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">orlando</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Nanjangud' : {
+										size : 5,
+										latitude : 12.1200,
+										longitude : 76.6801,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Nanjangud</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Noida' : {
+										size : 5,
+										latitude : 28.5355,
+										longitude : 77.3910,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Noida</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Greater Noida' : {
+										size : 5,
+										latitude : 28.4744,
+										longitude : 77.5040,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Greater Noida</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Gajraula' : {
+										size : 5,
+										latitude : 28.8448,
+										longitude : 78.2393,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Gajraula</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Savli' : {
+										size : 5,
+										latitude : 22.5616,
+										longitude : 73.2220,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Savli</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Hyderabad' : {
+										size : 5,
+										latitude : 17.3850,
+										longitude : 78.4867,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Hyderabad</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+
+									'Bengaluru' : {
+										size : 5,
+										latitude : 12.9716,
+										longitude : 77.5946,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Bengaluru</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Montreal' : {
+										size : 5,
+										latitude : 45.5016889,
+										longitude : -73.5672559999999999,
+										eventHandlers : {
+											click : function() {
+												alert("Jubilant");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
 											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Montreal</span></center>"
 										},
-										attrsHover: {
-									          fill: "orange",
-									          stroke: '#f4f4e8',
-									          "stroke-width":2,
-						
-									        }
-									      }, 
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 
 								}
 							});

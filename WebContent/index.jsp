@@ -135,7 +135,7 @@ footer {
 						<span class="glyphicon glyphicon-download"> </span>
 
 						<div class="fallback">
-							<input name="file" type="file" name="myfiles" multiple />
+							<input type="file" name="myfiles" multiple />
 						</div>
 					</div>
 					<br />
@@ -193,8 +193,7 @@ footer {
 									value="Save To MySQL"
 									formaction="http://localhost:8005/xmlparser/rest/test/insert1">
 								<input type="button" class="btn btn-primary" name="sqlExpress"
-									id="sqlExpressdb" value="Save To SQLexpress"
-								>
+									id="sqlExpressdb" value="Save To SQLexpress">
 							</div>
 						</div>
 					</form>
@@ -225,12 +224,27 @@ footer {
 						<br />
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
-								<input type="button" class="btn btn-primary" name="sqlExpressdb"id="sqllogin"
-									value="LogIN with SQLexpress">
+								<input type="button" class="btn btn-primary" name="sqlExpressdb"
+									id="sqllogin" value="LogIN with SQLexpress">
 							</div>
 						</div>
 					</form>
 				</div>
+			</div>
+			<div class="col-md-6" style="border: 2px solid black">
+				<form class="form-horizontal" method="post"
+					enctype="multipart/form-Data" name="form3">
+					
+					<br />
+					<input type="file"name="myfiles">
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input type="submit" class="btn btn-primary" name="sqlExpressdb"
+								formaction="http://localhost:8005/xmlparser/rest/test/insertdb1"
+								value="resume upload">
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -360,23 +374,23 @@ footer {
 									});
 						});
 		$("#sqllogin")
-		.click(
-				function() {
-					var email = $('#emails').val();
-					var pass = $('#pwds').val();
-					$
-							.ajax({
-								type : "POST",
-								url : "http://localhost:8005/xmlparser/rest/test/jubilant/emp_details_registration",
-								data : {
-									email : email,
-									pwd : pass,
-								},
-								success : function(data) {
-									console.log(data);
-								}
-							});
-				});
+				.click(
+						function() {
+							var email = $('#emails').val();
+							var pass = $('#pwds').val();
+							$
+									.ajax({
+										type : "POST",
+										url : "http://localhost:8005/xmlparser/rest/test/jubilant/emp_details_registration",
+										data : {
+											email : email,
+											pwd : pass,
+										},
+										success : function(data) {
+											console.log(data);
+										}
+									});
+						});
 		var myDropzoneOptions = {
 			url : "http://localhost:8005/xmlparser/rest/test/upload",
 			acceptedFiles : ".doc,.pdf,.json,.jpg",
