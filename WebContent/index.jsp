@@ -9,11 +9,19 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="dropzone.css">
+<link rel="stylesheet"
+	href="bootstrap-formhelpers/dist/css/bootstrap-formhelpers.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="dropzone.js"></script>
+<script src="bootstrap-formhelpers/dist/js/bootstrap-formhelpers.js"
+	type="text/javascript"></script>
+<script
+	src="bootstrap-formhelpers/js/bootstrap-formhelpers-countries.js"
+	type="text/javascript"></script>
+
 <style>
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
@@ -234,9 +242,8 @@ footer {
 			<div class="col-md-6" style="border: 2px solid black">
 				<form class="form-horizontal" method="post"
 					enctype="multipart/form-Data" name="form3">
-					
-					<br />
-					<input type="file"name="myfiles">
+
+					<br /> <input type="file" name="myfiles">
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<input type="submit" class="btn btn-primary" name="sqlExpressdb"
@@ -245,6 +252,38 @@ footer {
 						</div>
 					</div>
 				</form>
+			</div>
+			<div class=col-sm-2>
+				<div id="countries_states2" class="bfh-selectbox bfh-countries"
+					data-country="US" data-flags="true">
+					<input type="hidden" value=""> <a
+						class="bfh-selectbox-toggle" role="button"
+						data-toggle="bfh-selectbox" href="#"> <span
+						class="bfh-selectbox-option input-medium" data-option=""></span> <b
+						class="caret"></b>
+					</a>
+					<div class="bfh-selectbox-options">
+						<div role="listbox">
+							<ul role="option">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bfh-selectbox bfh-states"
+					data-country="countries_states2">
+					<input type="hidden" value=""> <a
+						class="bfh-selectbox-toggle" role="button"
+						data-toggle="bfh-selectbox" href="#"> <span
+						class="bfh-selectbox-option input-medium" data-option=""></span> <b
+						class="caret"></b>
+					</a>
+					<div class="bfh-selectbox-options">
+						<div role="listbox">
+							<ul role="option">
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
