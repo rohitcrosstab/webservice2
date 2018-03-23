@@ -675,15 +675,18 @@
 													item["basic"].currency);
 											console
 													.log(item["edu"][1].institution);
+											
 											for (var i = 0; i < item["edu"].length; i++) {
 j++;
 edu_arr.push(item["edu"][i]);
 												var text111 = $('<hr><div class="row"><div class="col-md-6"><label for="" style="text-align: left; float: left">Institute/College</label><select class="form-control" id="institutename"name="institutename" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Institute/College</option><option>Option1</option><option>Option2</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">PassingMonth and Year</label> <input id="passingyear" class="datepicker"placeholder="Fill in terms of MM-YYYY" style="width: 100%"name="passingyear" /></div></div>');
-												var text112 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Country</label><select class="form-control" name="countryedu" id="countryss"style="height: 40px; font-size: 13px;"></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">CourseType</label> <select class="form-control" name="course_type"id="course_type" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Course Type</option><option>option1</option><option>option1</option></select></div></div>');
+												var text112 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Country</label><select class="form-control" name="countryedu" id="countrysss"style="height: 40px; font-size: 13px;"></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">CourseType</label> <select class="form-control" name="course_type"id="course_type" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Course Type</option><option>option1</option><option>option1</option></select></div></div>');
 												var text113 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Degree/Qualification</label><select class="form-control" name="degree" id="degree"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Degree/qualification</option><option>option1</option><option>option2</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">Branch/Specialization</label><select class="form-control" name="branch" id="branch"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Branch/Specialization</option><option>option1</option><option>option1</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">FillYour % Marks / CGPA / Grade</label> <input type="text" name="score"id="score" placeholder="Percentage Marks / CGPA / Grade" /></div></div>');
 												var text114 = $('<input type="button" name="add_more" value="Add More"class="add_more"style="width: 100px; border-radius: 25px;color: white;" />');
-												$('#countryss').attr("id",
-														"countryss" + i);
+												
+												$('#countrysss').attr("id",
+														"countrysss" + i);
+												
 												$('#institutename').attr("id",
 														"institutename" + i);
 												$('#degree').attr("id",
@@ -706,12 +709,15 @@ edu_arr.push(item["edu"][i]);
 														item["edu"][i].branch);
 												$('#score' + i).val(
 														item["edu"][i].cgpa);
-												$('#countryss' + i)
+												$('#countrysss' + i)
 														.val(
 																item["edu"][i].country_edu);
+											
 												$("#add_edu").append(text111,
 														text112, text113,
 														text114);
+												populateCountries("countrysss" + i);
+												
 											}
 										}
 									});
