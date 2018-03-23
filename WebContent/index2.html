@@ -1,744 +1,1047 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <title>Jubilant</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
 
-    <link type="text/css" href="css/jplist-custom.css" rel="stylesheet" />
-    <link href="css/jplist.core.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/jplist.filter-toggle-bundle.min.css" rel="stylesheet"
-    type="text/css" />
-    <link href="css/jplist.pagination-bundle.min.css" rel="stylesheet"
-    type="text/css" />
-    <link href="css/jplist.history-bundle.min.css" rel="stylesheet"
-    type="text/css" />
-    <link href="css/jplist.textbox-filter.min.css" rel="stylesheet"
-    type="text/css" />
-    <link href="css/jplist.jquery-ui-bundle.min.css" rel="stylesheet"
-    type="text/css" />
-    <link href="css/jplist.preloader-control.min.css" rel="stylesheet"
-    type="text/css" />
-    <link href="css/jplist.views-control.min.css" rel="stylesheet"
-    type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body class="scroll-area" data-spy="scroll" data-offset="0">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jubilant Careers</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css">
+<link href="css/bootstrap-toggle.css" rel="stylesheet" type="text/css">
+<link href="css/dropzone.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+	type="text/javascript"></script>
+</head>
+<style>
+#ui-datepicker-div {
+	position: relative;
+}
 
-    <header>
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-              <img alt="Jubilant" src="./images/jubl_logo.png">
-            </a>
-          </div>
+.add_work, .add_more, .rem_more {
+	background: #3e4a3c;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 25px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+</style>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#section1">Home <span class="sr-only">(current)</span></a></li>
-              <li><a href="#section2">Global Opportunities</a></li>
-              <li><a href="#section3">Our Core Values</a></li>
-              <li><a href="#section4">Employee Speak</a></li>
-              <li><a href="#" data-toggle="modal" data-target="#myModal">Login/Register</a></li>
-            </ul>
-            <!--       <button type="button" class="btn btn-default btn-lg navbar-btn navbar-right" data-toggle="modal" data-target="#myModal">Login/Register</button> -->
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-    </header>
+<body
+	style="width: 100%; background-image: url(images/back.jpg); background-repeat: no-repeat; background-size: cover;">
+	<!-- 
+		<div class="row"
+			style="width: 100%; background: #ffffff; position: fixed; top: 0; margin-right: 0; margin-left: 0;">
+			<div class="col-md-12">
+				<img src="images/jubl_logo.png"
+					style="margin-top: 10px; margin-bottom: 10px;" height="60px">
 
-    <main>
-      <section id="section1">
-        <div class="editCarousel">
-          <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="./images/slide1.jpg" alt="" style="width: 100%" class="slider-background">
-                <div class="testimonials">
-                  <div class="testimonial_1">
-                    <img src="./images/raju.jpg" alt="Raju" class="img-responsive testi_slide_1">
-                    <h3 class="name_1">Dr. Raju Sunil Mistry, Chief Human Resources Officer</h3>
-                    <p class="said_1">"Jubilant Life Sciences is by far the best place to work for numerous reasons, first and foremost, the culture of the organization thrives on valuing employees through recognition programs and regular incentives."</p>
-                  </div>
-                  <div class="testimonial_2">
-                    <img src="./images/steve.jpg" alt="Steve" class="img-responsive testi_slide_2">
-                    <h3 class="name_2">Steve Hutchins, President - Drug Discovery Solutions</h3>
-                    <p class="said_2">"The internal work environment at Jubilant Life Sciences far exceeds any other corporation. Jubilant stresses the importance of family, if an employee needs time off for family emergencies and such, it will happen, you are encouraged to take care of your family."</p>
-                  </div>
-                </div>
-              </div>
+			</div>
+		</div> -->
+	<div class="row" style="margin-right: 0; margin-left: 0;">
+		<div class="col-md-12">
+			<form id="msform" method="post" enctype="multipart/form-Data">
+				<!-- progressbar -->
+				<ul id="progressbar">
 
-              <div class="item">
-                <img src="./images/slide3.jpg" alt="" style="width: 100%" class="slider-background">
-                <div class="container slider-slide-2">
-                  <div class="upper-write">
-                    <h3>Discover and do what you love.</h3>
-                  </div>
-                  <div class="lower-write">
-                    <h3>Come work with us.</h3>
-                  </div>
-                  <button class="blam" id="scrollToJobMap2">View Job Opportunities</button>
-                </div>
-              </div>
+					<li class="li2 active">Upload Resume</li>
+					<li class="li3">Biographical Details</li>
+					<li class="li4">Educational Details</li>
+					<li class="li5">Prior Work Experience Details</li>
 
-  <!--      <div class="item">
-          <img src="./images/slide3.jpg" alt="" style="width:100%;">
-        </div> -->
-      </div>
-          <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    </div>
-  </div>
-</section>
+				</ul>
+				<!-- fieldsets -->
 
-<section id="section2">
-  <h2>
-    We are looking for talented <span style="color: #fff;" class="typer" id="main"
-    data-words="managers.,engineers.,designers.,marketers."
-    data-colors="white" data-delay="100" data-deleteDelay="2000"></span>
-    <span class="cursor" data-owner="main" data-cursorDisplay="|"></span>
-  </h2>
-  <p>Select the location where you want to work.</p>
+				<fieldset>
+					<h2 class="fs-title">Upload Resume</h2>
+					<!-- <h3 class="fs-subtitle">Please upload your resume.</h3> -->
+					<button class="btn action-button" id="upload"
+						style="width: 150px; font-family:"Lato", Arial, Helvetica, sans-serif;">Click
+						here to Upload</button>
+					<div class="dropzone" id="dropzone">
+						<div id="dropzonePreview">
+							<!-- <span>Click here/Drop file to Upload Resume</span> -->
+						</div>
+					</div>
+					<input type="button" name="next" class="next action-button"
+						value="Next" />
+				</fieldset>
+				<fieldset class="outer">
+					<h2 class="fs-title">Create Account</h2>
+					<h3 class="fs-subtitle">Please enter your basic details for
+						account creation.</h3>
+					<div class=row>
+						<div class="form-group col-md-2">
+							<span class="req">*&nbsp;&nbsp;</span><label for="title"
+								style="text-align: left; float: left">Title</label> <select
+								class="form-control" name="title" id="title"
+								style="height: 40px; font-size: 13px;" required>
+								<option value="dr">Dr.</option>
+								<option value="ms">Ms.</option>
+								<option value="mr">Mr.</option>
+								<option value="mrs">Mrs.</option>
+							</select>
+						</div>
+						<div class="form-group col-md-5">
+							<span class="req">*&nbsp;&nbsp;</span><label for="fname"
+								style="text-align: left; float: left" class="control-label">First
+								Name</label> <input type="text" class="form-control" name="fname"
+								id="fname" placeholder="Enter Your First Name"
+								pattern="^[a-zA-Z\s]{3,}$" required />
+							<div class="help-block with-errors"></div>
+						</div>
 
-  <div class="container-map">
-    <div class="map"></div>
-  </div>
-</section>
+						<div class="form-group col-md-5">
+							<span class="req">*&nbsp;&nbsp;</span><label for="lname"
+								style="text-align: left; float: left" class="control-label">Last
+								Name</label> <input type="text" class="form-control" name="lname"
+								id="lname" placeholder="Enter Your Last Name"
+								pattern="^[a-zA-Z\s]{1,}$" required />
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
 
-<section id="section2description" style="display: none;">
-  <div class="job">
-    <video autoplay muted loop id="myVideo">
-      <source src="./images/banner.mp4" type="video/mp4">
-    </video>
-      <div style="padding: 2.5rem 0 4.5rem 0;">
-        <div class="jobBox">
-          <div id="demo" class="jplist">
-            <a id="scrollToJobMap3" href="javascript:void(0)"
-            style="font-size: 22px; cursor: pointer;"> Go to map &nbsp;<i
-            class="fa fa-angle-up"></i>
-          </a>
-          <div class="jplist-panel panel-top" style="">
-              <div class="jplist-drop-down" data-control-type="items-per-page-drop-down"
-              data-control-name="paging" data-control-action="paging">
-                <ul style="color: #000; width: 100%;">
-                  <li><span data-number="3" data-default="true"> 3
-                  per page </span></li>
-                  <li><span data-number="5"> 5 per page </span></li>
-                  <li><span data-number="10"> 10 per page </span></li>
-                  <li><span data-number="all"> View All </span></li>
-                </ul>
-              </div>
+					<div class="form-group row">
+						<div class="col-md-12">
+							<span class="req">*&nbsp;&nbsp;</span><label for="addr"
+								style="text-align: left; float: left" class="control-label">Current
+								Address</label>
+						</div>
 
-              <div class="text-filter-box">
-                <i class="fa fa-search  jplist-icon"
-                style="border-bottom-left-radius: 15px; border-top-left-radius: 15px; line-height: 28px;"></i>
-                  <!--[if lt IE 10]>
-                  <div class="jplist-label">Filter by Title:</div>
-                <![endif]-->
-                <input data-path=".title" type="text" value=""
-                placeholder="Filter Job Title" data-control-type="textbox"
-                data-control-name="title-filter" data-control-action="filter" />
-              </div>
+						<div class="col-md-6">
+							<input type="text" class="form-control" name="addr1" id="addr1"
+								placeholder="Address Line 1" required />
+							<div class="help-block with-errors"></div>
+						</div>
+						<div class="col-md-6">
+							<input type="text" name="addr2" id="addr2"
+								placeholder="Address Line 2" />
+						</div>
+						<div class="col-md-6">
+							<input type="text" name="addr3" id="addr3"
+								placeholder="Address Line 3" />
+						</div>
+						<div class="col-md-6">
+							<input type="text" name="addr4" id="addr4"
+								placeholder="Address Line 4" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Country</label>
+							<select class="form-control" id="country" name="country"
+								style="height: 40px; font-size: 13px;"></select>
+						</div>
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">State</label>
+							<select class="form-control" id="state" name="state"
+								style="height: 40px; font-size: 13px;"></select>
+						</div>
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">City</label>
+							<select class="form-control" id="city" name="city"
+								style="height: 40px; font-size: 13px;"><option value="">Specify
+									Your City</option>
+								<option value="1">option1</option>
+								<option value="2">option2</option></select>
+						</div>
+					</div>
 
-              <div class="text-filter-box">
-                <i class="fa fa-search  jplist-icon"
-                style="border-bottom-left-radius: 15px; border-top-left-radius: 15px; line-height: 28px;"></i>
-                  <!--[if lt IE 10]>
-                  <div class="jplist-label">Filter by Description:</div>
-                <![endif]-->
-                <input data-path=".desc" type="text" value=""
-                placeholder="Filter Job Description" data-control-type="textbox" data-control-name="desc-filter" data-control-action="filter" />
-              </div>
-
-              <div class="jplist-drop-down"
-                data-control-type="filter-drop-down"
-                data-control-name="location-filter"
-                data-control-action="filter">
-                <ul id="locationUL" style="color: #000; width: 100%;">
-                  <li><span data-path="default">Filter by Location</span></li>
-                  <li><span data-path=".Banglore">Banglore</span></li>
-                  <li><span data-path=".Mumbai">Mumbai</span></li>
-                  <li><span data-path=".Nira">Nira</span></li>
-                  <li><span data-path=".Noida">Noida</span></li>
-                </ul>
-              </div>
+					<div class="row">
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Postal/
+								Zip Code</label> <input type="text" name="postalcode" id="postalcode"
+								placeholder="Postal/ Zip code of Your City" />
+						</div>
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Country
+								Code</label> <input type="text" name="countrycode" id="countrycode"
+								class="countrycode" placeholder="Your Selected Country Code" />
+						</div>
+					</div>
 
 
-              <div class="jplist-drop-down"
-              data-control-type="filter-drop-down"
-              data-control-name="function-filter"
-              data-control-action="filter">
-                <ul id="functionUL" style="color: #000; width: 100%;">
-                  <li><span data-path="default">Filter by Function</span></li>
-                  <li><span data-path=".Administration">Administration</span></li>
-                  <li><span data-path=".Finance_n_Accounts">Finance
-                  &amp; Accounts</span></li>
-                  <li><span data-path=".Human_Resources">Human
-                  Resources</span></li>
-                  <li><span data-path=".Engineering">Engineering</span></li>
-                  <li><span data-path=".Legal">Legal</span></li>
-                  <li><span data-path=".Supply_Chain">Supply Chain</span></li>
-                </ul>
-              </div>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<span class="req">*&nbsp;&nbsp;</span><label for="mobilenumber"
+								style="text-align: left; float: left" class="control-label">Mobile</label>
+							<input type="tel" class="form-control" name="mobilenumber"
+								id="mobilenumber" placeholder="Enter Your Mobile Number"
+								pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+								required />
+							<div class="help-block with-errors"></div>
+						</div>
 
-              <div class="jplist-drop-down"
-              data-control-type="filter-drop-down"
-              data-control-name="business-filter"
-              data-control-action="filter">
-                <ul id="businessUL" style="color: #000; width: 100;">
-                  <li><span data-path="default">Filter by Business</span></li>
-                  <li><span data-path=".Allergy">Allergy</span></li>
-                  <li><span data-path=".Corporate">Corporate</span></li>
-                  <li><span data-path=".Drug_Discovery">Drug
-                  Discovery</span></li>
-                  <li><span data-path=".Generics">Generics</span></li>
-                </ul>
-              </div>
+						<div class="form-group col-md-6">
+							<span class="req">*&nbsp;&nbsp;</span><label for="emailid"
+								style="text-align: left; float: left" class="control-label">Email
+								ID</label> <input type="email" class="form-control" name="emailid"
+								id="emailid" placeholder="Enter Your Email ID"
+								data-error="Sorry, that email address is invalid" required />
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
 
-            <div class="jplist-pagination" data-control-type="pagination" data-control-name="paging" data-control-action="paging"></div>
-          </div>
+					<div class="row">
+						<div class="form-group col-md-6 col-lg-4">
+							<span class="req">*&nbsp;&nbsp;</span><label for="workyear"
+								style="text-align: left; float: left" class="control-label">Total
+								Work Experience-Years</label> <select class="form-control"
+								id="workexyears" name="workexyears"
+								style="height: 40px; font-size: 13px;">
+								<option value="">Your Total Work Experience in Years</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7-10</option>
+								<option>10+</option>
+							</select>
+							<div class="help-block with-errors"></div>
+						</div>
+						<div class="form-group col-md-6 col-lg-4">
+							<span class="req">*&nbsp;&nbsp;</span><label for="workmonth"
+								style="text-align: left; float: left" class="control-label">Total
+								Work Experience-Months</label> <select class="form-control"
+								id="workexmonths" name="workexmonths"
+								style="height: 40px; font-size: 13px;">
+								<option value="">Your Total Work Experience in Months</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+							</select>
+						</div>
 
-      <!-- data -->
-      <div class="text-shadow" style="padding-top: 20px;">
-        <table class="demo-tbl" style="border: 2px solid #eeeeee;">
+					</div>
 
-          <!-- one more panel section -->
-          <thead class="jplist-panel">
-
-            <tr data-control-type="sort-buttons-group"
-            data-control-name="header-sort-buttons"
-            data-control-action="sort" data-mode="single"
-            data-datetime-format="{month}/{day}/{year}">
-
-                    <!-- <th width="10%"><span class="header"
-                        style="cursor: pointer">Job Code</span> --> <!--  <span
-                    class="sort-btns"
-                    style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
-                      <i class="fa fa-caret-up" data-path=".jobcode"
-                      data-type="text" data-order="asc"
-                      title="Sort by Job Code Asc"></i> <i class="fa fa-caret-down"
-                      data-path=".jobcode" data-type="text" data-order="desc"
-                      title="Sort by Job Code Desc"></i>
-                    </span> --></th>
-
-                    <th width="15%"><span class="header"
-                        style="cursor: pointer">Job Title</span> <!--  <span
-                    class="sort-btns"
-                    style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
-                      <i class="fa fa-caret-up" data-path=".title" data-type="text"
-                      data-order="asc" title="Sort by Title Asc"></i> <i
-                      class="fa fa-caret-down" data-path=".title" data-type="text"
-                      data-order="desc" title="Sort by Title Desc"></i>
-                    </span> --></th>
-
-                    <th width="25%"><span class="header"
-                        style="cursor: pointer">Job Description</span> <!--  <span
-                    class="sort-btns"
-                    style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
-                      <i class="fa fa-caret-up" data-path=".desc" data-type="text"
-                      data-order="asc" title="Sort by Description Asc"></i> <i
-                      class="fa fa-caret-down" data-path=".desc" data-type="text"
-                      data-order="desc" title="Sort by Description Desc"></i>
-                    </span> --></th>
-
-                    <th width="10%"><span class="header"
-                        style="cursor: pointer">Location</span> <!--  <span
-                    class="sort-btns"
-                    style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
-                      <i class="fa fa-caret-up" data-path=".location"
-                      data-type="text" data-order="asc"
-                      title="Sort by Location Asc"></i> <i class="fa fa-caret-down"
-                      data-path=".location" data-type="text" data-order="desc"
-                      title="Sort by Location Desc"></i>
-                    </span> --></th>
+					<div class="row">
+						<div class="col-md-6 col-lg-4">
+							<label for="" style="text-align: left; float: left"
+								class="control-label">Masters/Post Graduation</label> <select
+								class="form-control" id="mgrad" name="mgrad"
+								style="height: 40px; font-size: 13px;">
 
 
-                    <!-- <th width="20%"><span class="header"
-                        style="cursor: pointer">Function</span> --> <!--  <span
-                    class="sort-btns"
-                    style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
-                      <i class="fa fa-caret-up" data-path=".function"
-                      data-type="text" data-order="asc"
-                      title="Sort by Function Asc"></i> <i class="fa fa-caret-down"
-                      data-path=".function" data-type="text" data-order="desc"
-                      title="Sort by Function Desc"></i>
-                    </span> --></th>
-
-                    <th width="10%"><span class="header"
-                        style="cursor: pointer">Business</span> <!--  <span
-                    class="sort-btns"
-                    style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
-                      <i class="fa fa-caret-up" data-path=".business"
-                      data-type="text" data-order="asc"
-                      title="Sort by Business Asc"></i> <i class="fa fa-caret-down"
-                      data-path=".business" data-type="text" data-order="desc"
-                      title="Sort by Business Desc"></i>
-                    </span> --></th>
+							</select>
+						</div>
+						<div class="form-group col-md-6 col-lg-4">
+							<span class="req">*&nbsp;&nbsp;</span><label for="graduation"
+								style="text-align: left; float: left" class="control-label">Bachelors/Graduation</label>
+							<select class="form-control" id="bgrad" name="bgrad"
+								style="height: 40px; font-size: 13px;">
 
 
-                    <th width="8%"><span class="header">Apply</span></th>
-                  </tr>
-                </thead>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6 col-lg-4">
+							<span class="req">*&nbsp;&nbsp;</span><label for="industry"
+								style="text-align: left; float: left" class="control-label">Current
+								Industry</label> <select class="form-control" id="industry"
+								name="industry" style="height: 40px; font-size: 13px;">
 
-                <!-- data container -->
-                <tbody id="jobpostingsBody">
-                </tbody>
-              </table>
-            </div>
-            <!-- end of data -->
+							</select>
+						</div>
+						<div class="form-group col-md-6 col-lg-4">
+							<span class="req">*&nbsp;&nbsp;</span><label for=""
+								style="text-align: left; float: left" class="control-label">Functional
+								Area</label> <select class="form-control" id="function" name="funct"
+								style="height: 40px; font-size: 13px;">
 
-            <div class="jplist-no-results text-shadow align-center"
-            style="padding-top: 60px; color: #000;">
-            <p>
-              <i class="fa fa-warning"></i>&nbsp;&nbsp;No job-postings found.
-            </p>
-          </div>
+							</select>
+						</div>
+					</div>
 
-          <!-- panel -->
-          <div class="jplist-panel panel-bottom">
+					<input type="button" name="previous"
+						class="previous action-button-previous" value="Previous" /> <input
+						type="button" name="next" class="next action-button" value="Next" />
 
-            <!-- items per page dropdown -->
-            <div class="jplist-drop-down"
-            data-control-type="items-per-page-drop-down"
-            data-control-name="paging" data-control-action="paging"
-            data-control-animate-to-top="true">
+				</fieldset>
 
-            <ul style="color: #000; width: 100%;">
-              <li><span data-number="3" data-default="true"> 3
-              per page </span></li>
-              <li><span data-number="5"> 5 per page </span></li>
-              <li><span data-number="10"> 10 per page </span></li>
-              <li><span data-number="all"> View All </span></li>
-            </ul>
-          </div>
-          <!-- panel end -->
+				<fieldset class="outer" id="add_edu">
+					<h2 class="fs-title">Educational Details</h2>
+					<h3 class="fs-subtitle">Fill you educational details.</h3>
 
-          <!-- pagination results -->
-          <div class="jplist-label" data-type="{start} - {end} of {all}"
-          data-control-type="pagination-info" data-control-name="paging"
-          data-control-action="paging"
-          style="font-size: 14px; font-weight: bold; border-radius: 30px;"></div>
+					<div class="row">
+						<div class='col-md-6'>
+							<label for="" style="text-align: left; float: left">Institute/College</label>
+							<select class="form-control" id="institutename"
+								name="institutename" style="height: 40px; font-size: 13px;"><option
+									value="">Specify Your Institute/College</option>
+								<option>Option1</option>
+								<option>Option2</option></select>
+						</div>
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Passing
+								Month and Year</label> <input id="passingyear" class="datepicker"
+								placeholder="Fill in terms of MM-YYYY" style="width: 100%"
+								name="passingyear" />
+						</div>
 
-          <!-- pagination -->
-          <div class="jplist-pagination" data-control-type="pagination"
-          data-control-name="paging" data-control-action="paging"
-          data-control-animate-to-top="true"></div>
+					</div>
 
-        </div>
-      </div>
-      <!-- end of demo -->
-            <!-- 
-            <a href="javascript:void(0)" class="button big wide scrolly"
-            style="margin-top: 40px;"><i class="fa fa-search"></i>&nbsp;Search</a> -->
-          </div>
-        </div>
-      </div>
-    </section>
+					<div class="row">
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Country</label>
+							<select class="form-control countrys" name="countryedu"
+								id="countrys" style="height: 40px; font-size: 13px;"></select>
 
-    <section id="section3">
-      <div class="banner">
-        <h2>Our Core Values</h2>
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12 values">
-            <div class="content">
-              <a href="#!">
-                <div class="content-overlay" style="background-color: #42b078;"></div>
-                <img class="content-image" src="./images/1.jpg">
-                <div class="value-inner"><h2>Inspire <br><span>Confidence</span></h2><hr>
-                  <div class="visible-xs"><p><br>We will carefully select, train and develop our people to be creative and empower them to take decisions, so that they respond to all stakeholders with agility, confidence and teamwork.</p></div>
-                </div>
-                <div class="content-details fadeIn-right">
-                  <p>We will carefully select, train and develop our people to be creative and empower them to take decisions, so that they respond to all stakeholders with agility, confidence and teamwork.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 values">
-            <div class="content">
-              <a href="#!">
-                <div class="content-overlay" style="background-color: #557494;"></div>
-                <img class="content-image" src="./images/2.jpg">
-                <div class="value-inner"><h2>Always <br><span>Stretch</span></h2><hr>
-                  <div class="visible-xs"><p><br>We stretch ourselves to be cost effective and efficient in all aspects of our operations and focus on flawless delivery to create and provide the best value to our stakeholders.</p></div>
-                </div>
-                <div class="content-details fadeIn-right">
-                  <p>We stretch ourselves to be cost effective and efficient in all aspects of our operations and focus on flawless delivery to create and provide the best value to our stakeholders.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 values">
-            <div class="content">
-              <a href="#!">
-                <div class="content-overlay" style="background-color: #81841c;"></div>
-                <img class="content-image" src="./images/3.jpg">
-                <div class="value-inner"><h2>Nurture <br><span>Innovation</span></h2><hr>
-                  <div class="visible-xs"><p><br>By sharing our knowledge and learning from each other and from the markets we serve, we will continue to surprise our stakeholders with innovative solutions.</p></div>
-                </div>
-                <div class="content-details fadeIn-right">
-                  <p>By sharing our knowledge and learning from each other and from the markets we serve, we will continue to surprise our stakeholders with innovative solutions.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 values">
-            <div class="content">
-              <a href="#!">
-                <div class="content-overlay" style="background-color: #4a266b;"></div>
-                <img class="content-image" src="./images/4.jpg">
-                <div class="value-inner"><h2>Excellent <br><span>Quality</span></h2><hr>
-                  <div class="visible-xs"><p><br>With utmost care for the environment and safety, we will always strive to excel in the quality of our processes, our products and our services.</p></div>
-                </div>
-                <div class="content-details fadeIn-right">
-                  <p>With utmost care for the environment and safety, we will always strive to excel in the quality of our processes, our products and our services.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+						</div>
 
 
-    <section id="section4">
-      <div class="demo">
-        <div class="emp-head">
-          <h2>Employee Speak</h2>
-        </div>
-        <div class="container">
-          <div class="row emp">
-            <div class="col-md-12">
-              <div id="testimonial-slider" class="owl-carousel">
-                <div class="testimonial">
-                  <span class="icon fa fa-quote-left icon"></span>
-                  <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.
-                  </p>
-                  <div class="testimonial-content">
-                    <div class="pic"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/tomaslau/128.jpg" alt=""></div>
-                    <h3 class="title">williamson</h3>
-                    <span class="post">SENIOR PRACTICE MANAGER</span>
-                  </div>
-                </div>
-                <div class="testimonial">
-                  <span class="icon fa fa-quote-left"></span>
-                  <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.
-                  </p>
-                  <div class="testimonial-content">
-                    <div class="pic"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg" alt=""></div>
-                    <h3 class="title">Kristina</h3>
-                    <span class="post">DEPUTY MANAGER, HR</span>
-                  </div>
-                </div>
-                <div class="testimonial">
-                  <span class="icon fa fa-quote-left"></span>
-                  <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.
-                  </p>
-                  <div class="testimonial-content">
-                    <div class="pic"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/celikovic/128.jpg" alt=""></div>
-                    <h3 class="title">Steve Thomas</h3>
-                    <span class="post">LEAD CONSULTANT</span>
-                  </div>
-                </div>
-                <div class="testimonial">
-                  <span class="icon fa fa-quote-left"></span>
-                  <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.
-                  </p>
-                  <div class="testimonial-content">
-                    <div class="pic"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/ok/128.jpg" alt=""></div>
-                    <h3 class="title">williamson</h3>
-                    <span class="post">ASSOCIATE GENERAL MANAGER</span>
-                  </div>
-                </div>
-                <div class="testimonial">
-                  <span class="icon fa fa-quote-left"></span>
-                  <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.
-                  </p>
-                  <div class="testimonial-content">
-                    <div class="pic"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/sindresorhus/128.jpg" alt=""></div>
-                    <h3 class="title">Kristina</h3>
-                    <span class="post">MANAGER</span>
-                  </div>
-                </div>
-                <div class="testimonial">
-                  <span class="icon fa fa-quote-left"></span>
-                  <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.
-                  </p>
-                  <div class="testimonial-content">
-                    <div class="pic"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/geeftvorm/128.jpg" alt=""></div>
-                    <h3 class="title">Steve Thomas</h3>
-                    <span class="post">HR MANAGER</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Course
+								Type</label> <select class="form-control" name="course_type"
+								id="course_type" style="height: 40px; font-size: 13px;"><option
+									value="">Specify Your Course Type</option>
+								<option>Part Time</option>
+								<option>Full Time</option>
+								<option>Correspondence</option></select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Degree/Qualification</label>
+							<select class="form-control" name="degree" id="degree"
+								style="height: 40px; font-size: 13px;"><option value="">Specify
+									Your Degree/qualification</option>
+								<option>High School</option>
+								<option>Intermediate</option>
+								<option>Graduation</option>
+								<option>Post Graduation</option>
+								<option>Doctorate</option></select>
+
+						</div>
+
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Branch/Specialization</label>
+							<select class="form-control" name="branch" id="branch"
+								style="height: 40px; font-size: 13px;"><option value="">Specify
+									Your Branch/Specialization</option>
+								<option>Technical Stream</option>
+								<option>Non Technical Stream</option></select>
+						</div>
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Fill
+								Your % Marks / CGPA / Grade</label> <input type="text" name="score"
+								id="score" placeholder="Percentage Marks / CGPA / Grade" />
+						</div>
+					</div>
+					<input type="button" name="previous"
+						class="previous action-button-previous" value="Previous" /> <input
+						type="button" name="next" class="next action-button" value="Next" />
+					<input type="button" name="add_more" value="Add More"
+						class="add_more"
+						style="width: 100px; border-radius: 25px; color: white;" />
+
+				</fieldset>
+				<fieldset class="outer" id="addwork">
+					<h2 class="fs-title">Prior Work Experience Details</h2>
+					<h3 class="fs-subtitle">Fill your prior work experience
+						details in reverse order.</h3>
+					<div class="row">
+						<div class="col-md-6">
+							<span class="req">*&nbsp;&nbsp;</span><label for="current"
+								style="text-align: left; float: left">Last/Current
+								Organization</label> <input type="text" id="current" name="current"
+								placeholder="Specify Your Last/Current Orgnization" required="" />
+						</div>
+
+						<div class="col-md-6">
+							<label for="" style="text-align: left; float: left">Current/Last
+								Job title @ time of leaving the organization</label> <input type="text"
+								name="jobtitle" id="jobtitle"
+								placeholder="Specify Your Job title @ time of leaving organization" />
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Start
+								Date</label> <input id="start_date" placeholder="MM-YYYY"
+								name="start_date" class="datepicker" style="width: 100%" />
+						</div>
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">End
+								Date</label> <input id="end_date" placeholder="MM-YYYY" name="end_date"
+								class="datepicker" style="width: 100%" />
+						</div>
+					</div>
 
 
-    <!-- Start Login/Register Popup -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-          ×</button>
-          <h4 class="modal-title" id="myModalLabel">
-          Login/Register</h4>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-12" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
-                <li><a href="#Registration" data-toggle="tab">Registration</a></li>
-                <li><a href="#Consultant" data-toggle="tab">Partner Login</a></li>
-              </ul>
-              <!-- Tab panes -->
-              <div class="tab-content">
-                <div class="tab-pane active" id="Login">
-                  <form role="form" class="form-horizontal">
-                    <div class="form-group">
-                      <label for="email" class="col-sm-3 control-label">
-                      Email</label>
-                      <div class="col-sm-9">
-                        <input type="email" class="form-control" id="email1" placeholder="Email" />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1" class="col-sm-3 control-label">
-                      Password</label>
-                      <div class="col-sm-9">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-2">
-                      </div>
-                      <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary btn-sm">
-                        Submit</button>
-                        <a href="javascript:;">Forgot your password?</a>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="tab-pane" id="Registration">
-                  <form role="form" class="form-horizontal">
-                   
-                    
-                    <div class="form-group">
-                      <label for="email" class="col-sm-3 control-label">
-                      Email</label>
-                      <div class="col-sm-9">
-                        <input type="email" class="form-control" id="email" placeholder="Email" />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="password" class="col-sm-3 control-label">
-                      Password</label>
-                      <div class="col-sm-9">
-                        <input type="password" class="form-control" id="password" placeholder="Password" />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="password" class="col-sm-3 control-label">
-                      Confirm Password</label>
-                      <div class="col-sm-9">
-                        <input type="password" class="form-control" id="password" placeholder="Confirm Password" />
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-2">
-                      </div>
-                      <div class="col-sm-10">
-                        <button type="button" class="btn btn-primary btn-sm">
-                        Save &amp; Continue</button>
-                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
-                        Cancel</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="tab-pane" id="Consultant-Login">
-                  <form role="form" class="form-horizontal">
-                    <div class="form-group">
-                      <label for="email" class="col-sm-3 control-label">
-                      Email</label>
-                      <div class="col-sm-9">
-                        <input type="email" class="form-control" id="email1" placeholder="Email" />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1" class="col-sm-3 control-label">
-                      Password</label>
-                      <div class="col-sm-9">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-2">
-                      </div>
-                      <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary btn-sm">
-                        Submit</button>
-                        <a href="javascript:;">Forgot your password?</a>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Login/Register Popup -->
-   <button id="myBtn" title="Go to top"style="border:2px solid white;"><i class="fa fa-angle-double-up" ></i></button> 
-</main>
+					<div class="row">
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Last
+								drawn CTC/Salary</label> <input type="text" name="ctc" id="ctc"
+								placeholder="Last drawn CTC/Salary which you get in previous organization" />
+						</div>
 
-<footer id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-xs-12">
-        <h3>Jubilant Life Sciences</h3>
-        <p id="footer-para">This is just a demonstration template for the careers page of Jubilant Life Sciences.</p>
-        <div class='demopadding clearfix'>
-          <div class='icon social fb'><i class='fa fa-facebook'></i></div>
-          <div class='icon social tw'><i class='fa fa-twitter'></i></div>
-          <div class='icon social in'><i class='fa fa-linkedin'></i></div>
-        </div>
-<!--         <div class="social-linkedin">
-          <a href="https://in.linkedin.com/company/jubilant-organosys-ltd"><img src="./images/download.png" style="border-radius:7px"></a>
-        </div> -->
-      </div>
-      <div class="col-md-2 col-xs-6 footer-list">
-        <h4>Careers</h4>
-        <ul>
-          <li><a href="#!">News Room</a></li>
-<!--           <li><a href="#!">Download</a></li> -->
-          <li><a href="http://www.jubl.com/about-us/locations-worldwide">Jubilant World</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2 col-xs-6 footer-list">
-        <h4>About</h4>
-        <ul>
-          <li><a href="http://www.jubl.com/about-us/company-profile">Company Profile</a></li>
-          <li><a href="http://www.jubl.com/about-us/board-of-directors">Management</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4 col-xs-12 contact-data">
-        <h3>Contact Us</h3>
-        <p id="footer-para">Please feel free to contact us.</p>
-        <div class="hidden-md">
-          <p style="color: #ffffff;">
-            <a style="color: #ffffff;" class="major">+91-120-4361000</a>
-          </p>
-        </div>
-        <div id="bg"></div>
-        <div class="contact hidden-xs hidden-sm">
-          <div class="envelope">
-            <div class="top">
-              <div class="outer"><div class="inner"></div></div>
-            </div>
-            <div class="bottom"></div>
-            <div class="left"></div>
-            <div class="right"></div>
-            <div class="cover"></div>
-            <div class="paper">
-              <a class="call" href="tel:+91-120-4361000"><div class="i"></div>+91-120-4361000</a>
-              <a class="mail" href="mailto:support@jubl.com"><div class="i"></div>support@jubl.com</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--Copyright-->
-  <div class="footer-copyright">
-    <div class="container-fluid">
-    © 2018 Copyright: Jubilant Life Sciences. All rights reserved. </a>
+						<div class="col-md-4">
+							<label for="" style="text-align: left; float: left">Currency</label>
+							<input type="text" name="curr" id="curr"
+								placeholder="Specify the currency of your salary" />
+						</div>
 
-  </div>
-</div>
-<!--/.Copyright-->
-</footer>
+					</div>
+					<!-- Success message -->
+					<div class="alert alert-success" role="alert" id="success_message">
+						Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for
+						contacting us, we will get back to you shortly.
+					</div>
+
+					<input type="button" name="previous"
+						class="previous action-button-previous" value="Previous" /> <input
+						type="submit" name="submit" class="next action-button"
+						value="Submit" /> <input type="button" name="add_more"
+						value="Add More" class="add_work"
+						style="width: 100px; border-radius: 25px; color: white;" />
+
+				</fieldset>
+
+			</form>
+		</div>
+	</div>
+	<div class="row down" style="">
+		<div class="col-md-12" style="" align="center">
+			<i class="fa fa-save"></i><input class="bottom-1" style=""
+				type="submit" id="draft" value="Save As Draft">
+
+
+			<button class="bottom-2" style="">
+				<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Quit
+			</button>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/dropzone.js"></script>
+	<script src="js/countries.js"></script>
+	<script src="js/jquery.floatinglabel.js"></script>
+	<script src="js/kendo.all.min.js"></script>
+	<script type="text/javascript">
+		$('#form').validator().on('submit', function(e) {
+			if (e.isDefaultPrevented()) {
+				// handle the invalid form...
+			} else {
+				// everything looks good!
+			}
+		})
+	</script>
+	<script>
+		//jQuery time
+
+		var current_fs, next_fs, previous_fs; //fieldsets
+		var left, opacity, scale; //fieldset properties which we will animate
+		var animating; //flag to prevent quick multi-click glitches
+
+		//$.backstretch("images/back.jpg");
+
+		$(".next").click(
+				function() {
+					if (animating)
+						return false;
+					animating = true;
+
+					current_fs = $(this).parent();
+					next_fs = $(this).parent().next();
+
+					//activate next step on progressbar using the index of next_fs
+					$("#progressbar li").eq($("fieldset").index(next_fs))
+							.addClass("active");
+
+					//show the next fieldset
+					next_fs.show();
+					//hide the current fieldset with style
+					current_fs.animate({
+						opacity : 0
+					}, {
+						step : function(now, mx) {
+							//as the opacity of current_fs reduces to 0 - stored in "now"
+							//1. scale current_fs down to 80%
+							scale = 1 - (1 - now) * 0.2;
+							//2. bring next_fs from the right(50%)
+							left = (now * 50) + "%";
+							//3. increase opacity of next_fs to 1 as it moves in
+							opacity = 1 - now;
+							current_fs.css({
+								'transform' : 'scale(' + scale + ')',
+								'position' : 'absolute'
+							});
+							next_fs.css({
+								'left' : left,
+								'opacity' : opacity
+							});
+						},
+						duration : 800,
+						complete : function() {
+							current_fs.hide();
+							animating = false;
+						},
+						//this comes from the custom easing plugin
+						easing : 'easeInOutBack'
+					});
+				});
+
+		$(".previous").click(
+				function() {
+					if (animating)
+						return false;
+					animating = true;
+
+					current_fs = $(this).parent();
+					previous_fs = $(this).parent().prev();
+
+					//de-activate current step on progressbar
+					$("#progressbar li").eq($("fieldset").index(current_fs))
+							.removeClass("active");
+
+					//show the previous fieldset
+					previous_fs.show();
+					//hide the current fieldset with style
+					current_fs.animate({
+						opacity : 0
+					}, {
+						step : function(now, mx) {
+							//as the opacity of current_fs reduces to 0 - stored in "now"
+							//1. scale previous_fs from 80% to 100%
+							scale = 0.8 + (1 - now) * 0.2;
+							//2. take current_fs to the right(50%) - from 0%
+							left = ((1 - now) * 50) + "%";
+							//3. increase opacity of previous_fs to 1 as it moves in
+							opacity = 1 - now;
+							current_fs.css({
+								'left' : left
+							});
+							previous_fs.css({
+								'transform' : 'scale(' + scale + ')',
+								'opacity' : opacity
+							});
+						},
+						duration : 800,
+						complete : function() {
+							current_fs.hide();
+							animating = false;
+						},
+						//this comes from the custom easing plugin
+						easing : 'easeInOutBack'
+					});
+				});
+
+		$(".submit").click(function() {
+			return false;
+		})
+
+		var myDropzoneOptions = {
+			url : "#",
+			acceptedFiles : ".doc,.pdf,.json,.jpg",
+			maxFiles : "1",
+			clickable : "#upload",
+			previewsContainer : '#dropzonePreview',
+			uploadMultiple : false,
+			dictDefaultMessage : "Click/Drop file to upload Resume",
+			addRemoveLinks : true,
+
+		};
+
+		var myDropzone = new Dropzone("#dropzonePreview", myDropzoneOptions);
+		var myDropzoneOptions2 = {
+			url : "#",
+			acceptedFiles : ".doc,.pdf,.json,.jpg",
+			maxFiles : "1",
+			clickable : "#dropzonePreview",
+			previewsContainer : '#dropzonePreview',
+			uploadMultiple : false,
+			dictDefaultMessage : "Click/Drop file to upload Resume",
+			addRemoveLinks : true,
+
+		};
+		var myDropzone = new Dropzone("#dropzone", myDropzoneOptions2);
+	</script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			$('.datepicker').datepicker(
+					{
+						changeMonth : true,
+						changeYear : true,
+						showButtonPanel : true,
+						dateFormat : 'MM yy',
+						onClose : function(dateText, inst) {
+							$(this).datepicker(
+									'setDate',
+									new Date(inst.selectedYear,
+											inst.selectedMonth, 1));
+						}
+					});
+		});
+
+		populateCountries("country", "state", "countrycode")
+		populateCountries("countrys")
+	</script>
+	<script type="text/javascript">
+		var j = 0;
+		var edu_arr = [];
+		var edu_obj = {};
+		$(document)
+				.ready(
+						function() {
+							$
+									.ajax({
+										type : "GET",
+
+										url : "http://localhost:8008/xmlparser/rest/test/fulljson",
+
+										success : function(jsonData) {
+											console.log(jsonData);
+											var item = JSON.parse(jsonData);
+											console.log(item);
+											$('#title').val(
+													item["basic"].name_type);
+											$('#fname').val(
+													item["basic"].first_name);
+											$('#lname').val(
+													item["basic"].last_name);
+											$('#addr1')
+													.val(item["basic"].addr1);
+											$('#addr2')
+													.val(item["basic"].addr2);
+											$('#addr3')
+													.val(item["basic"].addr3);
+											$('#addr4')
+													.val(item["basic"].addr4);
+											$('#country').val(
+													item["basic"].country);
+											$('#state').val(item.state);
+											$('#city').val(item["basic"].city);
+											$('#postalcode').val(
+													item["basic"].postal);
+											$('#countrycode').val(
+													item["basic"].country_code);
+											$('#mobilenumber').val(
+													item["basic"].phone);
+											$('#emailid').val(
+													item["basic"].email);
+											$('#workexyears').val(
+													item["basic"].exp_year);
+											$('#workexmonths').val(
+													item["basic"].exp_month);
+											$('#mgrad').val(
+													item["basic"].post_grad);
+											$('#bgrad').val(item["basic"].grad);
+											$('#industry').val(
+													item["basic"].industry);
+											$('#function')
+													.val(
+															item["basic"].functional_area);
+											$('#passingyear').val(
+													item["basic"].passing_year);
+											$('#current').val(
+													item["basic"].company);
+											$('#jobtitle').val(
+													item["basic"].jobtitle);
+											$('#start_date').val(
+													item["basic"].start_date);
+											$('#end_date').val(
+													item["basic"].end_date);
+											$('#ctc').val(item["basic"].salary);
+											$('#curr').val(
+													item["basic"].currency);
+											console
+													.log(item["edu"][1].institution);
+											for (var i = 0; i < item["edu"].length; i++) {
+j++;
+edu_arr.push(item["edu"][i]);
+												var text111 = $('<hr><div class="row"><div class="col-md-6"><label for="" style="text-align: left; float: left">Institute/College</label><select class="form-control" id="institutename"name="institutename" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Institute/College</option><option>Option1</option><option>Option2</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">PassingMonth and Year</label> <input id="passingyear" class="datepicker"placeholder="Fill in terms of MM-YYYY" style="width: 100%"name="passingyear" /></div></div>');
+												var text112 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Country</label><select class="form-control" name="countryedu" id="countryss"style="height: 40px; font-size: 13px;"></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">CourseType</label> <select class="form-control" name="course_type"id="course_type" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Course Type</option><option>option1</option><option>option1</option></select></div></div>');
+												var text113 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Degree/Qualification</label><select class="form-control" name="degree" id="degree"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Degree/qualification</option><option>option1</option><option>option2</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">Branch/Specialization</label><select class="form-control" name="branch" id="branch"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Branch/Specialization</option><option>option1</option><option>option1</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">FillYour % Marks / CGPA / Grade</label> <input type="text" name="score"id="score" placeholder="Percentage Marks / CGPA / Grade" /></div></div>');
+												var text114 = $('<input type="button" name="add_more" value="Add More"class="add_more"style="width: 100px; border-radius: 25px;color: white;" />');
+												$('#countryss').attr("id",
+														"countryss" + i);
+												$('#institutename').attr("id",
+														"institutename" + i);
+												$('#degree').attr("id",
+														"degree" + i);
+												$('#branch').attr("id",
+														"branch" + i);
+												$('#score').attr("id",
+														"score" + i);
+												$('#course_type').attr("id",
+														"course_type" + i);
+												$('#institutename' + i)
+														.val(
+																item["edu"][i].institution);
+												$('#course_type' + i)
+														.val(
+																item["edu"][i].course_type);
+												$('#degree' + i).val(
+														item["edu"][i].degree);
+												$('#branch' + i).val(
+														item["edu"][i].branch);
+												$('#score' + i).val(
+														item["edu"][i].cgpa);
+												$('#countryss' + i)
+														.val(
+																item["edu"][i].country_edu);
+												$("#add_edu").append(text111,
+														text112, text113,
+														text114);
+											}
+										}
+									});
+						});
+		$("#draft")
+				.click(
+						function() {
+							var title = $('#title').val();
+							var fname = $('#fname').val();
+							var lname = $('#lname').val();
+							var addr1 = $('#addr1').val();
+							var addr2 = $('#addr2').val();
+							var addr3 = $('#addr3').val();
+							var addr4 = $('#addr4').val();
+							var country = $('#country').val();
+							var state = $('#state').val();
+							var city = $('#city').val();
+							var postal = $('#postalcode').val();
+							var countrycode = $('#countrycode').val();
+							var phone = $('#mobilenumber').val();
+							var email = $('#emailid').val();
+							var expyear = $('#workexyears').val();
+							var expmonth = $('#workexmonths').val();
+							var pgrad = $('#mgrad').val();
+							var grad = $('#bgrad').val();
+							var industry = $('#industry').val();
+							var funct = $('#function').val();
+							var passingyear = $('#passingyear').val();
+							var employer = $('#current').val();
+							var endingttile = $('#jobtitle').val();
+							var startdt = $('#start_date').val();
+							var enddt = $('#end_date').val();
+							var currsal = $('#ctc').val();
+							var curr = $('#curr').val();
+							var schoolcode = $('#institutename').val();
+							var typeofstudy = $('#course_type').val();
+							var itemid = $('#degree').val();
+							var majorcode = $('#branch').val();
+							var jpm_decimal = $('#score').val();
+							var countryedu = $('#countrys').val();
+							$
+									.ajax({
+										type : "POST",
+										url : "http://localhost:8008/xmlparser/rest/test/jubilant/emp_draft",
+										data : {
+											title : title,
+											fname : fname,
+											lname : lname,
+											addr1 : addr1,
+											addr2 : addr2,
+											addr3 : addr3,
+											addr4 : addr4,
+											country : country,
+											state : state,
+											city : city,
+											postalcode : postal,
+											countrycode : countrycode,
+											mobilenumber : phone,
+											emailid : email,
+											workexyears : expyear,
+											workexmonths : expmonth,
+											mgrad : pgrad,
+											bgrad : grad,
+											industry : industry,
+											funct : funct,
+											current : employer,
+											jobtitle : endingttile,
+											start_date : startdt,
+											end_date : enddt,
+											ctc : currsal,
+											curr : curr,
+											countryedu : countryedu,
+											institutename : schoolcode,
+											passingyear : passingyear,
+											course_type : typeofstudy,
+											degree : itemid,
+											branch : majorcode,
+											score : jpm_decimal,
+											edu_arr : JSON.stringify(edu_arr),
+										},
+
+										success : function(data) {
+											console.log(data);
+										}
+									});
+
+						})
+
+		$('#add_edu')
+				.on(
+						'click',
+						'.add_more',
+						function() {
+
+							var text1 = $('<hr><div class="row"><div class="col-md-6"><label for="" style="text-align: left; float: left">Institute/College</label><select class="form-control" id="institutename"name="institutename" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Institute/College</option><option>Option1</option><option>Option2</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">PassingMonth and Year</label> <input id="passingyear" class="datepicker"placeholder="Fill in terms of MM-YYYY" style="width: 100%"name="passingyear" /></div></div>');
+							var text2 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Country</label><select class="form-control" name="countryedu" id="countryss"style="height: 40px; font-size: 13px;"></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">CourseType</label> <select class="form-control" name="course_type"id="course_type" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Course Type</option><option>option1</option><option>option1</option></select></div></div>');
+							var text3 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Degree/Qualification</label><select class="form-control" name="degree" id="degree"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Degree/qualification</option><option>option1</option><option>option2</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">Branch/Specialization</label><select class="form-control" name="branch" id="branch"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Branch/Specialization</option><option>option1</option><option>option1</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">FillYour % Marks / CGPA / Grade</label> <input type="text" name="score"id="score" placeholder="Percentage Marks / CGPA / Grade" /></div></div>');
+							var text4 = $('<input type="button" name="add_more" value="Add More"class="add_more"style="width: 100px; border-radius: 25px;color: white;" />');
+							j = parseInt(j) + parseInt(j);
+							if (j <= 5) {
+								$("#add_edu")
+										.append(text1, text2, text3, text4);
+								$('#countryss').attr("id", "countryss" + j);
+								$('#institutename').attr("id",
+										"institutename" + j);
+								$('#degree').attr("id", "degree" + j);
+								$('#branch').attr("id", "branch" + j);
+								$('#score').attr("id", "score" + j);
+								$('#course_type').attr("id", "course_type" + j);
+
+								edu_obj.schoolcode = $('#institutename' + j)
+										.val();
+								edu_obj.typeofstudy = $('#course_type' + j)
+										.val();
+								edu_obj.itemid = $('#degree' + j).val();
+								edu_obj.majorcode = $('#branch' + j).val();
+								edu_obj.jpm_decimal = $('#score' + j).val();
+								edu_obj.countryedu = $('#countryss' + j).val();
+								console.log(edu_obj);
+								edu_arr.push(edu_obj);
+								console.log(edu_arr);
+								populateCountries("countryss" + j);
+							}
+							if (j == 5) {
+								text4.remove();
+							}
+							return edu_arr;
+
+						})
+
+		$('#addwork')
+				.on(
+						'click',
+						'.add_work',
+						function() {
+							var text11 = '<hr><div class="row"><div class="col-md-6"><span class="req">*&nbsp;&nbsp;</span><label for="current"style="text-align: left; float: left">Last/CurrentOrganization</label> <input type="text" id="current" name="current"placeholder="Specify Your Last/Current Orgnization" required="" /></div><div class="col-md-6"><label for="" style="text-align: left; float: left">Current/Last Job title @ time of leaving the organization</label> <input type="text"name="jobtitle" id="jobtitle"placeholder="Specify Your Job title @ time of leaving organization" /></div></div>';
+							var text12 = '<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">StartDate</label> <input id="start_date" placeholder="MM-YYYY"name="start_date" class="datepicker" style="width: 100%" /></div><div class="col-md-4"><label for="" style="text-align: left; float: left">EndDate</label> <input id="end_date" placeholder="MM-YYYY" name="end_date"class="datepicker" style="width: 100%" /></div></div>';
+							var text13 = '<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Lastdrawn CTC/Salary</label> <input type="text" name="ctc" id="ctc"placeholder="Last drawn CTC/Salary which you get in previous organization" /></div><div class="col-md-4"><label for="" style="text-align: left; float: left">Currency</label><input type="text" name="curr" id="curr"placeholder="Specify the currency of your salary" /></div></div>';
+							var text14 = '<input type="button" name="add_more" value="Add More"class="add_work"style="width: 100px; border-radius: 25px;color: white;" />'
+							$("#addwork")
+									.append(text11, text12, text13, text14);
+						});
+		$('.datepicker').datepicker();
+		$('#add_edu').on(
+				'click',
+				'.datepicker',
+				function() {
+					$(this).datepicker(
+							{
+								changeMonth : true,
+								changeYear : true,
+								showButtonPanel : true,
+								dateFormat : 'MM yy',
+								onClose : function(dateText, inst) {
+									$(this).datepicker(
+											'setDate',
+											new Date(inst.selectedYear,
+													inst.selectedMonth, 1));
+								}
+							});
+				})
+		$('#addwork').on('click', '.datepicker', function() {
+			$(this).datepicker({
+				changeMonth : true,
+				changeYear : true,
+				showButtonPanel : true,
+				dateFormat : 'MM yy',
+
+			});
+		})
+		var industry = [ 'Industry', 'Any', 'Accounting/Finance',
+				'Advertising/PR/MR/Event', 'Agriculture/Dairy', 'Animation',
+				'Architecture/Interior Design', 'Auto/Auto Ancillary',
+				'Aviation/Aerospace Firm',
+				'Banking/Financial Services/Broking', 'BPO/ITES',
+				'Brewery/Distillery',
+				'Chemical/PetroChemical/ Plastic/ Rubber',
+				'Construction/Engineering/Cement/Metals', 'Consumer Durables',
+				'Courier/Transportation/Freight', 'Ceramics/Sanitary ware',
+				'Defence/Government', 'Education/Teaching/Training',
+				'Electrical/ Switchgears', 'Export/Import',
+				'Facility Management', 'Fertilizers/Pesticides',
+				'FMCG/Food/Beverage', 'Food Processing', 'Fresher/Trainee',
+				'Gems & Jewellery', 'Glass',
+				'Heat Ventilation Air-Conditioning',
+				'Hotels/Resturants/Airlines/Travel',
+				'Industrial Products/Heavy Machinery', 'Insurance',
+				'IT-Software/ Software Services', 'IT-Hardware & Networking',
+				'Telecom/ ISP', 'KPO/Research/Analytics', 'Legal',
+				'Media/Dotcom/Entertainment', 'Internet/E-Commerce',
+				'Medical/Healthcare/Hospital', 'Mining', 'NGO/Social Services',
+				'Office Equipment/ Automation',
+				'Oil and Gas/Power/Infrastructure/Energy', 'Paper',
+				'Pharma/Biotech/Clinical Research', 'Printing/Packaging',
+				'Publishing', 'Real Estate/Property', 'Recruitment', 'Retail',
+				'Security/Law Enforcement', 'Semiconductors/ Electronics',
+				'Shiping/Marine', 'Steel',
+				'Strategy/Management Consulting Firms',
+				'Textiles/Garments/Acessories', 'Tyres',
+				'Water Treatment/Waste Management', 'Wellness/Fitness/Sports',
+				'Other' ];
+		var functional = [ 'Chairman Office', 'CEO Office', 'Huamn Resources',
+				'Administration', 'Security', 'Finance & Accounts',
+				'Shares & Secretarial', 'Legal', 'Sustainability',
+				'Manufacturing', 'Projects', 'Business Managment',
+				'Slaes & Marketing', 'Corporate Office',
+				'Corporate Communication', 'Information Technology',
+				'Research & Development', 'Medical & Scientific Affairs',
+				'Pharmacovigilance', 'Technical Services', 'Quality',
+				'Regulatory Affairs', 'Supply Chain', 'Business Excellence',
+				'Ombudsman Office' ].sort();
+
+		var graduation = [ 'Bachelor of Applied Sciences (BASC)',
+				'Bachelor of Arts(BAT)', 'Bachelor of Business Admin (BBAD)',
+				'Bachelor of Business Management (BBM)',
+				'Bachelor of Business Studies (BBS)',
+				'Bachelor of Computer Application (BCA)',
+				'Bachelor of Chemistry(BCHEM)', 'Bachelor of Commerce (BCOM)',
+				'Bachelor of Education (BED)', 'Bachelor of Engineering (BEG)',
+				'Bachelor of Fine Arts (BFAT)',
+				'Bachelor of Hotel Management (BHMCT)',
+				'Bachelor in Library Sciences (BLIB) ',
+				'Bachelor of Nursing Degree (BND)',
+				'Bachelor of Pharmacy (BPHAR)', 'BS Animal Husbandry (BSAH)',
+				'Bachelor of Science (BSC)',
+				'Bachelor of Science(Computer Science) - BSC(CS)',
+				'Bachelor of Science Engineering (BSCE)',
+				'Bachelor of Science-Law (BSCL)',
+				'Bachelor of Fisheries Science (FISHERIES)',
+				'Bachelor of Technology (BTECH)', 'Bachelor of Theology (BTY)',
+				'Bachelor of Veterinary Science (BVETY)', 'Degree (DEG)',
+
+				'Graduate from National Institute of Information (GNIIT)',
+				'Intermediate Degree (INT)', 'Law (LLB)',
+				'Bachelor of Medicine (MBBS)', 'Others (OTHER_GRADUATE)',
+				'Qualified Degree (QUA)' ];
+		var post_graduation = [
+				'Doctor of Business Admin (DBAD)',
+				'Doctorate (DOC)',
+				'Master of Laws (L.L.M.)',
+				'Masters in Library Science (M.LIB.SC.)',
+				'Masters od Hospital Administration (M.H.A.)',
+				'Masters od Arts (MAT)',
+				'Master of Business Admin(MBA)',
+				'Masters in Business Law(MBL)',
+				'Masters in Computer Application(MCA)',
+				'Master of Civil Engineering(MCEG)',
+				'Masters in Commerce(MCOM)',
+				'Doctor of Medicine(MD)',
+				'Masters`s Diploma in Business Administration (MDBA)',
+				'Master of Divinity(MDIY)',
+				'Master of Education(MEDN)',
+				'Master of Electrical Engineering(MEEG)',
+				'Master of Engineering(MEG)',
+				'Master of Fine Arts(MFAT)',
+				'Master of Forest Management(MFM)',
+				'Masters in International Business(MIB)',
+				'Masters in Industrial Engineering(MIE)',
+				'Masters in Labour Law I.R.(MLLIR)',
+				'Master of Machenical Engineering(MMEG)',
+				'Masters in Marketing Management(MMKM)',
+				'Masters in Material Management(MMM)',
+				'Masters in Management Studies(MMS)',
+				'Masters in Professional Accounting(MPA)',
+				'Masters in pharmacy(MPHAR)',
+				'Masters in Philosphy(MPHIL)',
+				'Masters Programme in International Business(MPIB)',
+				'Masters in Personnel Management(MPM)',
+				'Master of personal Management and industrial Relation(MPMIR)',
+				'Master of Science(MS)',
+				'Master of Science(MSC)',
+				'Master of Science - Law(MSCL)',
+				'Masters in Social Work(MSW)',
+				'Masters in Technology(MTECH)',
+				'Master of Theology(MTY)',
+				'Master of Veterinary Science & Animal Husbandry(MVSC&AH)',
+				'Post Graduate Diploma(PGD)',
+				'Post Graduate Diploma in Business Administration(PGDBA)',
+				'Post Graduate Diploma in Business Management(PGDBM)',
+				'Post Graduate Diploma in Computer Application(PGDCA)',
+				'Post Graduate Diploma in Import Export Management(PGDIEM)',
+				'Post Graduate Diploma in Information Systems(PGDIS)',
+				'Post Graduate diploma in Management(PGDM)',
+				'Post Graduate Diploma in Medical Radio Isotopes Techniques(PGDMRIT)',
+				'Post Graduate Diploma in Patents Law(PGDPL)',
+				'Post Graduate Diploma in Regulatory Affairs(PGDRA)',
+				'Post Graduate Diploma in Supply Chain Management(PGDSCM)',
+				'Post Graduate in Logistic and Supply Chain Management(PGLSCM)',
+				'Post Graduate Degree(PGN)',
+				'Post Graduate Programme in Agri Business Management(PGPABM)',
+				'Post Graduate Diploma in Total Quality Management(PGTQM)',
+				'Doctor of Philosphy(PHD)', 'Doctor of Engineering(PHEG)',
+				'Doctor of Science(PHSC)' ];
+
+		select1 = document.getElementById('function');
+		select2 = document.getElementById('industry');
+		select3 = document.getElementById('bgrad');
+		select4 = document.getElementById('mgrad');
+		for (post_grad in post_graduation) {
+			select4.add(new Option(post_graduation[post_grad]));
+		}
+		for (industrial_area in industry) {
+			select2.add(new Option(industry[industrial_area]));
+		};
+		for (functional_area in functional) {
+			select1.add(new Option(functional[functional_area]));
+		};
+		for (grad in graduation) {
+			select3.add(new Option(graduation[grad]));
+		};
+	</script>
+	<!-- <script>
+		var data = '{"name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
+
+		var json = JSON.parse(data);
+		console.log(json);
+		alert(json["name"]); //mkyong
+		alert(json.name); //mkyong
+
+		alert(json.address.streetAddress); //88 8nd Street
+		alert(json["address"].city); //New York
+
+		alert(json.phoneNumber[0].number); //111 111-1111
+		alert(json.phoneNumber[1].type); //fax
+
+		alert(json.phoneNumber.number); //undefined
+	</script> -->
+
+	<script src="js/bootstrap-toggle.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+
 </body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
-charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"
-charset="utf-8"></script>
-<script src="https://rawgit.com/aterrien/jQuery-Knob/master/dist/jquery.knob.min.js"
-charset="utf-8"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/jquery.mapael.js"></script>
-<script type="text/javascript" src="js/world_countries.js"></script>
-<script type="text/javascript" src="js/typer.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.core.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.counter-control.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.filter-dropdown-bundle.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.filter-toggle-bundle.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.history-bundle.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.jquery-ui-bundle.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.pagination-bundle.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-bundle.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.textbox-filter.min.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.min.js"></script>
-
-
-  </html>
+</html>

@@ -9,19 +9,21 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="dropzone.css">
-<link rel="stylesheet"
-	href="bootstrap-formhelpers/dist/css/bootstrap-formhelpers.css">
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="dropzone.js"></script>
-<script src="bootstrap-formhelpers/dist/js/bootstrap-formhelpers.js"
-	type="text/javascript"></script>
-<script
-	src="bootstrap-formhelpers/js/bootstrap-formhelpers-countries.js"
-	type="text/javascript"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 <style>
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
@@ -58,6 +60,135 @@ footer {
 		height: auto;
 	}
 }
+
+.testimonial {
+	background: #d0d0f3;
+	text-align: center;
+	padding: 15px 30px 50px;
+	margin: 0 15px 100px;
+	position: relative;
+}
+
+.testimonial:before, .testimonial:after {
+	content: "";
+	border-top: 40px solid #fff;
+	border-right: 125px solid transparent;
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+}
+
+.testimonial:after {
+	border-right: none;
+	border-left: 125px solid transparent;
+	left: auto;
+	right: 0;
+}
+
+.testimonial .icon {
+	display: inline-block;
+	font-size: 60px;
+	color: #0D3B9C;
+	margin-bottom: 35px;
+	opacity: 0.6;
+	margin-right: 20%;
+}
+
+.testimonial .description {
+	font-size: 15px;
+	color: #777;
+	text-align: left;
+	margin-bottom: 30px;
+	opacity: 0.8;
+}
+
+.testimonial .testimonial-content {
+	width: 100%;
+	position: absolute;
+	left: 0;
+}
+
+.testimonial .pic {
+	display: inline-block;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 2px 2px #daad86;
+	overflow: hidden;
+	z-index: 1;
+	position: relative;
+}
+
+.testimonial .pic img {
+	width: 100%;
+	height: auto;
+}
+
+.testimonial .title {
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: capitalize;
+	margin: 0 0 5px 0;
+}
+
+.testimonial .post {
+	display: block;
+	font-size: 14px;
+	color: #ffd9b8;
+}
+
+.owl-theme .owl-controls {
+	margin-top: 4%;
+}
+
+.owl-theme .owl-controls .owl-page span {
+	width: 32px;
+	height: 10px;
+	background: #fff;
+	border: 2px solid #bd986b;
+	margin: 5px;
+	opacity: 1;
+}
+
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span
+	{
+	background: #ffd9b8;
+	border-color: #fff;
+}
+
+@media only screen and (max-width: 650px) and (min-width: 400px) {
+	.testimonial:before {
+		border-right: 325px solid transparent;
+	}
+	.testimonial:after {
+		border-left: 325px solid transparent;
+	}
+}
+
+.owl-wrapper {
+	margin-bottom: 40px;
+}
+
+.emp {
+	margin-top: 20px;
+}
+
+.emp-head {
+	padding: 2rem 0 0 0;
+	text-align: center;
+	cursor: default;
+	margin-bottom: 3rem;
+	width: 42.5rem;
+	max-width: calc(100% - 6rem);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.emp-head h2 {
+	color: #ffffff;
+	font-size: 3.75rem;
+	text-shadow: 0 0 3px #344B14;
+}
 </style>
 </head>
 <body>
@@ -86,6 +217,78 @@ footer {
 			</div>
 		</div>
 	</nav>
+	<br />
+	<div class="col-sm-offset-2 col-sm-10">
+		<img
+			src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUA
+AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
+    9TXL0Y4OHwAAAABJRU5ErkJggg=="
+			alt="Red dot" />
+	</div>
+	<br />
+	<div class="container">
+		<div class="row emp">
+			<div class="col-md-12">
+				<div class="owl-carousel" id="testimonial-slider"></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4" style="border: 2px solid black">
+			<h1>Testinomial module</h1>
+			<form class="form-horizontal" method="post"
+				enctype="multipart/form-Data" name="form5">
+				<div class="row">
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="email">Emp Name</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="enames"
+								placeholder="Enter name" name="enames">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group">
+
+						<label class="control-label col-sm-4" for="pwd">Emp Quote</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="quote"
+								placeholder="Enter quote" name="equote">
+						</div>
+					</div>
+				</div>
+				<br /> <input type="file" name="photofiles"><br />
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<input type="submit" class="btn btn-primary" id="testinomial"
+							value="testinomial" name="testinomial"
+							formaction="http://localhost:8008/xmlparser/rest/test/testinomial">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-sm-8 text-left"
+			style="overflow: auto; border: 2px solid black">
+
+			<h1>Testinomial Table</h1>
+			<hr>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Emp name</th>
+						<th>Emp Quote</th>
+
+					</tr>
+				</thead>
+				<tbody id="testinom">
+
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+	<br />
+	<br />
 
 	<div class="container-fluid text-center">
 		<div class="row content">
@@ -108,12 +311,17 @@ footer {
 						data</button>
 					<br>
 					<button type="button" class="btn btn-primary" id="qurey6">
-						<a href="http://localhost:8005/xmlparser/rest/test/check"
+						<a href="http://localhost:8008/xmlparser/rest/test/check"
 							style="color: white">Query6</a>
+					</button><br>
+					<button type="button" class="btn btn-primary" id="qurey6">
+						<a href="http://localhost:8008/xmlparser/rest/test/redirect"
+							style="color: white">Redirect</a>
 					</button>
 					<br>
 				</div>
 			</div>
+
 			<div class="col-sm-6 text-left" style="height: 500px; overflow: auto">
 				<h1>Welcome</h1>
 				<hr>
@@ -199,7 +407,7 @@ footer {
 							<div class="col-sm-offset-2 col-sm-10">
 								<input type="submit" class="btn btn-primary" name="mysql"
 									value="Save To MySQL"
-									formaction="http://localhost:8005/xmlparser/rest/test/insert1">
+									formaction="http://localhost:8008/xmlparser/rest/test/insert1">
 								<input type="button" class="btn btn-primary" name="sqlExpress"
 									id="sqlExpressdb" value="Save To SQLexpress">
 							</div>
@@ -247,7 +455,7 @@ footer {
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<input type="submit" class="btn btn-primary" name="sqlExpressdb"
-								formaction="http://localhost:8005/xmlparser/rest/test/insertdb1"
+								formaction="http://localhost:8008/xmlparser/rest/test/insertdb1"
 								value="resume upload">
 						</div>
 					</div>
@@ -286,10 +494,9 @@ footer {
 				</div>
 			</div>
 		</div>
+
 	</div>
-	<footer class="container-fluid text-center">
-		<p>Footer Text</p>
-	</footer>
+
 	<script>
 		$("#qurey1")
 				.click(
@@ -298,7 +505,7 @@ footer {
 									.ajax({
 										type : "GET",
 
-										url : "http://localhost:8005/xmlparser/rest/test/test3",
+										url : "http://localhost:8008/xmlparser/rest/test/test3",
 										dataType : "xml",
 										success : function(xmlData) {
 											$("employee", xmlData)
@@ -338,7 +545,7 @@ footer {
 									.ajax({
 										type : "GET",
 
-										url : "http://localhost:8005/xmlparser/rest/test/test2",
+										url : "http://localhost:8008/xmlparser/rest/test/test2",
 										dataType : "xml",
 										success : function(xmlData) {
 											$("employee", xmlData)
@@ -375,18 +582,83 @@ footer {
 			$.ajax({
 				type : "GET",
 
-				url : "http://localhost:8005/xmlparser/rest/test/test3",
+				url : "http://localhost:8008/xmlparser/rest/test/test3",
 				dataType : "xml",
 				success : function(xmlData) {
 					console.log(xmlData);
 				}
 			});
 		});
+		$(document)
+				.ready(
+						function() {							
+							$
+									.ajax({
+										url : 'http://localhost:8008/xmlparser/rest/test/testinomialjson1',
+										dataType : 'json',
+										success : function(data) {
+											var content = '';
+											$
+													.each(
+															JSON.parse(data),
+															function(i, item) {
+																content += '<div class="testimonial"> <span class="icon fa fa-quote-left"></span><p class="description">'
+																		+ item.empquote
+																		+ '</p><div class="testimonial-content"><div class="pic"><img src="data:image/jpeg;base64,'+ item.photo+'"  alt=""/></div><h3 class="title">'
+																		+ item.empnames
+																		+ '</h3><span class="post">LEAD CONSULTANT</span></div></div>';
+
+															});
+											$("#testimonial-slider").append(
+													content);
+											$('#testimonial-slider')
+													.owlCarousel(
+															{
+																items : 3,
+																itemsDesktop : [
+																		1000, 3 ],
+																itemsDesktopSmall : [
+																		979, 2 ],
+																itemsTablet : [
+																		768, 2 ],
+																itemsMobile : [
+																		650, 1 ],
+																pagination : true,
+																autoPlay : true
+															});
+										}
+									})
+						});
+		$(document)
+				.ready(
+						function() {
+							$
+									.ajax({
+										type : "GET",
+
+										url : "http://localhost:8008/xmlparser/rest/test/testinomialjson",
+
+										success : function(jsonData) {
+											console.log(jsonData);
+											var trHTML = '';
+											$.each(JSON.parse(jsonData),
+													function(i, item) {
+														trHTML += '<tr><td>'
+																+ item.col1
+																+ '</td><td>'
+																+ item.col2
+																+ '</td></tr>';
+													});
+											$('#testinom').append(trHTML);
+
+										}
+									});
+						});
 		$("#qurey4").click(function() {
 			$.ajax({
 				type : "GET",
 
-				url : "http://localhost:8005/xmlparser/rest/test/test4",
+				url : "http://localhost:8008/xmlparser/rest/test/test4",
 				dataType : "html",
 				success : function(base64data) {
 					console.log(base64data);
@@ -402,7 +674,7 @@ footer {
 							$
 									.ajax({
 										type : "POST",
-										url : "http://localhost:8005/xmlparser/rest/test/jubilant/emp_details_login",
+										url : "http://localhost:8008/xmlparser/rest/test/jubilant/emp_details_login",
 										data : {
 											email : email,
 											pwd : pass,
@@ -420,10 +692,10 @@ footer {
 							$
 									.ajax({
 										type : "POST",
-										url : "http://localhost:8005/xmlparser/rest/test/jubilant/emp_details_registration",
+										url : "http://localhost:8008/xmlparser/rest/test/jubilant/emp_details_registration",
 										data : {
-											email : email,
-											pwd : pass,
+											emails : email,
+											pwds : pass,
 										},
 										success : function(data) {
 											console.log(data);
@@ -431,7 +703,7 @@ footer {
 									});
 						});
 		var myDropzoneOptions = {
-			url : "http://localhost:8005/xmlparser/rest/test/upload",
+			url : "http://localhost:8008/xmlparser/rest/test/upload",
 			acceptedFiles : ".doc,.pdf,.json,.jpg",
 			maxFiles : "1",
 			clickable : "#upload",
@@ -444,7 +716,7 @@ footer {
 
 		var myDropzone = new Dropzone("#dropzonePreview1", myDropzoneOptions);
 		var myDropzoneOptions2 = {
-			url : "http://localhost:8005/xmlparser/rest/test/upload",
+			url : "http://localhost:8008/xmlparser/rest/test/upload",
 			acceptedFiles : ".doc,.pdf,.json,.jpg",
 			maxFiles : "1",
 			clickable : "#dropzonePreview1",
@@ -456,7 +728,7 @@ footer {
 		};
 		var myDropzone = new Dropzone("#dropzone1", myDropzoneOptions2);
 		var myDropzoneOptions1 = {
-			url : "http://localhost:8005/xmlparser/rest/test/upload",
+			url : "http://localhost:8008/xmlparser/rest/test/upload",
 			acceptedFiles : ".doc,.pdf,.json,.jpg",
 			maxFiles : "1",
 			clickable : true,
@@ -466,6 +738,9 @@ footer {
 
 		};
 		var myDropzone1 = new Dropzone("#dropzone3", myDropzoneOptions1);
+
 	</script>
+
+
 </body>
 </html>
