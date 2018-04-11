@@ -262,7 +262,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 					<div class="col-sm-offset-2 col-sm-10">
 						<input type="submit" class="btn btn-primary" id="testinomial"
 							value="testinomial" name="testinomial"
-							formaction="http://localhost:8008/xmlparser/rest/test/testinomial">
+							formaction="http://localhost:8002/xmlparser/rest/test/testinomial">
 					</div>
 				</div>
 			</form>
@@ -311,11 +311,11 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 						data</button>
 					<br>
 					<button type="button" class="btn btn-primary" id="qurey6">
-						<a href="http://localhost:8008/xmlparser/rest/test/check"
+						<a href="http://localhost:8002/xmlparser/rest/test/check"
 							style="color: white">Query6</a>
 					</button><br>
 					<button type="button" class="btn btn-primary" id="qurey6">
-						<a href="http://localhost:8008/xmlparser/rest/test/redirect"
+						<a href="http://localhost:8002/xmlparser/rest/test/redirect"
 							style="color: white">Redirect</a>
 					</button>
 					<br>
@@ -407,7 +407,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 							<div class="col-sm-offset-2 col-sm-10">
 								<input type="submit" class="btn btn-primary" name="mysql"
 									value="Save To MySQL"
-									formaction="http://localhost:8008/xmlparser/rest/test/insert1">
+									formaction="http://localhost:8002/xmlparser/rest/test/insert1">
 								<input type="button" class="btn btn-primary" name="sqlExpress"
 									id="sqlExpressdb" value="Save To SQLexpress">
 							</div>
@@ -455,7 +455,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<input type="submit" class="btn btn-primary" name="sqlExpressdb"
-								formaction="http://localhost:8008/xmlparser/rest/test/insertdb1"
+								formaction="http://localhost:8002/xmlparser/rest/test/insertdb1"
 								value="resume upload">
 						</div>
 					</div>
@@ -505,7 +505,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 									.ajax({
 										type : "GET",
 
-										url : "http://localhost:8008/xmlparser/rest/test/test3",
+										url : "http://localhost:8002/xmlparser/rest/test/test3",
 										dataType : "xml",
 										success : function(xmlData) {
 											$("employee", xmlData)
@@ -545,7 +545,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 									.ajax({
 										type : "GET",
 
-										url : "http://localhost:8008/xmlparser/rest/test/test2",
+										url : "http://localhost:8002/xmlparser/rest/test/test2",
 										dataType : "xml",
 										success : function(xmlData) {
 											$("employee", xmlData)
@@ -582,7 +582,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 			$.ajax({
 				type : "GET",
 
-				url : "http://localhost:8008/xmlparser/rest/test/test3",
+				url : "http://localhost:8002/xmlparser/rest/test/test3",
 				dataType : "xml",
 				success : function(xmlData) {
 					console.log(xmlData);
@@ -594,7 +594,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 						function() {							
 							$
 									.ajax({
-										url : 'http://localhost:8008/xmlparser/rest/test/testinomialjson1',
+										url : 'http://localhost:8002/xmlparser/rest/test/testinomialjson1',
 										dataType : 'json',
 										success : function(data) {
 											var content = '';
@@ -636,7 +636,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 									.ajax({
 										type : "GET",
 
-										url : "http://localhost:8008/xmlparser/rest/test/testinomialjson",
+										url : "http://localhost:8002/xmlparser/rest/test/testinomialjson",
 
 										success : function(jsonData) {
 											console.log(jsonData);
@@ -658,7 +658,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 			$.ajax({
 				type : "GET",
 
-				url : "http://localhost:8008/xmlparser/rest/test/test4",
+				url : "http://localhost:8002/xmlparser/rest/test/test4",
 				dataType : "html",
 				success : function(base64data) {
 					console.log(base64data);
@@ -674,7 +674,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 							$
 									.ajax({
 										type : "POST",
-										url : "http://localhost:8008/xmlparser/rest/test/jubilant/emp_details_login",
+										url : "http://localhost:8002/xmlparser/rest/test/jubilant/emp_details_login",
 										data : {
 											email : email,
 											pwd : pass,
@@ -692,7 +692,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 							$
 									.ajax({
 										type : "POST",
-										url : "http://localhost:8008/xmlparser/rest/test/jubilant/emp_details_registration",
+										url : "http://localhost:8002/xmlparser/rest/test/jubilant/emp_details_registration",
 										data : {
 											emails : email,
 											pwds : pass,
@@ -703,7 +703,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 									});
 						});
 		var myDropzoneOptions = {
-			url : "http://localhost:8008/xmlparser/rest/test/upload",
+			url : "http://localhost:8002/xmlparser/rest/test/upload",
 			acceptedFiles : ".doc,.pdf,.json,.jpg",
 			maxFiles : "1",
 			clickable : "#upload",
@@ -716,7 +716,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 
 		var myDropzone = new Dropzone("#dropzonePreview1", myDropzoneOptions);
 		var myDropzoneOptions2 = {
-			url : "http://localhost:8008/xmlparser/rest/test/upload",
+			url : "http://localhost:8002/xmlparser/rest/test/upload",
 			acceptedFiles : ".doc,.pdf,.json,.jpg",
 			maxFiles : "1",
 			clickable : "#dropzonePreview1",
@@ -728,7 +728,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 		};
 		var myDropzone = new Dropzone("#dropzone1", myDropzoneOptions2);
 		var myDropzoneOptions1 = {
-			url : "http://localhost:8008/xmlparser/rest/test/upload",
+			url : "http://localhost:8002/xmlparser/rest/test/upload",
 			acceptedFiles : ".doc,.pdf,.json,.jpg",
 			maxFiles : "1",
 			clickable : true,
