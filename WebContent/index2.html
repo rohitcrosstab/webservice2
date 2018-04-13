@@ -15,6 +15,11 @@
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link href="css/custom.css" rel="stylesheet" type="text/css" />
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css"
+	rel="stylesheet" type="text/css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
 	type="text/javascript"></script>
@@ -148,11 +153,8 @@
 						</div>
 						<div class="col-md-4">
 							<label for="" style="text-align: left; float: left">City</label>
-							<select class="form-control" id="city" name="city"
-								style="height: 40px; font-size: 13px;"><option value="">Specify
-									Your City</option>
-								<option value="1">option1</option>
-								<option value="2">option2</option></select>
+							<input type="text" id="city" name="city"
+								style="height: 40px; font-size: 13px;"text">
 						</div>
 					</div>
 
@@ -364,7 +366,7 @@
 							<span class="req">*&nbsp;&nbsp;</span><label for="current"
 								style="text-align: left; float: left">Last/Current
 								Organization</label> <input type="text" id="current" name="current"
-								placeholder="Specify Your Last/Current Orgnization" required="" />
+								placeholder="Specify Your Last/Current Orgnization" required />
 						</div>
 
 						<div class="col-md-6">
@@ -411,7 +413,8 @@
 
 					<input type="button" name="previous"
 						class="previous action-button-previous" value="Previous" /> <input
-						type="submit" name="submit" class="next action-button"
+						type="button" name="submit"id="form_submit"
+						style="background: #3e4a3c; font-weight: bold; color: white; border: 0 none; border-radius: 25px; cursor: pointer; padding: 10px 5px; margin: 10px 5px; width: 100px"
 						value="Submit" /> <input type="button" name="add_more"
 						value="Add More" class="add_work"
 						style="width: 100px; border-radius: 25px; color: white;" />
@@ -606,7 +609,10 @@
 		populateCountries("countrys")
 	</script>
 	<script type="text/javascript">
-		var j = 0;
+	var m = 0;
+	var work_arr = [];
+	var work_obj = {};
+		var  j = 0;
 		var edu_arr = [];
 		var edu_obj = {};
 		$(document)
@@ -616,12 +622,12 @@
 									.ajax({
 										type : "GET",
 
-										url : "http://localhost:8008/xmlparser/rest/test/fulljson",
+										url : "http://localhost:8002/xmlparser/rest/test/fulljson",
 
 										success : function(jsonData) {
-											console.log(jsonData);
+											console.log(jsonData); 
 											var item = JSON.parse(jsonData);
-											console.log(item);
+										 console.log(item); 
 											$('#title').val(
 													item["basic"].name_type);
 											$('#fname').val(
@@ -662,7 +668,7 @@
 															item["basic"].functional_area);
 											$('#passingyear').val(
 													item["basic"].passing_year);
-											$('#current').val(
+										/* 	$('#current').val(
 													item["basic"].company);
 											$('#jobtitle').val(
 													item["basic"].jobtitle);
@@ -672,21 +678,22 @@
 													item["basic"].end_date);
 											$('#ctc').val(item["basic"].salary);
 											$('#curr').val(
-													item["basic"].currency);
+													item["basic"].currency); */
 											console
 													.log(item["edu"][1].institution);
-											
+													console
+													.log(item["work"][1].company);
 											for (var i = 0; i < item["edu"].length; i++) {
-j++;
-edu_arr.push(item["edu"][i]);
+												j++;
+												edu_arr.push(item["edu"][i]);
 												var text111 = $('<hr><div class="row"><div class="col-md-6"><label for="" style="text-align: left; float: left">Institute/College</label><select class="form-control" id="institutename"name="institutename" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Institute/College</option><option>Option1</option><option>Option2</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">PassingMonth and Year</label> <input id="passingyear" class="datepicker"placeholder="Fill in terms of MM-YYYY" style="width: 100%"name="passingyear" /></div></div>');
 												var text112 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Country</label><select class="form-control" name="countryedu" id="countrysss"style="height: 40px; font-size: 13px;"></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">CourseType</label> <select class="form-control" name="course_type"id="course_type" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Course Type</option><option>option1</option><option>option1</option></select></div></div>');
 												var text113 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Degree/Qualification</label><select class="form-control" name="degree" id="degree"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Degree/qualification</option><option>option1</option><option>option2</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">Branch/Specialization</label><select class="form-control" name="branch" id="branch"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Branch/Specialization</option><option>option1</option><option>option1</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">FillYour % Marks / CGPA / Grade</label> <input type="text" name="score"id="score" placeholder="Percentage Marks / CGPA / Grade" /></div></div>');
 												var text114 = $('<input type="button" name="add_more" value="Add More"class="add_more"style="width: 100px; border-radius: 25px;color: white;" />');
-												
+
 												$('#countrysss').attr("id",
 														"countrysss" + i);
-												
+
 												$('#institutename').attr("id",
 														"institutename" + i);
 												$('#degree').attr("id",
@@ -712,12 +719,51 @@ edu_arr.push(item["edu"][i]);
 												$('#countrysss' + i)
 														.val(
 																item["edu"][i].country_edu);
-											
+
 												$("#add_edu").append(text111,
 														text112, text113,
 														text114);
-												populateCountries("countrysss" + i);
+												populateCountries("countrysss"
+														+ i);
+
+											}
+											for (var n = 0; n < item["work"].length; n++) {
+												m++;
+												work_arr.push(item["work"][n]);
+												var text1111 = $('<hr><div class="row"><div class="col-md-6"><span class="req">*&nbsp;&nbsp;</span><label for="current"style="text-align: left; float: left">Last/CurrentOrganization</label> <input type="text" id="current" name="current"placeholder="Specify Your Last/Current Orgnization" required="" /></div><div class="col-md-6"><label for="" style="text-align: left; float: left">Current/Last Job title @ time of leaving the organization</label> <input type="text"name="jobtitle" id="jobtitle"placeholder="Specify Your Job title @ time of leaving organization" /></div></div>');
+												var text1112 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">StartDate</label> <input id="start_date" placeholder="MM-YYYY"name="start_date" class="datepicker" style="width: 100%" /></div><div class="col-md-4"><label for="" style="text-align: left; float: left">EndDate</label> <input id="end_date" placeholder="MM-YYYY" name="end_date"class="datepicker" style="width: 100%" /></div></div>');
+												var text1113 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Lastdrawn CTC/Salary</label> <input type="text" name="ctc" id="ctc"placeholder="Last drawn CTC/Salary which you get in previous organization" /></div><div class="col-md-4"><label for="" style="text-align: left; float: left">Currency</label><input type="text" name="curr" id="curr"placeholder="Specify the currency of your salary" /></div></div>');
+												var text1114 = $('<input type="button" name="add_more" value="Add More"class="add_work"style="width: 100px; border-radius: 25px;color: white;" />');
 												
+												$('#current').attr("id", "current" + n);
+												$('#jobtitle').attr("id",
+														"jobtitle" + n);
+												$('#start_date').attr("id", "start_date" + n);
+												$('#end_date').attr("id", "end_date" + n);
+												$('#ctc').attr("id", "ctc" + n);
+												$('#curr').attr("id", "curr" + n);
+
+												$('#current' + n)
+														.val(
+																item["work"][n].company);
+												$('#jobtitle' + n)
+														.val(
+																item["work"][n].jobtitle);
+												$('#start_date' + n).val(
+														item["work"][n].start_date);
+												$('#end_date' + n).val(
+														item["work"][n].end_date);
+												$('#ctc' + n).val(
+														item["work"][n].salary);
+												$('#curr' + n)
+														.val(
+																item["work"][n].currency);
+
+												$("#addwork").append(text1111,
+														text1112, text1113,
+														text1114);
+												
+
 											}
 										}
 									});
@@ -761,7 +807,7 @@ edu_arr.push(item["edu"][i]);
 							$
 									.ajax({
 										type : "POST",
-										url : "http://localhost:8008/xmlparser/rest/test/jubilant/emp_draft",
+										url : "http://localhost:8002/xmlparser/rest/test/jubilant/emp_draft",
 										data : {
 											title : title,
 											fname : fname,
@@ -797,10 +843,11 @@ edu_arr.push(item["edu"][i]);
 											branch : majorcode,
 											score : jpm_decimal,
 											edu_arr : JSON.stringify(edu_arr),
+											work_arr : JSON.stringify(work_arr),
 										},
 
 										success : function(data) {
-											console.log(data);
+											 console.log(data); 
 										}
 									});
 
@@ -816,10 +863,12 @@ edu_arr.push(item["edu"][i]);
 							var text2 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Country</label><select class="form-control" name="countryedu" id="countryss"style="height: 40px; font-size: 13px;"></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">CourseType</label> <select class="form-control" name="course_type"id="course_type" style="height: 40px; font-size: 13px;"><optionvalue="">Specify Your Course Type</option><option>option1</option><option>option1</option></select></div></div>');
 							var text3 = $('<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Degree/Qualification</label><select class="form-control" name="degree" id="degree"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Degree/qualification</option><option>option1</option><option>option2</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">Branch/Specialization</label><select class="form-control" name="branch" id="branch"style="height: 40px; font-size: 13px;"><option value="">SpecifyYour Branch/Specialization</option><option>option1</option><option>option1</option></select></div><div class="col-md-4"><label for="" style="text-align: left; float: left">FillYour % Marks / CGPA / Grade</label> <input type="text" name="score"id="score" placeholder="Percentage Marks / CGPA / Grade" /></div></div>');
 							var text4 = $('<input type="button" name="add_more" value="Add More"class="add_more"style="width: 100px; border-radius: 25px;color: white;" />');
-							j = parseInt(j) + parseInt(j);
-							if (j <= 5) {
+						j = parseInt(j) + 1; 
+							if(j <= 5) {
 								$("#add_edu")
 										.append(text1, text2, text3, text4);
+			
+					
 								$('#countryss').attr("id", "countryss" + j);
 								$('#institutename').attr("id",
 										"institutename" + j);
@@ -836,13 +885,26 @@ edu_arr.push(item["edu"][i]);
 								edu_obj.majorcode = $('#branch' + j).val();
 								edu_obj.jpm_decimal = $('#score' + j).val();
 								edu_obj.countryedu = $('#countryss' + j).val();
-								console.log(edu_obj);
+							 console.log(edu_obj); 
 								edu_arr.push(edu_obj);
-								console.log(edu_arr);
-								populateCountries("countryss" + j);
+								 console.log(edu_arr); 
+								 populateCountries("countryss" + j);
+								console.log(j);
 							}
 							if (j == 5) {
 								text4.remove();
+								text1.remove();
+								text2.remove();
+								text3.remove();
+								swal({
+									title : "Sorry",
+									text : "You can not attach more than 5 Details",
+									type : "warning",
+									showCancelButton : true,
+									confirmButtonClass : "btn-danger",
+									confirmButtonText : "OK",
+									closeOnConfirm : true
+								})
 							}
 							return edu_arr;
 
@@ -857,9 +919,55 @@ edu_arr.push(item["edu"][i]);
 							var text12 = '<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">StartDate</label> <input id="start_date" placeholder="MM-YYYY"name="start_date" class="datepicker" style="width: 100%" /></div><div class="col-md-4"><label for="" style="text-align: left; float: left">EndDate</label> <input id="end_date" placeholder="MM-YYYY" name="end_date"class="datepicker" style="width: 100%" /></div></div>';
 							var text13 = '<div class="row"><div class="col-md-4"><label for="" style="text-align: left; float: left">Lastdrawn CTC/Salary</label> <input type="text" name="ctc" id="ctc"placeholder="Last drawn CTC/Salary which you get in previous organization" /></div><div class="col-md-4"><label for="" style="text-align: left; float: left">Currency</label><input type="text" name="curr" id="curr"placeholder="Specify the currency of your salary" /></div></div>';
 							var text14 = '<input type="button" name="add_more" value="Add More"class="add_work"style="width: 100px; border-radius: 25px;color: white;" />'
-							$("#addwork")
-									.append(text11, text12, text13, text14);
-						});
+							m = parseInt(m) + 1;
+							if(m <= 5) {
+								$("#addwork")
+								.append(text11, text12, text13, text14);
+			
+					
+								$('#current').attr("id", "current" + m);
+								$('#jobtitle').attr("id",
+										"jobtitle" + m);
+								$('#start_date').attr("id", "start_date" + m);
+								$('#end_date').attr("id", "end_date" + m);
+								$('#ctc').attr("id", "ctc" + m);
+								$('#curr').attr("id", "curr" + m);
+
+								work_obj.employer = $('#current' + m)
+										.val();
+								work_obj.endingttile = $('#jobtitle' + m)
+										.val();
+								work_obj.satrtdt = $('#start_date' + m).val();
+								work_obj.enddt = $('#end_date' + m).val();
+								work_obj.currsal = $('#ctc' + m).val();
+								work_obj.curr = $('#curr' + m).val();
+								console.log(work_obj);
+								work_arr.push(work_obj);
+								console.log(work_arr);
+								 populateCountries("countryss" + j); 
+								console.log(j);
+							}
+							if (m == 5) {
+								text14.remove();
+								text11.remove();
+								text12.remove();
+								text13.remove();
+								swal({
+									title : "Sorry",
+									text : "You can not attach more than 5 Details",
+									type : "warning",
+									showCancelButton : true,
+									confirmButtonClass : "btn-danger",
+									confirmButtonText : "OK",
+									closeOnConfirm : true
+								})
+							}
+							return work_arr;
+
+						})
+
+							
+						
 		$('.datepicker').datepicker();
 		$('#add_edu').on(
 				'click',
@@ -918,7 +1026,7 @@ edu_arr.push(item["edu"][i]);
 				'Strategy/Management Consulting Firms',
 				'Textiles/Garments/Acessories', 'Tyres',
 				'Water Treatment/Waste Management', 'Wellness/Fitness/Sports',
-				'Other' ];
+				'Other' ,'None'];
 		var functional = [ 'Chairman Office', 'CEO Office', 'Huamn Resources',
 				'Administration', 'Security', 'Finance & Accounts',
 				'Shares & Secretarial', 'Legal', 'Sustainability',
@@ -953,7 +1061,7 @@ edu_arr.push(item["edu"][i]);
 				'Graduate from National Institute of Information (GNIIT)',
 				'Intermediate Degree (INT)', 'Law (LLB)',
 				'Bachelor of Medicine (MBBS)', 'Others (OTHER_GRADUATE)',
-				'Qualified Degree (QUA)' ];
+				'Qualified Degree (QUA)','None' ];
 		var post_graduation = [
 				'Doctor of Business Admin (DBAD)',
 				'Doctorate (DOC)',
@@ -1010,7 +1118,7 @@ edu_arr.push(item["edu"][i]);
 				'Post Graduate Programme in Agri Business Management(PGPABM)',
 				'Post Graduate Diploma in Total Quality Management(PGTQM)',
 				'Doctor of Philosphy(PHD)', 'Doctor of Engineering(PHEG)',
-				'Doctor of Science(PHSC)' ];
+				'Doctor of Science(PHSC)','None' ];
 
 		select1 = document.getElementById('function');
 		select2 = document.getElementById('industry');
@@ -1028,23 +1136,28 @@ edu_arr.push(item["edu"][i]);
 		for (grad in graduation) {
 			select3.add(new Option(graduation[grad]));
 		};
+
+		$("#form_submit").click(
+				function() {
+					if ($("#fname").val() == "" || $("#lname").val() == "" || $("#addr1").val() == "" || $("#mobilenumber").val() == ""  || $("#emailid").val() == "" || $("#workexyears").val() == "" || $("#workexmonths").val() == "" || $("#bgrad").val() == "" || $("#industry").val() == "" || $("#function").val() == "" || $("#current").val() == ""  ) {
+						swal({
+							title : "check",
+							text : "Please fill the required input",
+							type : "warning",
+							showCancelButton : true,
+							confirmButtonClass : "btn-danger",
+							confirmButtonText : "OK",
+							closeOnConfirm : true
+						}, function() {
+							window.location.href = "#fname";
+
+						});
+					} else {
+						window.location.href = "index2.html"
+					}
+				});
 	</script>
-	<!-- <script>
-		var data = '{"name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
-
-		var json = JSON.parse(data);
-		console.log(json);
-		alert(json["name"]); //mkyong
-		alert(json.name); //mkyong
-
-		alert(json.address.streetAddress); //88 8nd Street
-		alert(json["address"].city); //New York
-
-		alert(json.phoneNumber[0].number); //111 111-1111
-		alert(json.phoneNumber[1].type); //fax
-
-		alert(json.phoneNumber.number); //undefined
-	</script> -->
+	
 
 	<script src="js/bootstrap-toggle.js"></script>
 	<script type="text/javascript" src="js/validate.js"></script>

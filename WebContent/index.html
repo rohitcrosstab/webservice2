@@ -199,7 +199,7 @@
 				var name = $('#name').val();
 				var surname = $('#dsgn').val();
 				var email = $('#quote').val();
-				var pass = $('#image').val();
+		
 				$.ajax({
 					url : "http://localhost:8002/xmlparser/rest/test/consultant/testinomial_update/"+id,
 					method : 'get',
@@ -207,7 +207,7 @@
 						name : name,
 						dsgn : surname,
 						quote : email,
-						image : pass
+					
 					},
 					success : function(result) {
 						$('#testinom').html(result);
@@ -226,7 +226,7 @@
 			$("#name").val(col2);
 			$("#dsgn").val(col3);
 			$("#quote").val(col4);
-			$("#image").val(col1);
+			
 		});
 
 	}
