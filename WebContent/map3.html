@@ -251,15 +251,7 @@
                       data-order="desc" title="Sort by Title Desc"></i>
                     </span> --></th>
 
-                    <th width="25%"><span class="header"
-                        style="cursor: pointer">Job Description</span> <!--  <span
-                    class="sort-btns"
-                    style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
-                      <i class="fa fa-caret-up" data-path=".desc" data-type="text"
-                      data-order="asc" title="Sort by Description Asc"></i> <i
-                      class="fa fa-caret-down" data-path=".desc" data-type="text"
-                      data-order="desc" title="Sort by Description Desc"></i>
-                    </span> --></th>
+                    
 
                     <th width="10%"><span class="header"
                         style="cursor: pointer">Location</span> <!--  <span
@@ -443,63 +435,8 @@
 									"IN" : {
 										eventHandlers : {
 											click : function() {
-												$(
-												"#locationUL")
-											.html(
-												'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
-											$(
-												"#functionUL")
-											.html(
-												'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-											$(
-												"#businessUL")
-											.html(
-												'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
-											$(
-												"#jobpostingsBody")
-											.html(
-												'<tr class="tbl-item"><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr><tr class="tbl-item"><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>');
-
-											$(
-												'#demo')
-											.jplist(
-											{
-												itemsBox : '.demo-tbl',
-												itemPath : '.tbl-item',
-												panelPath : '.jplist-panel'
-																					//save plugin state
-																					//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
-																					//,storageName: 'jplist-table-sortable-cols'
-																				});
-
-											$(
-												'.demo-tbl .header')
-											.on(
-												'click',
-												function() {
-													$(
-														this)
-													.next(
-														'.sort-btns')
-													.find(
-														'[data-path]:not(.jplist-selected):first')
-													.trigger(
-														'click');
-												});
-											$('#section2description')
-											.show();
-											$(
-											'html,body')
-										.animate(
-										{
-											scrollTop : $(
-												'.jplist')
-											.offset().top - 80
-										},
-										'slow');
-											
-
-										},
+												map("IND");
+											},
 									},
 									attrs : {
 										fill : "#06425b"
@@ -518,60 +455,7 @@
 									"CA" : {
 										eventHandlers : {
 											click : function() {
-												$(
-												"#locationUL")
-											.html(
-												'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
-											$(
-												"#functionUL")
-											.html(
-												'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-											$(
-												"#businessUL")
-											.html(
-												'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
-											$(
-												"#jobpostingsBody")
-											.html(
-												'<tr class="tbl-item"><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr><tr class="tbl-item"><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>');
-
-											$(
-												'#demo')
-											.jplist(
-											{
-												itemsBox : '.demo-tbl',
-												itemPath : '.tbl-item',
-												panelPath : '.jplist-panel'
-																					//save plugin state
-																					//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
-																					//,storageName: 'jplist-table-sortable-cols'
-																				});
-
-											$(
-												'.demo-tbl .header')
-											.on(
-												'click',
-												function() {
-													$(
-														this)
-													.next(
-														'.sort-btns')
-													.find(
-														'[data-path]:not(.jplist-selected):first')
-													.trigger(
-														'click');
-												});
-											$('#section2description')
-											.show();
-											$(
-											'html,body')
-										.animate(
-										{
-											scrollTop : $(
-												'.jplist')
-											.offset().top - 80
-										},
-										'slow');
+												map("CAN");
 											
 
 										},
@@ -593,61 +477,7 @@
 									"US" : {
 										eventHandlers : {
 											click : function() {
-												$(
-												"#locationUL")
-											.html(
-												'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
-											$(
-												"#functionUL")
-											.html(
-												'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-											$(
-												"#businessUL")
-											.html(
-												'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
-											$(
-												"#jobpostingsBody")
-											.html(
-												'<tr class="tbl-item"><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr><tr class="tbl-item"><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>');
-
-											$(
-												'#demo')
-											.jplist(
-											{
-												itemsBox : '.demo-tbl',
-												itemPath : '.tbl-item',
-												panelPath : '.jplist-panel'
-																					//save plugin state
-																					//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
-																					//,storageName: 'jplist-table-sortable-cols'
-																				});
-
-											$(
-												'.demo-tbl .header')
-											.on(
-												'click',
-												function() {
-													$(
-														this)
-													.next(
-														'.sort-btns')
-													.find(
-														'[data-path]:not(.jplist-selected):first')
-													.trigger(
-														'click');
-												});
-											$('#section2description')
-											.show();
-											$(
-											'html,body')
-										.animate(
-										{
-											scrollTop : $(
-												'.jplist')
-											.offset().top - 80
-										},
-										'slow');
-											
+												map("USA");
 
 										},
 									},
@@ -1309,50 +1139,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.
 
 <script type="text/javascript">
 
-  $(
-    "#locationUL")
-  .html(
-    '<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
-  $(
-    "#functionUL")
-  .html(
-    '<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-  $(
-    "#businessUL")
-  .html(
-    '<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
-  $(
-    "#jobpostingsBody")
-  .html(
-    '<tr class="tbl-item"><td class="jobcode">16602</td><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Dosage_Forms">Dosage Forms</td><td><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr><tr class="tbl-item"><td class="jobcode">16654</td><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td class="Generics">Generics</td><td><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></td></tr>');
 
-
-  $(
-    '#demo')
-  .jplist(
-  {
-    itemsBox : '.demo-tbl',
-    itemPath : '.tbl-item',
-    panelPath : '.jplist-panel'
-                                            //save plugin state
-                                            //,storage: 'localstorage' //'', 'cookies', 'localstorage'      
-                                            //,storageName: 'jplist-table-sortable-cols'
-                                          });
-
-  $(
-    '.demo-tbl .header')
-  .on(
-    'click',
-    function() {
-      $(
-        this)
-      .next(
-        '.sort-btns')
-      .find(
-        '[data-path]:not(.jplist-selected):first')
-      .trigger(
-        'click');
-    });
 
   $("#xmltojson").click(function() {
 		$.ajax({
@@ -1365,6 +1152,75 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.
 			}
 		});
 	});
+  function map(country){
+	  $.ajax({
+			type : "GET",
+
+			url : "http://localhost:8002/xmlparser/rest/test/mapdata/"+country,
+			dataType : "json",
+			success : function(mapData) {
+				console.log(mapData);
+				var trHTML = '';
+				$.each(JSON.parse(mapData),
+						function(i, item) {
+							trHTML += '<tr class="tbl-item"><td class="title">'+item.jobcode+'</td><td class="title">'+item.jobtitle+'</td><td class="Noida">'+item.jobloc+'</td><td class="desc">'+item.jobfunct+'</td><td class="Sales_Marketing_n_Business_Development">'+item.jobbuis+'</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>)';
+						});
+				$(
+				"#locationUL")
+			.html(
+				'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
+			$(
+				"#functionUL")
+			.html(
+				'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
+			$(
+				"#businessUL")
+			.html(
+				'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
+			$(
+				"#jobpostingsBody")
+			.html(trHTML);
+				
+			$(
+				'#demo')
+			.jplist(
+			{
+				itemsBox : '.demo-tbl',
+				itemPath : '.tbl-item',
+				panelPath : '.jplist-panel'
+													//save plugin state
+													//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
+													//,storageName: 'jplist-table-sortable-cols'
+												});
+
+			$(
+				'.demo-tbl .header')
+			.on(
+				'click',
+				function() {
+					$(
+						this)
+					.next(
+						'.sort-btns')
+					.find(
+						'[data-path]:not(.jplist-selected):first')
+					.trigger(
+						'click');
+				});
+			$('#section2description')
+			.show();
+			$(
+			'html,body')
+		.animate(
+		{
+			scrollTop : $(
+				'.jplist')
+			.offset().top - 80
+		},
+		'slow');
+			}
+		});
+  }
   </script>
 </body>
 </html>
