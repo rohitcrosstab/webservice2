@@ -176,10 +176,7 @@
                 data-control-action="filter">
                 <ul id="locationUL" style="color: #000; width: 100%;">
                   <li><span data-path="default">Filter by Location</span></li>
-                  <li><span data-path=".Banglore">Banglore</span></li>
-                  <li><span data-path=".Mumbai">Mumbai</span></li>
-                  <li><span data-path=".Nira">Nira</span></li>
-                  <li><span data-path=".Noida">Noida</span></li>
+                 
                 </ul>
               </div>
 
@@ -583,7 +580,7 @@
 										longitude : 72.9959,
 										eventHandlers : {
 											click : function() {
-												alert("jubilant");
+												maps("B04");
 											},
 										},
 										attrs : {
@@ -633,7 +630,7 @@
 										longitude : 77.5946,
 										eventHandlers : {
 											click : function() {
-												alert("jubilant");
+												maps("B01");
 											},
 										},
 										attrs : {
@@ -684,7 +681,7 @@
 										longitude : 74.2119,
 										eventHandlers : {
 											click : function() {
-												alert("jubilant");
+												maps("N03");
 											},
 										},
 										attrs : {
@@ -709,7 +706,7 @@
 										longitude : 72.8777,
 										eventHandlers : {
 											click : function() {
-												alert("jubilant");
+												maps("M05");
 											},
 										},
 										attrs : {
@@ -735,7 +732,7 @@
 										longitude : 77.8880,
 										eventHandlers : {
 											click : function() {
-												alert("jubilant");
+												maps("R10");
 											},
 										},
 										attrs : {
@@ -760,7 +757,7 @@
 										longitude : -117.426048,
 										eventHandlers : {
 											click : function() {
-												alert("jubilant");
+											maps("SPK");
 											},
 										},
 										attrs : {
@@ -785,7 +782,7 @@
 										longitude : -75.8459472,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+											maps("YRD");
 											},
 										},
 										attrs : {
@@ -810,7 +807,7 @@
 										longitude : -75.5993700,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												maps("SBY");
 											},
 										},
 										attrs : {
@@ -960,7 +957,7 @@
 										longitude : 76.6801,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												maps("N04");
 											},
 										},
 										attrs : {
@@ -1012,7 +1009,7 @@
 										longitude : 73.2220,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												maps("S04");
 											},
 										},
 										attrs : {
@@ -1161,14 +1158,107 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.
 			success : function(mapData) {
 				console.log(mapData);
 				var trHTML = '';
+				var locdesc = '';
+				var funct = '';
+				var buis = '';
+				var dupli1 = [];
+				var dupli2 = [];
+				var dupli3 = [];
 				$.each(JSON.parse(mapData),
 						function(i, item) {
 							trHTML += '<tr class="tbl-item"><td class="title">'+item.jobcode+'</td><td class="title">'+item.jobtitle+'</td><td class="Noida">'+item.jobloc+'</td><td class="desc">'+item.jobfunct+'</td><td class="Sales_Marketing_n_Business_Development">'+item.jobbuis+'</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>)';
+						var jobfunction = (item.jobfunct).toString();
+						jobfunction.replace("&" , "and");
+						console.log(jobfunction); 
+						var location = item.locdesc;
+						location.replace("&","and");
+						
+				dupli1.push(item.jobbuis);
+						dupli2.push(jobfunction);
+						dupli3.push(location);
+				}); 
+	  var dup1 = [...new Set(dupli1)];
+	  var dup2 = [...new Set(dupli2)];
+	  var dup3 = [...new Set(dupli3)];
+	  console.log(dup1);
+	  console.log(dup2);
+	 for(var i in dup1) {		 
+		  buis +=  '<li><span data-path=".'+dup1[i]+'">'+dup1[i]+'</span></li>';
+	 }							
+	 for(var i in dup2) {		 
+		  funct +=  '<li><span data-path=".'+dup2[i]+'">'+dup2[i]+'</span></li>';
+	 }
+	 for(var i in dup3) {		 
+		  locdesc +=  '<li><span data-path=".'+dup3[i]+'">'+dup3[i]+'</span></li>';
+	 }
+	  console.log(buis);
+			 $(
+				"#locationUL").append(locdesc).parent().show(); 
+		 	$(
+				"#functionUL").append(funct); 
+			$(
+				"#businessUL").append(buis);
+			$(
+				"#jobpostingsBody")
+			.html(trHTML);
+				
+			$(
+				'#demo')
+			.jplist(
+			{
+				itemsBox : '.demo-tbl',
+				itemPath : '.tbl-item',
+				panelPath : '.jplist-panel'
+													//save plugin state
+													//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
+													//,storageName: 'jplist-table-sortable-cols'
+												});
+
+			$(
+				'.demo-tbl .header')
+			.on(
+				'click',
+				function() {
+					$(
+						this)
+					.next(
+						'.sort-btns')
+					.find(
+						'[data-path]:not(.jplist-selected):first')
+					.trigger(
+						'click');
+				});
+			$('#section2description')
+			.show();
+			$(
+			'html,body')
+		.animate(
+		{
+			scrollTop : $(
+				'.jplist')
+			.offset().top - 80
+		},
+		'slow');
+			}
+		});
+  }
+  function maps(state){
+	  $.ajax({
+			type : "GET",
+
+			url : "http://localhost:8002/xmlparser/rest/test/mapdatas/"+state,
+			dataType : "json",
+			success : function(mapData) {
+				console.log(mapData);
+				var trHTML = '';
+				$.each(JSON.parse(mapData),
+						function(i, item) {
+							trHTML += '<tr class="tbl-item"><td class="title">'+item.jobcode+'</td><td class="title">'+item.jobtitle+'</td><td class="desc">'+item.jobfunct+'</td><td class="Sales_Marketing_n_Business_Development">'+item.jobbuis+'</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>)';
 						});
 				$(
 				"#locationUL")
 			.html(
-				'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
+				'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>').parent().hide();
 			$(
 				"#functionUL")
 			.html(
@@ -1220,7 +1310,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.
 		'slow');
 			}
 		});
-  }
+  } 
   </script>
 </body>
 </html>
