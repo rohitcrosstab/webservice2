@@ -1156,51 +1156,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.
 			url : "http://localhost:8002/xmlparser/rest/test/mapdata/"+country,
 			dataType : "json",
 			success : function(mapData) {
-				console.log(mapData);
-				var trHTML = '';
-				var locdesc = '';
-				var funct = '';
-				var buis = '';
-				var dupli1 = [];
-				var dupli2 = [];
-				var dupli3 = [];
-				$.each(JSON.parse(mapData),
-						function(i, item) {
-							trHTML += '<tr class="tbl-item"><td class="title">'+item.jobcode+'</td><td class="title">'+item.jobtitle+'</td><td class="Noida">'+item.jobloc+'</td><td class="desc">'+item.jobfunct+'</td><td class="Sales_Marketing_n_Business_Development">'+item.jobbuis+'</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>)';
-						var jobfunction = (item.jobfunct).toString();
-						jobfunction.replace("&" , "and");
-						console.log(jobfunction); 
-						var location = item.locdesc;
-						location.replace("&","and");
-						
-				dupli1.push(item.jobbuis);
-						dupli2.push(jobfunction);
-						dupli3.push(location);
-				}); 
-	  var dup1 = [...new Set(dupli1)];
-	  var dup2 = [...new Set(dupli2)];
-	  var dup3 = [...new Set(dupli3)];
-	  console.log(dup1);
-	  console.log(dup2);
-	 for(var i in dup1) {		 
-		  buis +=  '<li><span data-path=".'+dup1[i]+'">'+dup1[i]+'</span></li>';
-	 }							
-	 for(var i in dup2) {		 
-		  funct +=  '<li><span data-path=".'+dup2[i]+'">'+dup2[i]+'</span></li>';
-	 }
-	 for(var i in dup3) {		 
-		  locdesc +=  '<li><span data-path=".'+dup3[i]+'">'+dup3[i]+'</span></li>';
-	 }
-	  console.log(buis);
-			 $(
-				"#locationUL").append(locdesc).parent().show(); 
-		 	$(
-				"#functionUL").append(funct); 
-			$(
-				"#businessUL").append(buis);
-			$(
-				"#jobpostingsBody")
-			.html(trHTML);
+$('#demo').html(mapData);
 				
 			$(
 				'#demo')
@@ -1247,14 +1203,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.
 			type : "GET",
 
 			url : "http://localhost:8002/xmlparser/rest/test/mapdatas/"+state,
-			dataType : "json",
+			dataType : "html",
 			success : function(mapData) {
 				console.log(mapData);
-				var trHTML = '';
-				$.each(JSON.parse(mapData),
-						function(i, item) {
-							trHTML += '<tr class="tbl-item"><td class="title">'+item.jobcode+'</td><td class="title">'+item.jobtitle+'</td><td class="desc">'+item.jobfunct+'</td><td class="Sales_Marketing_n_Business_Development">'+item.jobbuis+'</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>)';
-						});
+				
 				$(
 				"#locationUL")
 			.html(
@@ -1269,7 +1221,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-buttons.
 				'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
 			$(
 				"#jobpostingsBody")
-			.html(trHTML);
+			.html(mapdata);
 				
 			$(
 				'#demo')
