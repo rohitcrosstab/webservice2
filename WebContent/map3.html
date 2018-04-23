@@ -9,7 +9,7 @@
     type="text/css" />
     <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -28,6 +28,7 @@
     <link href="css/jplist.views-control.min.css" rel="stylesheet"
     type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" type="text/css">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style>
@@ -133,7 +134,7 @@
       <div style="padding: 2.5rem 0 4.5rem 0;">
         <div class="jobBox">
           <div id="demo" class="jplist">
-            <a id="scrollToJobMap3" href="javascript:void(0)"
+<!--             <a id="scrollToJobMap3" href="javascript:void(0)"
             style="font-size: 22px; cursor: pointer;"> Go to map &nbsp;<i
             class="fa fa-angle-up"></i>
           </a>
@@ -152,9 +153,9 @@
               <div class="text-filter-box">
                 <i class="fa fa-search  jplist-icon"
                 style="border-bottom-left-radius: 15px; border-top-left-radius: 15px; line-height: 28px;"></i>
-                  <!--[if lt IE 10]>
+                  [if lt IE 10]>
                   <div class="jplist-label">Filter by Title:</div>
-                <![endif]-->
+                <![endif]
                 <input data-path=".title" type="text" value=""
                 placeholder="Filter Job Title" data-control-type="textbox"
                 data-control-name="title-filter" data-control-action="filter" />
@@ -163,9 +164,9 @@
               <div class="text-filter-box">
                 <i class="fa fa-search  jplist-icon"
                 style="border-bottom-left-radius: 15px; border-top-left-radius: 15px; line-height: 28px;"></i>
-                  <!--[if lt IE 10]>
+                  [if lt IE 10]>
                   <div class="jplist-label">Filter by Description:</div>
-                <![endif]-->
+                <![endif]
                 <input data-path=".desc" type="text" value=""
                 placeholder="Filter Job Description" data-control-type="textbox" data-control-name="desc-filter" data-control-action="filter" />
               </div>
@@ -187,14 +188,7 @@
               data-control-action="filter">
                 <ul id="functionUL" style="color: #000; width: 100%;">
                   <li><span data-path="default">Filter by Function</span></li>
-                  <li><span data-path=".Administration">Administration</span></li>
-                  <li><span data-path=".Finance_n_Accounts">Finance
-                  &amp; Accounts</span></li>
-                  <li><span data-path=".Human_Resources">Human
-                  Resources</span></li>
-                  <li><span data-path=".Engineering">Engineering</span></li>
-                  <li><span data-path=".Legal">Legal</span></li>
-                  <li><span data-path=".Supply_Chain">Supply Chain</span></li>
+                  
                 </ul>
               </div>
 
@@ -204,22 +198,18 @@
               data-control-action="filter">
                 <ul id="businessUL" style="color: #000; width: 100;">
                   <li><span data-path="default">Filter by Business</span></li>
-                  <li><span data-path=".Allergy">Allergy</span></li>
-                  <li><span data-path=".Corporate">Corporate</span></li>
-                  <li><span data-path=".Drug_Discovery">Drug
-                  Discovery</span></li>
-                  <li><span data-path=".Generics">Generics</span></li>
+                  
                 </ul>
               </div>
 
             <div class="jplist-pagination" data-control-type="pagination" data-control-name="paging" data-control-action="paging"></div>
           </div>
 
-      <!-- data -->
+      data
       <div class="text-shadow" style="padding-top: 20px;">
         <table class="demo-tbl" style="border: 2px solid #eeeeee;">
 
-          <!-- one more panel section -->
+          one more panel section
           <thead class="jplist-panel">
 
             <tr data-control-type="sort-buttons-group"
@@ -228,7 +218,7 @@
             data-datetime-format="{month}/{day}/{year}">
 
             <th width="10%"><span class="header"
-                        style="cursor: pointer">Job Code</span> <!--  <span
+                        style="cursor: pointer">Job Code</span>  <span
                     class="sort-btns"
                     style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
                       <i class="fa fa-caret-up" data-path=".jobcode"
@@ -236,22 +226,22 @@
                       title="Sort by Job Code Asc"></i> <i class="fa fa-caret-down"
                       data-path=".jobcode" data-type="text" data-order="desc"
                       title="Sort by Job Code Desc"></i>
-                    </span> --></th>
+                    </span></th>
 
                     <th width="15%"><span class="header"
-                        style="cursor: pointer">Job Title</span> <!--  <span
+                        style="cursor: pointer">Job Title</span>  <span
                     class="sort-btns"
                     style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
                       <i class="fa fa-caret-up" data-path=".title" data-type="text"
                       data-order="asc" title="Sort by Title Asc"></i> <i
                       class="fa fa-caret-down" data-path=".title" data-type="text"
                       data-order="desc" title="Sort by Title Desc"></i>
-                    </span> --></th>
+                    </span></th>
 
                     
 
                     <th width="10%"><span class="header"
-                        style="cursor: pointer">Location</span> <!--  <span
+                        style="cursor: pointer">Location</span>  <span
                     class="sort-btns"
                     style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
                       <i class="fa fa-caret-up" data-path=".location"
@@ -259,11 +249,11 @@
                       title="Sort by Location Asc"></i> <i class="fa fa-caret-down"
                       data-path=".location" data-type="text" data-order="desc"
                       title="Sort by Location Desc"></i>
-                    </span> --></th>
+                    </span></th>
 
 
                     <th width="20%"><span class="header"
-                        style="cursor: pointer">Function</span> <!--  <span
+                        style="cursor: pointer">Function</span>  <span
                     class="sort-btns"
                     style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
                       <i class="fa fa-caret-up" data-path=".function"
@@ -271,10 +261,10 @@
                       title="Sort by Function Asc"></i> <i class="fa fa-caret-down"
                       data-path=".function" data-type="text" data-order="desc"
                       title="Sort by Function Desc"></i>
-                    </span> --></th>
+                    </span></th>
 
                     <th width="10%"><span class="header"
-                        style="cursor: pointer">Business</span> <!--  <span
+                        style="cursor: pointer">Business</span>  <span
                     class="sort-btns"
                     style="display: inline-grid; cursor: pointer; position: relative; left: 6px; bottom: 9px;">
                       <i class="fa fa-caret-up" data-path=".business"
@@ -282,19 +272,19 @@
                       title="Sort by Business Asc"></i> <i class="fa fa-caret-down"
                       data-path=".business" data-type="text" data-order="desc"
                       title="Sort by Business Desc"></i>
-                    </span> --></th>
+                    </span></th>
 
 
                     <th width="8%"><span class="header">Apply</span></th>
                   </tr>
                 </thead>
 
-                <!-- data container -->
+                data container
                 <tbody id="jobpostingsBody">
                 </tbody>
               </table>
             </div>
-            <!-- end of data -->
+            end of data
 
             <div class="jplist-no-results text-shadow align-center"
             style="padding-top: 60px; color: #000;">
@@ -303,10 +293,10 @@
             </p>
           </div>
 
-          <!-- panel -->
+          panel
           <div class="jplist-panel panel-bottom">
 
-            <!-- items per page dropdown -->
+            items per page dropdown
             <div class="jplist-drop-down"
             data-control-type="items-per-page-drop-down"
             data-control-name="paging" data-control-action="paging"
@@ -320,20 +310,20 @@
               <li><span data-number="all"> View All </span></li>
             </ul>
           </div>
-          <!-- panel end -->
+          panel end
 
-          <!-- pagination results -->
+          pagination results
           <div class="jplist-label" data-type="{start} - {end} of {all}"
           data-control-type="pagination-info" data-control-name="paging"
           data-control-action="paging"
           style="font-size: 14px; font-weight: bold; border-radius: 30px;"></div>
 
-          <!-- pagination -->
+          pagination
           <div class="jplist-pagination" data-control-type="pagination"
           data-control-name="paging" data-control-action="paging"
           data-control-animate-to-top="true"></div>
 
-        </div>
+        </div> -->
       </div>
       <!-- end of demo -->
             <!-- 
@@ -495,7 +485,7 @@
 									"MY" : {
 										eventHandlers : {
 											click : function() {
-
+nodata();
 											},
 										},
 										tooltip : {
@@ -511,7 +501,7 @@
 									"BE" : {
 										eventHandlers : {
 											click : function() {
-
+												nodata();
 											},
 										},
 										tooltip : {
@@ -528,7 +518,7 @@
 
 										eventHandlers : {
 											click : function() {
-
+												nodata();
 											},
 										},
 										attrs : {
@@ -554,7 +544,7 @@
 										longitude : 74.6269,
 										eventHandlers : {
 											click : function() {
-												alert("");
+												nodata();
 											},
 										},
 										attrs : {
@@ -605,7 +595,7 @@
 										longitude : 73.1926,
 										eventHandlers : {
 											click : function() {
-												alert("jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -656,7 +646,7 @@
 										longitude : 77.3910,
 										eventHandlers : {
 											click : function() {
-												alert("jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -832,7 +822,7 @@
 										longitude : -75.513809,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -857,7 +847,7 @@
 										longitude : 121.4737,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -882,7 +872,7 @@
 										longitude : 3.7456,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -907,7 +897,7 @@
 										longitude : 103.8198,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -932,7 +922,7 @@
 										longitude : -81.379234,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -984,7 +974,7 @@
 										longitude : 78.2393,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -1034,7 +1024,7 @@
 										longitude : 78.4867,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -1060,7 +1050,7 @@
 										longitude : 77.5946,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -1085,7 +1075,7 @@
 										longitude : -73.5672559999999999,
 										eventHandlers : {
 											click : function() {
-												alert("Jubilant");
+												nodata();
 											},
 										},
 										attrs : {
@@ -1263,6 +1253,17 @@ $('#demo').html(mapData);
 			}
 		});
   } 
+  function nodata(){
+	  swal({
+			title : "Sorry",
+			text : "There is no job posting for this state",
+			type : "warning",
+			showCancelButton : true,
+			closeOnConfirm : true,
+			confirmButtonText : "OK!",
+			confirmButtonColor : "#ec6c62"
+		})
+  }
   </script>
 </body>
 </html>

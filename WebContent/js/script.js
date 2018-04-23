@@ -178,61 +178,7 @@ $(function() {
 										eventHandlers : {
 											click : function() {
 
-												$(
-													"#locationUL")
-												.html(
-													'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>');
-												$(
-													"#functionUL")
-												.html(
-													'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-												$(
-													"#businessUL")
-												.html(
-													'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
-												$(
-													"#jobpostingsBody")
-												.html(
-													'<tr class="tbl-item"><td class="title">DGM - Business Development & Sales</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Noida">Noida</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr><tr class="tbl-item"><td class="title">Manager - Sales & Marketing (Domestic)</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Banglore">Banglore</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>');
-
-												$(
-													'#demo')
-												.jplist(
-												{
-													itemsBox : '.demo-tbl',
-													itemPath : '.tbl-item',
-													panelPath : '.jplist-panel'
-																						//save plugin state
-																						//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
-																						//,storageName: 'jplist-table-sortable-cols'
-																					});
-
-												$(
-													'.demo-tbl .header')
-												.on(
-													'click',
-													function() {
-														$(
-															this)
-														.next(
-															'.sort-btns')
-														.find(
-															'[data-path]:not(.jplist-selected):first')
-														.trigger(
-															'click');
-													});
-												$('#section2description')
-												.show();
-												$(
-													'html,body')
-												.animate(
-												{
-													scrollTop : $(
-														'.jplist')
-													.offset().top - 80
-												},
-												'slow');
-												
+										map("IND");
 
 											},
 										},
@@ -254,57 +200,7 @@ $(function() {
 										eventHandlers : {
 											click : function() {
 
-												$(
-													"#locationUL")
-												.html(
-													'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Montreal">Montreal</span></li>');
-												$(
-													"#functionUL")
-												.html(
-													'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Quality">Quality</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-												$(
-													"#businessUL")
-												.html(
-													'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".DraxImage">DraxImage</span></li>');
-												$(
-													"#jobpostingsBody")
-												.html(
-													'<tr class="tbl-item"><td class="title">Compliance Specialist</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Quality">Quality</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr><tr class="tbl-item"><td class="title">Business Analyst</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Montreal">Montreal</td><td class="Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>');
-
-												$(
-													'#demo')
-												.jplist(
-												{
-													itemsBox : '.demo-tbl',
-													itemPath : '.tbl-item',
-													panelPath : '.jplist-panel'
-												});
-
-												$(
-													'.demo-tbl .header')
-												.on(
-													'click',
-													function() {
-														$(
-															this)
-														.next(
-															'.sort-btns')
-														.find(
-															'[data-path]:not(.jplist-selected):first')
-														.trigger(
-															'click');
-													});
-												$('#section2description')
-												.show();
-												$(
-													'html,body')
-												.animate(
-												{
-													scrollTop : $(
-														'.jplist')
-													.offset().top - 80
-												},
-												'slow');
+												map("CAN");
 												
 											},
 										},
@@ -323,62 +219,7 @@ $(function() {
 
 										eventHandlers : {
 											click : function() {
-
-												$(
-													"#locationUL")
-												.html(
-													'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Spokane">Spokane</span></li><li><span data-path=".Yardley">Yardley</span></li>');
-												$(
-													"#functionUL")
-												.html(
-													'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li><li><span data-path=".Pharmacovigilance">Pharmacovigilance</span></li>');
-												$(
-													"#businessUL")
-												.html(
-													'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Allergy">Allergy</span></li><li><span data-path=".Corporate">Corporate</span></li>');
-												$(
-													"#jobpostingsBody")
-												.html(
-													'<tr class="tbl-item"><td class="title">Learning & Development Manager</td><td class="desc">A Short job-description telling all the main responsibilites and tasks related to this job.</td><td class="Yardley">Yardley</td><td class="Corporate">Corporate</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr><tr class="tbl-item"><td class="title">Inside Sales Representative</td><td class="desc">An arch is a structure that spans a space and supports a load.</td><td class="Spokane">Spokane</td><td class="Allergy">Allergy</td><td><a href="#" data-toggle="modal" data-target="#myModal"><span class="modalTrigger" style="cursor: pointer; text-decoration: underline; color: #004d99;"><i class="fa fa-paper-plane"></i>&nbsp;Apply</span></a><br><a href="#" data-toggle="modal" data-target="#emailModal"><span style="cursor: pointer; text-decoration: underline; color: #80bb2d;"><i class="fa fa-envelope"></i>&nbsp;Refer a friend</span></a></td></tr>');
-
-												$(
-													'#demo')
-												.jplist(
-												{
-													itemsBox : '.demo-tbl',
-													itemPath : '.tbl-item',
-													panelPath : '.jplist-panel'
-												});
-
-												$(
-													'.demo-tbl .header')
-												.on(
-													'click',
-													function() {
-														$(
-															this)
-														.next(
-															'.sort-btns')
-														.find(
-															'[data-path]:not(.jplist-selected):first')
-														.trigger(
-															'click');
-													});
-
-
-												$('#section2description')
-												.show();
-												$(
-													'html,body')
-												.animate(
-												{
-													scrollTop : $(
-														'.jplist')
-													.offset().top - 80
-												},
-												'slow');
-
-
+												map("USA");
 											},
 										},
 										attrs : {
@@ -386,6 +227,55 @@ $(function() {
 										},
 										tooltip : {
 											content : "<span style=\"font-weight:bold;\">United States</span><br />"
+										},
+										attrsHover : {
+											fill : "#000000"
+										}
+									},
+									"MY" : {
+										eventHandlers : {
+											click : function() {
+nodata();
+											},
+										},
+										tooltip : {
+											content : "<center><span style=\"font-weight:bold;padding: 5px;max-width: 200px;background-color: #000;color: #fff;\">Malaysia</span></center>"
+										},
+										attrs : {
+											fill : "#06425b"
+										},
+										attrsHover : {
+											fill : "#000000"
+										}
+									},
+									"BE" : {
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										tooltip : {
+											content : "<center><span style=\"font-weight:bold;padding: 5px;max-width: 200px;background-color: #000;color: #fff;\">Belgium</span></center>"
+										},
+										attrs : {
+											fill : "#06425b"
+										},
+										attrsHover : {
+											fill : "#000000"
+										}
+									},
+									"CN" : {
+
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										attrs : {
+											fill : "#06425b"
+										},
+										tooltip : {
+											content : "<center><span style=\"font-weight:bold;padding: 5px;max-width: 200px;background-color: #000;color: #fff;\">United States</span></center>"
 										},
 										attrsHover : {
 											fill : "#000000"
@@ -399,371 +289,561 @@ $(function() {
 									// Plot positioned by x and y instead of latitude, longitude
 
 									'Chittorgarh' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
-										latitude : 24.8887,
+										size : 5,
+										latitude : 28.8887,
 										longitude : 74.6269,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+												nodata();
 											},
 										},
 										attrs : {
-											fill : "#red",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Chittorgarh</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Chittorgarh</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
+									},
 									'Bharuch' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size : 5,
 										latitude : 21.7051,
 										longitude : 72.9959,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+												maps("B04");
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Bharuch</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Bharuch</span><br /></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
+									},
 									'Ambarnath' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size : 5,
 										latitude : 19.1825,
 										longitude : 73.1926,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+												nodata();
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Ambarnath</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Ambarnath</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
-									'banglore' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+									},
+									'bengalore' : {
+										size : 5,
 										latitude : 12.9716,
 										longitude : 77.5946,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+												maps("B01");
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Banglore</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Banglore</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
+									},
 
 									'noida' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
-										latitude : 28.5355,
+										size : 5,
+										latitude : 27.5355,
 										longitude : 77.3910,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+												nodata();
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Noida</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Noida</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
+									},
 									'Nira' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size : 5,
 										latitude : 18.1022,
 										longitude : 74.2119,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+												maps("N03");
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Nira</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Nira</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
+									},
 									'Mumbai' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
-										latitude : 19.0760,
+										size : 5,
+										latitude : 25.0760,
 										longitude : 72.8777,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+												maps("M05");
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Mumbai</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Mumbai</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
-									'Sahibabad' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
-										latitude : 28.6654,
-										longitude : 77.3493,
-										eventHandlers : {
-											click : function() {
-												//alert("hello");
-											},
-										},
-										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
-										},
-										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Sahibabad</span><br />"
-										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
-
-										}
-									}, 
+									},
+									
 									'Roorkee' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
-										latitude : 29.8543,
+										size : 5,
+										latitude : 30.8543,
 										longitude : 77.8880,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+												maps("R10");
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Roorkee</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Roorkee</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
+									},
 									'Spokane' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size : 5,
 										latitude : 47.658779,
 										longitude : -117.426048,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+											maps("SPK");
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Spokane</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Spokane</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
-									'Georgia' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
-										latitude : 33.247875,
-										longitude : -83.441162,
-										eventHandlers : {
-											click : function() {
-												//alert("hello");
-											},
-										},
-										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
-										},
-										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Georgia</span><br />"
-										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
-
-										}
-									}, 
-									'Pennsylvania' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
-										latitude : 41.203323,
-										longitude : -77.194527,
-										eventHandlers : {
-											click : function() {
-												//alert("hello");
-											},
-										},
-										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
-										},
-										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Pennsylvania</span><br />"
-										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
-
-										}
-									}, 
-									
+									},
 									'Yardley' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
-										latitude : 40.245664,
-										longitude : -74.8459472,
+										size : 5,
+										latitude : 42.2457,
+										longitude : -75.8459472,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+											maps("YRD");
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Yardley</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Yardley</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
+									},
+									'Salisbury' : {
+										size : 5,
+										latitude : 38.3606700,
+										longitude : -75.5993700,
+										eventHandlers : {
+											click : function() {
+												maps("SBY");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Salisbury</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Malvern' : {
+										size : 5,
+										latitude : 40.036217,
+										longitude : -75.513809,
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Malvern</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Shanghai' : {
+										size : 5,
+										latitude : 31.2304,
+										longitude : 121.4737,
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Shanghai</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Merelbeke' : {
+										size : 5,
+										latitude : 50.9945,
+										longitude : 3.7456,
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Merelbeke</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Singapore' : {
+										size : 5,
+										latitude : 1.3521,
+										longitude : 103.8198,
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Singapore</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'orlando' : {
+										size : 5,
+										latitude : 28.538336,
+										longitude : -81.379234,
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Orlando</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Nanjangud' : {
+										size : 5,
+										latitude : 12.1200,
+										longitude : 76.6801,
+										eventHandlers : {
+											click : function() {
+												maps("N04");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Nanjangud</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									
+									
+									'Gajraula' : {
+										size : 5,
+										latitude : 28.8448,
+										longitude : 78.2393,
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Gajraula</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Savli' : {
+										size : 5,
+										latitude : 22.5616,
+										longitude : 73.2220,
+										eventHandlers : {
+											click : function() {
+												maps("S04");
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Savli</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+									'Hyderabad' : {
+										size : 5,
+										latitude : 17.3850,
+										longitude : 78.4867,
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Hyderabad</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
+
+									'Bengaluru' : {
+										size : 5,
+										latitude : 12.9716,
+										longitude : 77.5946,
+										eventHandlers : {
+											click : function() {
+												nodata();
+											},
+										},
+										attrs : {
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
+										},
+										tooltip : {
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Bengaluru</span></center>"
+										},
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
+
+										}
+									},
 									'Montreal' : {
-										type : "svg",
-										path :'M7.5,0C2.48,0,0,3.5,0,7.81S7.5,22,7.5,22,15,12.13,15,7.81,12.52,0,7.5,0Zm0,10.32a4,4,0,1,1,4-4A4,4,0,0,1,7.5,10.32Z',
-										width : 6,
-										height : 10,
+										size : 5,
 										latitude : 45.5016889,
 										longitude : -73.5672559999999999,
 										eventHandlers : {
 											click : function() {
-												//alert("hello");
+												nodata();
 											},
 										},
 										attrs : {
-											fill : "#80bb2d",
-											opacity : 1
+											fill : "orange",
+											opacity : 1,
+											stroke : '#f4f4e8',
+											"stroke-width" : 1,
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">Montreal</span><br />"
+											content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Montreal</span></center>"
 										},
-										attrsHover: {
-											fill: "orange",
-											stroke: '#f4f4e8',
-											"stroke-width": 0.5,
+										attrsHover : {
+											fill : "orange",
+											stroke : '#f4f4e8',
+											"stroke-width" : 2,
 
 										}
-									}, 
+									},
 
 								}
 							});
@@ -891,4 +971,140 @@ $(window).scroll(function(){
                 console.log(result);
             }, 'json');
         });
+    $("#xmltojson").click(function() {
+		$.ajax({
+			type : "GET",
+
+			url : "http://localhost:8002/xmlparser/rest/test/xmltojson",
+			dataType : "xml",
+			success : function(xmlData) {
+				console.log(xmlData);
+			}
+		});
+	});
+  function map(country){
+	  $.ajax({
+			type : "GET",
+
+			url : "http://localhost:8002/xmlparser/rest/test/mapdata/"+country,
+			dataType : "json",
+			success : function(mapData) {
+$('#demo').html(mapData);
+				
+			$(
+				'#demo')
+			.jplist(
+			{
+				itemsBox : '.demo-tbl',
+				itemPath : '.tbl-item',
+				panelPath : '.jplist-panel'
+													//save plugin state
+													//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
+													//,storageName: 'jplist-table-sortable-cols'
+												});
+
+			$(
+				'.demo-tbl .header')
+			.on(
+				'click',
+				function() {
+					$(
+						this)
+					.next(
+						'.sort-btns')
+					.find(
+						'[data-path]:not(.jplist-selected):first')
+					.trigger(
+						'click');
+				});
+			$('#section2description')
+			.show();
+			$(
+			'html,body')
+		.animate(
+		{
+			scrollTop : $(
+				'.jplist')
+			.offset().top - 80
+		},
+		'slow');
+			}
+		});
+  }
+  function maps(state){
+	  $.ajax({
+			type : "GET",
+
+			url : "http://localhost:8002/xmlparser/rest/test/mapdatas/"+state,
+			dataType : "html",
+			success : function(mapData) {
+				console.log(mapData);
+				
+				$(
+				"#locationUL")
+			.html(
+				'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>').parent().hide();
+			$(
+				"#functionUL")
+			.html(
+				'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
+			$(
+				"#businessUL")
+			.html(
+				'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
+			$(
+				"#jobpostingsBody")
+			.html(mapdata);
+				
+			$(
+				'#demo')
+			.jplist(
+			{
+				itemsBox : '.demo-tbl',
+				itemPath : '.tbl-item',
+				panelPath : '.jplist-panel'
+													//save plugin state
+													//,storage: 'localstorage' //'', 'cookies', 'localstorage'			
+													//,storageName: 'jplist-table-sortable-cols'
+												});
+
+			$(
+				'.demo-tbl .header')
+			.on(
+				'click',
+				function() {
+					$(
+						this)
+					.next(
+						'.sort-btns')
+					.find(
+						'[data-path]:not(.jplist-selected):first')
+					.trigger(
+						'click');
+				});
+			$('#section2description')
+			.show();
+			$(
+			'html,body')
+		.animate(
+		{
+			scrollTop : $(
+				'.jplist')
+			.offset().top - 80
+		},
+		'slow');
+			}
+		});
+  } 
+  function nodata(){
+	  swal({
+			title : "Sorry",
+			text : "There is no job posting for this state",
+			type : "warning",
+			showCancelButton : true,
+			closeOnConfirm : true,
+			confirmButtonText : "OK!",
+			confirmButtonColor : "#ec6c62"
+		})
+  }
 });
