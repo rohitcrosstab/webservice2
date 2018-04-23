@@ -485,7 +485,7 @@
 									"MY" : {
 										eventHandlers : {
 											click : function() {
-nodata();
+map("MYS")
 											},
 										},
 										tooltip : {
@@ -501,7 +501,7 @@ nodata();
 									"BE" : {
 										eventHandlers : {
 											click : function() {
-												nodata();
+											map("BEG");
 											},
 										},
 										tooltip : {
@@ -518,7 +518,7 @@ nodata();
 
 										eventHandlers : {
 											click : function() {
-												nodata();
+												map("CNA");
 											},
 										},
 										attrs : {
@@ -1024,7 +1024,7 @@ nodata();
 										longitude : 78.4867,
 										eventHandlers : {
 											click : function() {
-												nodata();
+												maps("HYD");
 											},
 										},
 										attrs : {
@@ -1050,7 +1050,7 @@ nodata();
 										longitude : 77.5946,
 										eventHandlers : {
 											click : function() {
-												nodata();
+												maps("BEN");
 											},
 										},
 										attrs : {
@@ -1075,7 +1075,7 @@ nodata();
 										longitude : -73.5672559999999999,
 										eventHandlers : {
 											click : function() {
-												nodata();
+											maps("MON");
 											},
 										},
 										attrs : {
@@ -1185,7 +1185,10 @@ $('#demo').html(mapData);
 			.offset().top - 80
 		},
 		'slow');
-			}
+			},
+			  error: function (jqXHR, exception) {
+			      console.log(jqXHR.status);
+			    }
 		});
   }
   function maps(state){
@@ -1194,24 +1197,10 @@ $('#demo').html(mapData);
 
 			url : "http://localhost:8002/xmlparser/rest/test/mapdatas/"+state,
 			dataType : "html",
-			success : function(mapData) {
-				console.log(mapData);
+			success : function(mapsData) {
+				console.log(mapsData);
 				
-				$(
-				"#locationUL")
-			.html(
-				'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>').parent().hide();
-			$(
-				"#functionUL")
-			.html(
-				'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-			$(
-				"#businessUL")
-			.html(
-				'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
-			$(
-				"#jobpostingsBody")
-			.html(mapdata);
+				$("#demo").html(mapsData);
 				
 			$(
 				'#demo')
@@ -1250,10 +1239,13 @@ $('#demo').html(mapData);
 			.offset().top - 80
 		},
 		'slow');
-			}
+			},
+	  error: function (jqXHR, exception) {
+	      console.log(jqXHR.status);
+	    }
 		});
   } 
-  function nodata(){
+   function nodata(){
 	  swal({
 			title : "Sorry",
 			text : "There is no job posting for this state",
@@ -1262,8 +1254,8 @@ $('#demo').html(mapData);
 			closeOnConfirm : true,
 			confirmButtonText : "OK!",
 			confirmButtonColor : "#ec6c62"
-		})
-  }
+		}) 
+   }
   </script>
 </body>
 </html>

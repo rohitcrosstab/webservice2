@@ -207,13 +207,13 @@
 											fill : "#06425b"
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">India</span><br />"
+											content : "<span style=\"font-weight:bold;\">Canada</span><br />"
 										},
 										attrsHover : {
 											fill : "#000000"
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">India</span><br />"
+											content : "<span style=\"font-weight:bold;\">Canada</span><br />"
 										},
 
 									},
@@ -228,20 +228,20 @@
 											fill : "#06425b"
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">India</span><br />"
+											content : "<span style=\"font-weight:bold;\">USA</span><br />"
 										},
 										attrsHover : {
 											fill : "#000000"
 										},
 										tooltip : {
-											content : "<span style=\"font-weight:bold;\">India</span><br />"
+											content : "<span style=\"font-weight:bold;\">USA</span><br />"
 										},
 
 									},
 										"MY" : {
 											eventHandlers : {
 												click : function() {
-	nodata();
+													map("nodata");
 												},
 											},
 											tooltip : {
@@ -257,7 +257,7 @@
 										"BE" : {
 											eventHandlers : {
 												click : function() {
-													nodata();
+													map("nodata");
 												},
 											},
 											tooltip : {
@@ -274,14 +274,14 @@
 
 											eventHandlers : {
 												click : function() {
-													nodata();
+													map("nodata");
 												},
 											},
 											attrs : {
 												fill : "#06425b"
 											},
 											tooltip : {
-												content : "<center><span style=\"font-weight:bold;padding: 5px;max-width: 200px;background-color: #000;color: #fff;\">United States</span></center>"
+												content : "<center><span style=\"font-weight:bold;padding: 5px;max-width: 200px;background-color: #000;color: #fff;\">China</span></center>"
 											},
 											attrsHover : {
 												fill : "#000000"
@@ -300,7 +300,7 @@
 											longitude : 74.6269,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -351,7 +351,7 @@
 											longitude : 73.1926,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -402,7 +402,7 @@
 											longitude : 77.3910,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -578,7 +578,7 @@
 											longitude : -75.513809,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -603,7 +603,7 @@
 											longitude : 121.4737,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -628,7 +628,7 @@
 											longitude : 3.7456,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -653,7 +653,7 @@
 											longitude : 103.8198,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -678,7 +678,7 @@
 											longitude : -81.379234,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -730,7 +730,7 @@
 											longitude : 78.2393,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -780,7 +780,7 @@
 											longitude : 78.4867,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -806,7 +806,7 @@
 											longitude : 77.5946,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -831,7 +831,7 @@
 											longitude : -73.5672559999999999,
 											eventHandlers : {
 												click : function() {
-													nodata();
+													maps("nodata");
 												},
 											},
 											attrs : {
@@ -1118,24 +1118,10 @@ function maps(state){
 
 			url : "http://localhost:8002/xmlparser/rest/test/mapdatas/"+state,
 			dataType : "html",
-			success : function(mapData) {
-				console.log(mapData);
+			success : function(mapsData) {
+				console.log(mapsData);
 				
-				$(
-				"#locationUL")
-			.html(
-				'<li><span data-path="default">Filter by Location</span></li><li><span data-path=".Banglore">Banglore</span></li><li><span data-path=".Noida">Noida</span></li>').parent().hide();
-			$(
-				"#functionUL")
-			.html(
-				'<li><span data-path="default">Filter by Function</span></li><li><span data-path=".Sales_Marketing_n_Business_Development">Sales, Marketing & Business Development</span></li>');
-			$(
-				"#businessUL")
-			.html(
-				'<li><span data-path="default">Filter by Business</span></li><li><span data-path=".Dosage_Forms">Dosage Forms</span></li><li><span data-path=".Generics">Generics</span></li>');
-			$(
-				"#jobpostingsBody")
-			.html(mapdata);
+			$("#demo").html(mapsdata);	
 				
 			$(
 				'#demo')
@@ -1177,14 +1163,4 @@ function maps(state){
 			}
 		});
 } 
-function nodata(){
-	  swal({
-			title : "Sorry",
-			text : "There is no job posting for this state",
-			type : "warning",
-			showCancelButton : true,
-			closeOnConfirm : true,
-			confirmButtonText : "OK!",
-			confirmButtonColor : "#ec6c62"
-		})
-}
+
