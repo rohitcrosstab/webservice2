@@ -728,7 +728,7 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 		};
 		var myDropzone = new Dropzone("#dropzone1", myDropzoneOptions2);
 		var myDropzoneOptions1 = {
-			url : "http://localhost:8002/xmlparser/rest/test/upload",
+			url : "http://localhost:8002/xmlparser/rest/test/insertdb1",
 			acceptedFiles : ".doc,.pdf,.json,.jpg",
 			maxFiles : "1",
 			clickable : true,
