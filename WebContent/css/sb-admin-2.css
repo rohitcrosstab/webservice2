@@ -3,8 +3,22 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+@import
+  url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css)
+  ;
+
+@import
+  url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700')
+  ;
+
+@import
+  url("https://fonts.googleapis.com/css?family=Lato:300,400,700,300i,400i,700i")
+  ;
+
 body {
-  background-color: #f8f8f8;
+  background-color: #eee;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 #wrapper {
   width: 100%;
@@ -27,6 +41,7 @@ body {
 }
 .navbar-top-links li {
   display: inline-block;
+  color: #fff;
 }
 .navbar-top-links li:last-child {
   margin-right: 15px;
@@ -66,6 +81,7 @@ body {
 .navbar-top-links .dropdown-user {
   right: 0;
   left: auto;
+  background-color: #8CCE32;
 }
 .sidebar .sidebar-nav.navbar-collapse {
   padding-left: 0;
@@ -438,14 +454,16 @@ table.dataTable thead .sorting:after {
 
 .navbar.navbar-default.navbar-static-top {
     width: 100%;
-    z-index: 1;
+    z-index: 6;
     position: fixed;
     border-color: transparent;
     background-color: #349886;
+    background: linear-gradient(to right, #23b1ec , #8CCE32);
 }
 
 .page-header {
-  margin: 65px 0 20px;
+  margin: 70px 0 5px;
+  font-size: 24px;
 }
 
 #dataTables-example th {
@@ -454,21 +472,43 @@ table.dataTable thead .sorting:after {
 
 .navbar-default.sidebar {
   z-index: -1;
-  background-color: #25333E;
+  background-color: #ffffff;
   height: 100vh;
 }
 
+@media screen and (max-width: 767px) {
+  .navbar-default.sidebar {
+    height: 0;
+  }
+}
+
 .navbar-default.sidebar .nav > li > a {
-  background-color: #23b1ec;
-  color: #fff;
+  background-color: #ffffff;
+  color: #0645AC;
+}
+
+.navbar-default.sidebar .nav > li > a:hover {
+  color: #ffffff;
+  background-color: #0645AC;
+}
+
+.navbar-default.sidebar .nav > li:first-child > a:hover {
+  cursor: context-menu;
+  background-color: #ffffff;
 }
 
 .navbar-default .navbar-top-links li a {
-  color: #fff;
+  color: #ffffff;
+  background-color: #8CCE32;
+}
+
+.navbar-default .navbar-top-links li a:hover {
+  color: #23b1ec;
+  background-color: transparent;
 }
 
 #page-wrapper {
-  background-color: #ffffff;
+  background-color: #eee;
 }
 
 .pagination > li:first-child > a, .pagination > li:last-child > a {
@@ -482,8 +522,132 @@ table.dataTable thead .sorting:after {
 
 .panel-default > .panel-heading {
   border-color: #ddd;
-background: #80bb2d;
-background: linear-gradient(#8CCE32, #91C763, #94BA6E, #80bb2d);
-color: rgba(255, 255, 255, 0.75);
+background: #0645AC;
+//background: linear-gradient(#8CCE32, #91C763, #94BA6E, #80bb2d);
+color: rgba(255, 255, 255);
 font-size: large;
+}
+
+#side-menu > li > a > img {
+    display: block;
+    margin: auto;
+}
+
+.navbar-default .navbar-brand {
+  font-size: x-large;
+  font-weight: 200;
+  color: #ffffff;
+  cursor: default;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-default .navbar-brand {
+    font-size: large;
+  }
+}
+
+.navbar-brand span {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.extra .tooltiptext {
+    display: none;
+    width: 80px;
+    background-color: #ffffff;
+    color: #0645AC;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 1;
+}
+
+.extra:hover .tooltiptext {
+    display:block;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-top-links {
+    display: none;
+  }
+}
+
+hr {
+  margin-top: 0px;
+  border-top: 1px solid #d1d1d1;
+  margin-bottom: 7px;
+}
+
+#msform {
+  margin-top: 0;
+}
+
+#msform fieldset {
+  box-shadow: 0 12px 18px 1px rgba(0, 0, 0, 0.4);
+}
+
+#progressbar {
+  margin-bottom: 15px;
+}
+
+#progressbar .li2::before, #progressbar .li3::before, #progressbar .li4::before, #progressbar .li5::before {
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 20px;
+    margin: 0 auto 5px auto;
+}
+
+#progressbar .li1, #progressbar .li2, #progressbar .li3, #progressbar .li4, #progressbar .li5, #progressbar .li6 {
+  color: #23b1ec;
+  text-shadow: 1px 1px #0645AC;
+}
+
+.bottom-1, .bottom-2 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.ui-datepicker-calendar {
+  display: none;
+}
+
+.add_work, .add_more, .rem_more {
+  background: #3e4a3c;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+.page-header strong {
+  color: #0645AC;
+}
+
+.rem_more {
+  background-color: #d14444;
+}
+
+#success_message{ display: none;}
+
+select{
+  font-family: FontAwesome, sans-serif;
+}
+
+.radio, .checkbox {
+    margin-left: 25px;
+    font-weight: 400;
 }

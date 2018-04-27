@@ -690,102 +690,7 @@
 					<div class="row emp">
 						<div class="col-md-12">
 							<div id="testimonial-slider" class="owl-carousel">
-								<div class="testimonial">
-									<span class="icon fa fa-quote-left icon"></span>
-									<p class="description">Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Nullam justo neque, aliquet sit
-										amet elementum vel, vehicula eget eros. Vivamus arcu metus,
-										mattis sed sagittis at, sagittis quis neque. Praesent.</p>
-									<div class="testimonial-content">
-										<div class="pic">
-											<img
-												src="https://s3.amazonaws.com/uifaces/faces/twitter/tomaslau/128.jpg"
-												alt="">
-										</div>
-										<h3 class="title">williamson</h3>
-										<span class="post">SENIOR PRACTICE MANAGER</span>
-									</div>
-								</div>
-								<div class="testimonial">
-									<span class="icon fa fa-quote-left"></span>
-									<p class="description">Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Nullam justo neque, aliquet sit
-										amet elementum vel, vehicula eget eros. Vivamus arcu metus,
-										mattis sed sagittis at, sagittis quis neque. Praesent.</p>
-									<div class="testimonial-content">
-										<div class="pic">
-											<img
-												src="https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"
-												alt="">
-										</div>
-										<h3 class="title">Kristina</h3>
-										<span class="post">DEPUTY MANAGER, HR</span>
-									</div>
-								</div>
-								<div class="testimonial">
-									<span class="icon fa fa-quote-left"></span>
-									<p class="description">Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Nullam justo neque, aliquet sit
-										amet elementum vel, vehicula eget eros. Vivamus arcu metus,
-										mattis sed sagittis at, sagittis quis neque. Praesent.</p>
-									<div class="testimonial-content">
-										<div class="pic">
-											<img
-												src="https://s3.amazonaws.com/uifaces/faces/twitter/celikovic/128.jpg"
-												alt="">
-										</div>
-										<h3 class="title">Steve Thomas</h3>
-										<span class="post">LEAD CONSULTANT</span>
-									</div>
-								</div>
-								<div class="testimonial">
-									<span class="icon fa fa-quote-left"></span>
-									<p class="description">Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Nullam justo neque, aliquet sit
-										amet elementum vel, vehicula eget eros. Vivamus arcu metus,
-										mattis sed sagittis at, sagittis quis neque. Praesent.</p>
-									<div class="testimonial-content">
-										<div class="pic">
-											<img
-												src="https://s3.amazonaws.com/uifaces/faces/twitter/ok/128.jpg"
-												alt="">
-										</div>
-										<h3 class="title">williamson</h3>
-										<span class="post">ASSOCIATE GENERAL MANAGER</span>
-									</div>
-								</div>
-								<div class="testimonial">
-									<span class="icon fa fa-quote-left"></span>
-									<p class="description">Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Nullam justo neque, aliquet sit
-										amet elementum vel, vehicula eget eros. Vivamus arcu metus,
-										mattis sed sagittis at, sagittis quis neque. Praesent.</p>
-									<div class="testimonial-content">
-										<div class="pic">
-											<img
-												src="https://s3.amazonaws.com/uifaces/faces/twitter/sindresorhus/128.jpg"
-												alt="">
-										</div>
-										<h3 class="title">Kristina</h3>
-										<span class="post">MANAGER</span>
-									</div>
-								</div>
-								<div class="testimonial">
-									<span class="icon fa fa-quote-left"></span>
-									<p class="description">Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Nullam justo neque, aliquet sit
-										amet elementum vel, vehicula eget eros. Vivamus arcu metus,
-										mattis sed sagittis at, sagittis quis neque. Praesent.</p>
-									<div class="testimonial-content">
-										<div class="pic">
-											<img
-												src="https://s3.amazonaws.com/uifaces/faces/twitter/geeftvorm/128.jpg"
-												alt="">
-										</div>
-										<h3 class="title">Steve Thomas</h3>
-										<span class="post">HR MANAGER</span>
-									</div>
-								</div>
+						
 							</div>
 						</div>
 					</div>
@@ -1227,4 +1132,75 @@
 											.css('height', slideHeight);
 						});
 	</script>
+	 <script>
+  $(document)
+	.ready(
+			function() {							
+				$
+						.ajax({
+							url : 'http://localhost:8002/xmlparser/rest/test/consultant/testinomial_owl',
+							type : "GET",
+							success : function(data) {
+								var content = '';
+								$
+										.each(
+												JSON.parse(data),
+												function(i, item) {
+													content += '<div class="testimonial"> <span class="icon fa fa-quote-left"></span><p class="description">'
+															+ item.empquote
+															+ '</p><div class="testimonial-content"><div class="pic"><img src="data:image/jpeg;base64,'+ item.photo+'"  alt=""/></div><h3 class="title">'
+															+ item.empnames
+															+ '</h3><span class="post">'
+															+ item.empdesg+'</span></div></div>';
+
+												});
+								$("#testimonial-slider").append(
+										content);
+								$('#testimonial-slider')
+										.owlCarousel(
+												{
+													items : 3,
+													itemsDesktop : [
+															1000, 3 ],
+													itemsDesktopSmall : [
+															979, 2 ],
+													itemsTablet : [
+															768, 2 ],
+													itemsMobile : [
+															650, 1 ],
+													pagination : true,
+													autoPlay : true
+												}); 
+							}
+						})
+						$("#sweetalert").click(function() {
+			swal({
+				title : "Forget Password",
+				text : "Please enter Your Email to send the link for change password",
+				type : "input",
+				showCancelButton : true,
+				closeOnConfirm : false,
+				inputPlaceholder : "Your Email Address"
+			}, function(inputValue) {
+				if (inputValue === false)
+					return false;
+				if (inputValue === "") {
+					swal.showInputError("You need to give valid Email Address!");
+					return false
+				}
+				$.ajax({
+					url : "http://localhost:8002/xmlparser/rest/test/consultant/forgetpass/"+inputValue,
+					method : 'get',
+					success : function(result) {
+						swal("Thanks", "The link has been send to your Email", "success");
+					},
+				error : function(result){
+					swal("Sorry", "Your email is not registered", "warning");
+				}
+				});
+				
+			});
+		})
+			});
+  </script>
 	</html>

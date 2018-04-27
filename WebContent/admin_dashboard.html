@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jubilant Dashboard</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Jubilant<span>Dashboard</span></a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                
+                <li>Welcome, Admin</li>
+                <li class="extra">
+                    <a href="#">
+                        <i class="fa fa-sign-out fa-fw"></i><span class="tooltiptext">Logout</span>
+                    </a>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="javascript:void(0)"> <img alt="Jubilant" src="https://rawgit.com/anuranjan-crosstab/careersdemo/master/WebContent/images/jubl_logo.png" class="img-responsive">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="admin_dashboard.html"><i class="fa fa-plus fa-fw"></i> Manage Experience Jubilant</a>
+                        </li>
+                        <li>
+                            <a href="consultant2.html"><i class="fa fa-dashboard fa-fw"></i> Manage Consultant Login</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> Logout</a>
+                        </li>
+<!--                         <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="page-header">Edit Employee Speak Section</h1>
+                    
+                </div>
+                 <div class="col-lg-4">
+                    <button class="btn btn-success btn-xs pull-right page-header"data-toggle="modal" data-target="#myModal">Add New Speak</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            List of Employee Speak
+                        </div>
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Designation</th>
+                                        <th style="width:40%">Quote</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Designation</th>
+                                        <th>Quote</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody id="testinom" >
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Employee Speak</h4>
+      </div>
+      <div class="modal-body">
+         <form role="form" class="form-horizontal"method="post"
+                enctype="multipart/form-Data" name="form5">
+                    <div class="form-group">
+                      <label for="name" class="col-sm-3 control-label">
+                      Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Name" id="name"name="name"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="name" class="col-sm-3 control-label">
+                      Designation</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Designation" id="dsgn" name="dsgn"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="col-sm-3 control-label">
+                      Quote</label>
+                      <div class="col-sm-9">
+                        <textarea rows=10 cols=20 class="form-control" id="quote" placeholder="Enter Your Quote"name="quote"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="image" class="col-sm-3 control-label">
+                      Your Image</label>
+                      <div class="col-sm-9">
+                        <input type="file" class="form-control" placeholder=""id="image"name="image" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-10">
+                        <input type="Submit" class="btn btn-primary btn-sm"name="testinomial"
+                            formaction="http://localhost:8002/xmlparser/rest/test/consultant/table">
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
+                        Cancel</button>
+                      </div>
+                    </div>
+                  </form>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="js/sb-admin-2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script>
+    function delete_row(id) {
+        console.log(id);
+        swal({
+            title : "Are you sure?",
+            text : "Are you sure that you want to delete?",
+            type : "warning",
+            showCancelButton : true,
+            closeOnConfirm : true,
+            confirmButtonText : "Yes, delete it!",
+            confirmButtonColor : "#ec6c62"
+        }, function() {
+            $.ajax({
+                url : "http://localhost:8002/xmlparser/rest/test/consultant/testinomial_delete/"+id,
+                method : 'get',
+                success : function(result) {
+                    $('#testinom').html(result);
+                }
+            });
+        });
+    }
+    $(document).ready(function() {
+
+  
+   /*  $
+    .ajax({
+        type : "GET",
+        url : "http://localhost:8008/xmlparser/rest/test/testinomialjson",
+        success : function(jsonData) {
+            console.log(jsonData);
+            var trHTML = '';
+            $.each(JSON.parse(jsonData),
+                    function(i, item) {
+                        trHTML += '<tr><td>'
+                                + item.col1
+                                + '</td><td>'
+                                + item.col2
+                                + '</td></tr>';
+                    });
+            $('#testinom').append(trHTML);
+
+        }
+    }); */
+    $
+    .ajax({
+        type : "GET",
+        url : "http://localhost:8002/xmlparser/rest/test/consultant/testinomial",
+        success : function(jsonData) {
+        
+            
+            $('#testinom').html(jsonData);
+
+        }
+    });
+    
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>
+</body>
+</html>
+
