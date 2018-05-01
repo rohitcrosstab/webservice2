@@ -232,7 +232,7 @@
 										"MY" : {
 											eventHandlers : {
 												click : function() {
-													map("nodata");
+													map("MYS");
 												},
 											},
 											tooltip : {
@@ -248,7 +248,7 @@
 										"BE" : {
 											eventHandlers : {
 												click : function() {
-													map("nodata");
+													map("BEL");
 												},
 											},
 											tooltip : {
@@ -265,7 +265,7 @@
 
 											eventHandlers : {
 												click : function() {
-													map("nodata");
+													map("CHN");
 												},
 											},
 											attrs : {
@@ -291,7 +291,7 @@
 											longitude : 74.6269,
 											eventHandlers : {
 												click : function() {
-													maps("nodata");
+													maps("CT");
 												},
 											},
 											attrs : {

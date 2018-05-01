@@ -451,12 +451,10 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 				<form class="form-horizontal" method="post"
 					enctype="multipart/form-Data" name="form3">
 
-					<br /> <input type="file" name="myfiles">
+					<br /> <input type="file" name="myfiles"id="myfiles"class="myfiles">
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<input type="submit" class="btn btn-primary" name="sqlExpressdb"
-								formaction="http://localhost:8002/xmlparser/rest/test/insertdb1"
-								value="resume upload">
+							<button type="button" class="btn btn-success" id = "check">Upload</button>
 						</div>
 					</div>
 				</form>
@@ -735,12 +733,32 @@ AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
 			uploadMultiple : false,
 			dictDefaultMessage : "Upload your resume here",
 			addRemoveLinks : true,
-
+			autoProcessQueue : false
 		};
 		var myDropzone1 = new Dropzone("#dropzone3", myDropzoneOptions1);
 
 	</script>
-
+<script>
+$("#check").click(function(){
+	  
+	var documentData = new FormData();
+	documentData.append('myfiles', $('input#dropzone3.dropzone')[0]);
+	
+	 $.ajax({
+		 
+		 dataType : 'json',
+       contentType: false,
+       cache: false,
+       processData: false,
+		  type: 'POST',
+		  url: "http://localhost:8002/xmlparser/rest/test/insertdb1",    
+		  data: documentData ,
+		  success: function(result) {
+			 console.log(result);
+		  },
+		}); 	 
+})
+</script>
 
 </body>
 </html>
