@@ -754,7 +754,7 @@ $("#check").click(function(){
 		  url: "http://localhost:8002/xmlparser/rest/test/insertdb1",    
 		  data: documentData ,
 		  success: function(result) {
-			 console.log(result);
+			  myDropzone1.processQueue();
 		  },
 		}); 	 
 })

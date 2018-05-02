@@ -291,7 +291,7 @@
 											longitude : 74.6269,
 											eventHandlers : {
 												click : function() {
-													maps("CT");
+													maps("C06");
 												},
 											},
 											attrs : {
@@ -342,7 +342,7 @@
 											longitude : 73.1926,
 											eventHandlers : {
 												click : function() {
-													maps("nodata");
+													maps("B34");
 												},
 											},
 											attrs : {
@@ -393,7 +393,7 @@
 											longitude : 77.3910,
 											eventHandlers : {
 												click : function() {
-													maps("nodata");
+													maps("N01");
 												},
 											},
 											attrs : {
@@ -594,7 +594,7 @@
 											longitude : 121.4737,
 											eventHandlers : {
 												click : function() {
-													maps("nodata");
+													maps("SHG");
 												},
 											},
 											attrs : {
@@ -644,7 +644,7 @@
 											longitude : 103.8198,
 											eventHandlers : {
 												click : function() {
-													maps("nodata");
+													maps("SGP");
 												},
 											},
 											attrs : {
@@ -721,7 +721,7 @@
 											longitude : 78.2393,
 											eventHandlers : {
 												click : function() {
-													maps("nodata");
+													maps("C02");
 												},
 											},
 											attrs : {
@@ -771,7 +771,7 @@
 											longitude : 78.4867,
 											eventHandlers : {
 												click : function() {
-													maps("nodata");
+													maps("HO1");
 												},
 											},
 											attrs : {
@@ -797,7 +797,7 @@
 											longitude : 77.5946,
 											eventHandlers : {
 												click : function() {
-													maps("nodata");
+													maps("B01");
 												},
 											},
 											attrs : {
@@ -822,7 +822,7 @@
 											longitude : -73.5672559999999999,
 											eventHandlers : {
 												click : function() {
-													maps("nodata");
+													maps("MTL");
 												},
 											},
 											attrs : {
@@ -1112,7 +1112,7 @@ function maps(state){
 			success : function(mapsData) {
 				console.log(mapsData);
 				
-			$("#demo").html(mapsdata);	
+			$("#demo").html(mapsData);	
 				
 			$(
 				'#demo')
