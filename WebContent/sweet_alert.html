@@ -18,9 +18,15 @@
 var data='{"PersonName":{"FormattedName":"BINEET KAUR CHOPRA","GivenName":"BINEET","MiddleName":"KAUR","FamilyName":"CHOPRA"},"ContactMethod":[{"WhenAvailable":"anytime","PostalAddress":{"CountryCode":"IN","PostalCode":"110085","Region":"IN-DL","Municipality":"Delhi","DeliveryAddress":{"AddressLine":"Pocket A-1, Flat No. 20, Sector-5, Rohini"}}},{"Telephone":{"FormattedNumber":"+918861605898"}},{"Use":"personal","Location":"onPerson","WhenAvailable":"anytime","InternetEmailAddress":"bineetchopra@gmail.com"}]}';
 var parsing=JSON.parse(data);
 		console.log(parsing);
-		var name=parsing["PersonName"].GivenName;
-		var addr=parsing["ContactMethod"][2].InternetEmailAddress;
-		console.log(addr);
+		
+		 var fname=parsing["PersonName"].GivenName;
+			var lname=parsing["PersonName"].FamilyName;
+			var postalcode=parsing["ContactMethod"][0]["PostalAddress"].PostalCode;
+			var city=parsing["ContactMethod"][0]["PostalAddress"].Municipality;
+			var addr=parsing["ContactMethod"][0]["PostalAddress"]["DeliveryAddress"].AddressLine;
+			var mob=parsing["ContactMethod"][1]["Telephone"].FormattedNumber;
+			var email=parsing["ContactMethod"][2].InternetEmailAddress;
+			console.log(lname+postalcode+fname+city+addr+mob+email);
 </script>
 
 
