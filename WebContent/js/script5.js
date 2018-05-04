@@ -563,31 +563,7 @@
 
 											}
 										},
-										'Malvern' : {
-											size : 5,
-											latitude : 40.036217,
-											longitude : -75.513809,
-											eventHandlers : {
-												click : function() {
-													maps("nodata");
-												},
-											},
-											attrs : {
-												fill : "orange",
-												opacity : 1,
-												stroke : '#f4f4e8',
-												"stroke-width" : 1,
-											},
-											tooltip : {
-												content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Malvern</span></center>"
-											},
-											attrsHover : {
-												fill : "orange",
-												stroke : '#f4f4e8',
-												"stroke-width" : 2,
-
-											}
-										},
+										
 										'Shanghai' : {
 											size : 5,
 											latitude : 31.2304,
@@ -613,31 +589,7 @@
 
 											}
 										},
-										'Merelbeke' : {
-											size : 5,
-											latitude : 50.9945,
-											longitude : 3.7456,
-											eventHandlers : {
-												click : function() {
-													maps("nodata");
-												},
-											},
-											attrs : {
-												fill : "orange",
-												opacity : 1,
-												stroke : '#f4f4e8',
-												"stroke-width" : 1,
-											},
-											tooltip : {
-												content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Merelbeke</span></center>"
-											},
-											attrsHover : {
-												fill : "orange",
-												stroke : '#f4f4e8',
-												"stroke-width" : 2,
-
-											}
-										},
+									
 										'Singapore' : {
 											size : 5,
 											latitude : 1.3521,
@@ -663,31 +615,7 @@
 
 											}
 										},
-										'orlando' : {
-											size : 5,
-											latitude : 28.538336,
-											longitude : -81.379234,
-											eventHandlers : {
-												click : function() {
-													maps("nodata");
-												},
-											},
-											attrs : {
-												fill : "orange",
-												opacity : 1,
-												stroke : '#f4f4e8',
-												"stroke-width" : 1,
-											},
-											tooltip : {
-												content : "<center><img src='ju.png'width='60%'height='60%'/><br><span style=\"font-weight:bold;\">Orlando</span></center>"
-											},
-											attrsHover : {
-												fill : "orange",
-												stroke : '#f4f4e8',
-												"stroke-width" : 2,
-
-											}
-										},
+										
 										'Nanjangud' : {
 											size : 5,
 											latitude : 12.1200,

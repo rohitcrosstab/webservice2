@@ -12,60 +12,16 @@
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="dropzone.js"></script>
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="dropzone.css"rel="stylesheet">
 </head>
 <body>
-<div class="dropzone" id="dropzone3"
-						style="min-height: 150px; cursor: pointer; border: 2px dashed #0087F7; background: #eee; border-radius: 40px; background: white;">
-						<span class="glyphicon glyphicon-download"> </span>
-
-						<div class="fallback">
-							<input type="file" name="myfiles" multiple />
-						</div>
-					</div>
-					<button class="btn btn-success" tupe="button"id="check">Check</button>
-	<script type="text/javascript">
-	var myDropzoneOptions1 = {
-			url : "http://localhost:8002/xmlparser/rest/test/jubilant/emp_draft",
-			acceptedFiles : ".doc,.pdf,.json,.jpg",
-			maxFiles : "1",
-			clickable : true,
-			uploadMultiple : false,
-			dictDefaultMessage : "Upload your resume here",
-			addRemoveLinks : true,
-			autoProcessQueue : false
-
-		};
-	  var myDropzone1 = new Dropzone("#dropzone3", myDropzoneOptions1);
-	  $("#check").click(function(){
-		  
-		  var formData = new FormData($("#dropzone3"));
-		 $.ajax({
-			 
-			 mimeType: "multipart/form-data",
-             contentType: false,
-             cache: false,
-             processData: false,
-			  type: 'POST',
-			  url: "http://localhost:8002/xmlparser/rest/test/testinomial",
-			
-             
-			  data: { myfiles: formData },
-			  success: function(result) {
-				  myDropzone1.processQueue();
-			  },
-			 
-
-			  async:true
-			}); 	 
-	  })
-	</script>
-</head>
-
-
-
-	
-
+<script>
+var data='{"PersonName":{"FormattedName":"BINEET KAUR CHOPRA","GivenName":"BINEET","MiddleName":"KAUR","FamilyName":"CHOPRA"},"ContactMethod":[{"WhenAvailable":"anytime","PostalAddress":{"CountryCode":"IN","PostalCode":"110085","Region":"IN-DL","Municipality":"Delhi","DeliveryAddress":{"AddressLine":"Pocket A-1, Flat No. 20, Sector-5, Rohini"}}},{"Telephone":{"FormattedNumber":"+918861605898"}},{"Use":"personal","Location":"onPerson","WhenAvailable":"anytime","InternetEmailAddress":"bineetchopra@gmail.com"}]}';
+var parsing=JSON.parse(data);
+		console.log(parsing);
+		var name=parsing["PersonName"].GivenName;
+		var addr=parsing["ContactMethod"][2].InternetEmailAddress;
+		console.log(addr);
+</script>
 
 
 	
